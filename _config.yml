@@ -1,0 +1,11 @@
+title: "Ibuki Sugiura"
+description: "Personal website"
+url: "https://isugiura.github.io"
+
+theme: null
+
+markdown: kramdown
+
+collections:
+  publications:
+    output: true

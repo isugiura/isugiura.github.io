@@ -3,20 +3,72 @@ layout: default
 title: Home
 ---
 
-# Your Name
+<div class="home-layout">
 
-Your position  
-Your Department  
-Your University
+  <aside class="profile-sidebar">
 
-Welcome to my personal website.
+    <img
+      src="{{ '/assets/images/profile.jpg' | relative_url }}"
+      alt="Your Name"
+      class="profile-photo"
+    >
 
-I am a researcher interested in climate variability, climate dynamics, and climate data analysis.
+    <h2>Your Name</h2>
 
-## Research
+    <p class="profile-position">
+      Ph.D. candidate<br>
+      Department of Earth & Environmental Sciences<br>
+      Columbia University
+    </p>
 
-My research focuses on understanding variability and change in the climate system using climate observations, model simulations, and statistical methods.
+    <div class="profile-links">
+      <a href="mailto:ibuki.s@columbia.edu">
+        Email
+      </a>
 
-You can find my publications, research materials, and other information about my work throughout this site.
+      <a href="https://github.com/isugiura">
+        GitHub
+      </a>
 
-[View Publications](/publications/)
+      <a href="#">
+        Google Scholar
+      </a>
+    </div>
+
+  </aside>
+
+
+  <section class="about-content">
+
+    <h1>About Me</h1>
+
+    <p>
+      I am a Ph.D. candidate at the Department of Earth and 
+      Environmental Sciences, Columbia University.
+    </p>
+
+    <p>
+      My research interests are the ocean's role in past, modern, 
+      and future climates, including ocean–atmosphere interactions, 
+      modes of climate variability, ocean responses to external 
+      forcings, and their impacts on hydroclimate.
+    </p>
+
+    <p>
+      I graduated from Smith College in 2022 with cum laude and B.A. 
+      in Geosciences and Mathematics. I also received highest honors 
+      for my thesis titled “Reconstructing Past Temperature From Lake 
+      Sediments at Darwin Crater, Tasmania, Australia Using the brGDGT 
+      Biomarker Proxy.”
+    </p>
+
+    <h2>Research Interests</h2>
+
+    <ul>
+      <li>Climate variability and change</li>
+      <li>Climate dynamics</li>
+    </ul>
+
+  </section>
+
+</div>

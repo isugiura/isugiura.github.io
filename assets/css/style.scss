@@ -11,17 +11,17 @@
    ========================= */
 
 :root {
-  --bg-main: #872657;
-  --bg-header-footer: #7D0552;
+  --bg-main: #FFF5EE;
+  --bg-header-footer: #FFF0F5;
 
   --text-main: #f0f0f0;
   --text-secondary: #c5c7cc;
-  --text-muted: #a5a7ad;
+  --text-muted: #560319;
 
   --link: #E67451;
   --link-hover: #954535;
 
-  --border: #363b75;
+  --border: #733635;
 
   --accent: #8bbcff;
   --accent-hover: #b0d2ff;
@@ -494,9 +494,7 @@ body {
    ========================= */
 
 .site-footer {
-  max-width: 1200px;
-
-  margin: 0 auto;
+  width: 100%;
 
   background: var(--bg-header-footer);
 

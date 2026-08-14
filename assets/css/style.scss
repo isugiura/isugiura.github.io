@@ -471,9 +471,7 @@ body {
 
 .main-content p {
   font-size: 1rem;
-
-  color: #d0d1d5;
-
+  color: var(--text-main);
   margin: 0 0 25px;
 }
 
@@ -486,63 +484,128 @@ body {
 }
 
 /* =========================
-   PUBLICATIONS
+   PUBLICATION AUTHOR
    ========================= */
 
-.publication {
-  margin-bottom: 32px;
+.my-name {
+  color: var(--accent);
+  font-weight: 700;
 }
 
-.publication-title {
-  color: var(--text-main);
 
-  font-size: 1.05rem;
-  font-weight: 600;
+/* =========================
+   PUBLICATION THEME
+   ========================= */
 
-  line-height: 1.5;
+.publication-theme {
+  margin-top: 5px;
 
-  margin-bottom: 3px;
+  color: var(--accent);
+
+  font-size: 0.82rem;
 }
 
-.publication-authors {
-  color: var(--text-main);
 
-  font-size: 0.9rem;
+/* =========================
+   PUBLICATION TABS
+   ========================= */
 
-  line-height: 1.5;
-
-  margin-bottom: 2px;
-}
-
-.publication-journal {
-  color: var(--text-main);
-
-  font-size: 0.9rem;
-
-  line-height: 1.5;
-}
-
-.publication-links {
+.publication-tabs {
   display: flex;
 
-  gap: 12px;
+  gap: 8px;
 
-  margin-top: 7px;
+  margin-bottom: 35px;
+
+  border-bottom: 1px solid var(--border);
 }
 
-.publication-links a {
+
+.publication-tab {
+  padding: 8px 14px;
+
+  border: none;
+
+  border-bottom: 2px solid transparent;
+
+  background: transparent;
+
+  color: var(--text-main);
+
+  font-family: inherit;
+
+  font-size: 0.9rem;
+
+  cursor: pointer;
+}
+
+
+.publication-tab:hover {
+  color: var(--link);
+}
+
+
+.publication-tab.active {
   color: var(--link);
 
-  font-size: 0.85rem;
-
-  text-decoration: none;
+  border-bottom-color: var(--link);
 }
 
-.publication-links a:hover {
-  color: var(--link-hover);
-  text-decoration: underline;
+
+/* =========================
+   PUBLICATION VIEWS
+   ========================= */
+
+.publication-view {
+  display: none;
 }
 
+
+.publication-view.active {
+  display: block;
+}
+
+
+/* =========================
+   YEAR HEADINGS
+   ========================= */
+
+.publication-year {
+  margin-top: 40px;
+
+  margin-bottom: 22px;
+
+  padding-bottom: 7px;
+
+  border-bottom: 1px solid var(--border);
+
+  color: var(--text-section);
+
+  font-size: 1.35rem;
+
+  font-weight: 600;
+}
+
+
+/* =========================
+   THEME HEADINGS
+   ========================= */
+
+.publication-theme-heading {
+  margin-top: 40px;
+
+  margin-bottom: 22px;
+
+  padding-bottom: 7px;
+
+  border-bottom: 1px solid var(--border);
+
+  color: var(--text-section);
+
+  font-size: 1.35rem;
+
+  font-weight: 600;
+}
 
 /* =========================
    FOOTER

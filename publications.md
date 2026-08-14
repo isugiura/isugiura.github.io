@@ -1,8 +1,9 @@
 ---
 layout: default
 title: Publications
+permalink: /publications/
 ---
 
-# Publications
+<h1>Publications</h1>
 
-{% bibliography %}
+{% bibliography --template publication %}

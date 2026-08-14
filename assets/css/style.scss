@@ -11,14 +11,14 @@
    ========================= */
 
 :root {
-  --bg-main: #2B3856;
-  --bg-header-footer: #123456;
+  --bg-main: #872657;
+  --bg-header-footer: #7D0552;
 
   --text-main: #f0f0f0;
   --text-secondary: #c5c7cc;
   --text-muted: #a5a7ad;
 
-  --link: #F87217;
+  --link: #E67451;
   --link-hover: #954535;
 
   --border: #363b75;
@@ -227,11 +227,13 @@ body {
 
   color: var(--text-secondary);
 
-  text-decoration: none;
-
   font-size: 0.82rem;
-
   line-height: 1.35;
+}
+
+.contact-info a {
+  color: var(--link);
+  text-decoration: none;
 }
 
 .contact-info a:hover {
@@ -281,7 +283,7 @@ body {
 
   gap: 10px;
 
-  color: var(--text-secondary);
+  color: var(--link);
 
   text-decoration: none;
 
@@ -314,7 +316,7 @@ body {
 
   gap: 10px;
 
-  color: var(--text-secondary);
+  color: var(--link);
 
   text-decoration: none;
 
@@ -479,7 +481,7 @@ body {
 }
 
 .main-content a {
-  color: var(--accent);
+  color: var(--link);
 }
 
 .main-content a:hover {

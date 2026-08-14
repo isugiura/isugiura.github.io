@@ -114,14 +114,14 @@ body {
 }
 
 .profile-photo {
-  width: 190px;
-  height: 190px;
+  width: 175px;
+  height: 175px;
 
   object-fit: cover;
 
   border-radius: 50%;
 
-  margin-bottom: 22px;
+  margin-bottom: 20px;
 }
 
 .sidebar h2 {
@@ -155,7 +155,109 @@ body {
 
 
 /* =========================
-   ACADEMIC LINKS
+   CONTACT INFO
+   ========================= */
+
+.contact-info {
+  display: flex;
+  flex-direction: column;
+
+  gap: 14px;
+
+  text-align: left;
+}
+
+.contact-info a,
+.contact-info div {
+  display: flex;
+  align-items: flex-start;
+
+  gap: 12px;
+
+  color: #444;
+
+  text-decoration: none;
+
+  font-size: 0.85rem;
+
+  line-height: 1.45;
+}
+
+.contact-info a:hover {
+  color: #1670d2;
+}
+
+.contact-info i {
+  width: 20px;
+
+  margin-top: 3px;
+
+  color: #777;
+
+  text-align: center;
+
+  flex-shrink: 0;
+}
+
+.contact-info a:hover i {
+  color: #1670d2;
+}
+
+
+/* =========================
+   SECTION HEADINGS
+   ========================= */
+
+.sidebar-section h3 {
+  margin: 0 0 15px;
+
+  text-align: left;
+
+  color: #777;
+
+  font-size: 0.75rem;
+  font-weight: 600;
+
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+
+/* =========================
+   RESOURCES
+   ========================= */
+
+.resource-links {
+  display: flex;
+  flex-direction: column;
+
+  gap: 13px;
+
+  text-align: left;
+}
+
+.resource-links a {
+  display: flex;
+  align-items: center;
+
+  gap: 12px;
+
+  color: #444;
+
+  text-decoration: none;
+
+  font-size: 0.9rem;
+
+  transition: color 0.15s ease;
+}
+
+.resource-links a:hover {
+  color: #1670d2;
+}
+
+
+/* =========================
+   ACADEMIC PROFILES
    ========================= */
 
 .academic-links {
@@ -173,19 +275,23 @@ body {
 
   gap: 12px;
 
-  color: #1670d2;
+  color: #444;
 
   text-decoration: none;
 
-  font-size: 0.95rem;
+  font-size: 0.9rem;
+
+  transition: color 0.15s ease;
 }
 
 .academic-links a:hover {
-  text-decoration: underline;
+  color: #1670d2;
 }
 
 
-/* Icons */
+/* =========================
+   ICONS
+   ========================= */
 
 .icon {
   width: 24px;
@@ -203,70 +309,87 @@ body {
   flex-shrink: 0;
 }
 
-.academic-links a:hover .icon {
+.academic-links a:hover .icon,
+.resource-links a:hover .icon {
   color: #1670d2;
 }
 
 .researchgate {
   font-family: Georgia, serif;
+
+  font-size: 0.95rem;
   font-weight: 600;
-}
-
-.circle-icon {
-  width: 24px;
-  height: 24px;
-
-  border-radius: 50%;
-
-  background: #999;
-
-  color: white;
-
-  font-size: 0.7rem;
-}
-
-.scholar {
-  font-size: 1.2rem;
 }
 
 
 /* =========================
-   CONTACT INFO
+   PAST AFFILIATIONS
    ========================= */
 
-.contact-info {
+.past-affiliations {
   display: flex;
   flex-direction: column;
 
-  gap: 16px;
+  gap: 13px;
 
   text-align: left;
 }
 
-.contact-info a,
-.contact-info div {
+.past-affiliations div {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
 
-  gap: 14px;
+  gap: 12px;
 
-  color: #444;
+  color: #555;
 
-  text-decoration: none;
+  font-size: 0.85rem;
 
-  font-size: 0.9rem;
+  line-height: 1.45;
 }
 
-.contact-info a:hover {
-  color: #1670d2;
+.past-affiliations .icon {
+  margin-top: 1px;
 }
 
-.contact-info i {
-  width: 20px;
 
-  color: #777;
+/* =========================
+   MOBILE
+   ========================= */
 
-  text-align: center;
+@media (max-width: 850px) {
+
+  .page-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .sidebar {
+    position: static;
+
+    height: auto;
+
+    border-right: none;
+    border-bottom: 1px solid #e5e5e5;
+
+    padding: 40px 25px;
+  }
+
+  .academic-links,
+  .resource-links,
+  .contact-info,
+  .past-affiliations {
+    max-width: 300px;
+
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .sidebar-section h3 {
+    max-width: 300px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
 }
 
 
@@ -275,7 +398,7 @@ body {
    ========================= */
 
 .main-content {
-  padding: 65px 70px;
+  padding: 60px 70px;
 
   max-width: 900px;
 }
@@ -326,66 +449,4 @@ body {
   color: #777;
 
   font-size: 0.85rem;
-}
-
-
-/* =========================
-   MOBILE
-   ========================= */
-
-@media (max-width: 850px) {
-
-  .header-inner {
-    flex-direction: column;
-    align-items: flex-start;
-
-    padding: 20px 25px;
-  }
-
-  .site-nav {
-    gap: 18px;
-    flex-wrap: wrap;
-  }
-
-  .page-layout {
-    grid-template-columns: 1fr;
-  }
-
-  .sidebar {
-    border-right: none;
-    border-bottom: 1px solid #e5e5e5;
-
-    padding: 40px 25px;
-  }
-
-  .academic-links {
-    max-width: 300px;
-    margin: 0 auto;
-  }
-
-  .contact-info {
-    max-width: 300px;
-    margin: 0 auto;
-  }
-
-  .main-content {
-    padding: 45px 25px;
-  }
-
-}
-
-@media (max-width: 500px) {
-
-  .site-nav {
-    gap: 12px 18px;
-  }
-
-  .site-nav a {
-    font-size: 0.9rem;
-  }
-
-  .main-content h1 {
-    font-size: 2rem;
-  }
-
 }

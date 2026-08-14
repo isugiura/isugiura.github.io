@@ -3,18 +3,30 @@
 
 <div class="publication">
 
+  <!-- =========================
+       TITLE
+       ========================= -->
+
   <div class="publication-title">
     {{ entry.title }}
   </div>
 
+  <!-- =========================
+       AUTHORS
+       ========================= -->
+  
   <div class="publication-authors">
     {{ entry.author }}
   </div>
 
+  <!-- =========================
+       JOURNAL
+       ========================= -->
+  
   <div class="publication-journal">
 
     {% if entry.journal %}
-      {{ entry.journal }}
+      <em>{{ entry.journal }}</em>
     {% endif %}
 
     {% if entry.volume %}
@@ -32,32 +44,63 @@
     {% if entry.year %}
       ({{ entry.year }})
     {% endif %}
-
+    
   </div>
 
-  <div class="publication-links">
+  <!-- =========================
+       LINKS
+       ========================= -->
+  
+  {% if entry.pdf or entry.doi or entry.code %}
 
-    {% if entry.pdf %}
-      <a href="{{ entry.pdf }}" target="_blank">
-        Paper
-      </a>
-    {% endif %}
+    <div class="publication-links">
 
-    {% if entry.doi %}
-      <a
-        href="https://doi.org/{{ entry.doi }}"
-        target="_blank"
-      >
-        DOI
-      </a>
-    {% endif %}
+      {% if entry.pdf %}
+        <a
+          href="{{ entry.pdf }}"
+          target="_blank"
+          rel="noopener"
+        >
+          Paper
+        </a>
+      {% endif %}
 
-    {% if entry.code %}
-      <a href="{{ entry.code }}" target="_blank">
-        Code
-      </a>
-    {% endif %}
 
-  </div>
+      {% if entry.doi %}
+        <a
+          href="https://doi.org/{{ entry.doi }}"
+          target="_blank"
+          rel="noopener"
+        >
+          DOI
+        </a>
+      {% endif %}
+
+
+      {% if entry.code %}
+        <a
+          href="{{ entry.code }}"
+          target="_blank"
+          rel="noopener"
+        >
+          Code
+        </a>
+      {% endif %}
+
+    </div>
+
+  {% endif %}
+
+  <!-- =========================
+       RESEARCH THEME
+       ========================= -->
+
+  {% if entry.theme %}
+
+    <div class="publication-theme">
+      {{ entry.theme }}
+    </div>
+
+  {% endif %}
 
 </div>

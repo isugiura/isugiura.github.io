@@ -15,18 +15,17 @@
   --bg-header-footer: #2F0909;
 
   --text-header-footer: #FFF5EE;
+  --text-header-footer-hover: #E67451;
+  
   --text-section: #560319;
   --text-main: #1C1C1C;
-  --text-muted: #1B8A6B;
+  --accent: #C34A2C;
 
   --icon: #560319;
   --link: #E67451;
-  --link-hover: #9E4638;
+  --link-hover: #C34A2C;
 
   --border: #733635;
-
-  --accent: #FFF5EE;
-  --accent-hover: #E67451;
 }
 
 
@@ -98,7 +97,7 @@ body {
 }
 
 .header-name span {
-  color: var(--text-main);
+  color: var(--text-header-footer-hover);
   font-size: 0.9rem;
 }
 
@@ -110,7 +109,7 @@ body {
 }
 
 .site-nav a {
-  color: var(--accent);
+  color: var(--text-header-footer);
   text-decoration: none;
 
   font-size: 0.95rem;
@@ -119,7 +118,7 @@ body {
 }
 
 .site-nav a:hover {
-  color: var(--accent-hover);
+  color: var(--text-header-footer-hover);
 }
 
 
@@ -187,7 +186,7 @@ body {
 .position {
   margin: 5px 0 0;
 
-  color: var(--text-muted);
+  color: var(--accent);
 
   font-size: 0.88rem;
   line-height: 1.4;
@@ -238,10 +237,6 @@ body {
   text-decoration: none;
 }
 
-.contact-info a:hover {
-  color: var(--link-hover);
-}
-
 .contact-info i {
   color: var(--icon);
 }
@@ -256,7 +251,7 @@ body {
 
   text-align: left;
 
-  color: var(--text-section);
+  color: var(--accent);
 
   font-size: 0.75rem;
   font-weight: 600;
@@ -504,7 +499,7 @@ body {
 
   padding: 20px 40px;
 
-  color: var(text-header-footer);
+  color: var(--text-header-footer);
 
   font-size: 0.85rem;
 }

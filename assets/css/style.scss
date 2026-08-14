@@ -653,3 +653,68 @@ body {
 
   padding: 0 40px;
 }
+
+/* =========================
+   404 PAGE
+   ========================= */
+
+.error-page {
+  text-align: center;
+
+  padding: 70px 20px;
+}
+
+
+.error-code {
+  color: var(--accent);
+
+  font-size: 6rem;
+
+  font-weight: 700;
+
+  line-height: 1;
+
+  margin-bottom: 20px;
+}
+
+
+.error-page h1 {
+  margin: 0 0 15px;
+
+  color: var(--text-section);
+
+  font-size: 2rem;
+}
+
+
+.error-page p {
+  margin: 0 auto 10px;
+
+  max-width: 550px;
+
+  color: var(--text-main);
+}
+
+
+.error-home-link {
+  display: inline-flex;
+
+  align-items: center;
+
+  gap: 8px;
+
+  margin-top: 25px;
+
+  color: var(--link);
+
+  text-decoration: none;
+
+  font-size: 0.95rem;
+}
+
+
+.error-home-link:hover {
+  color: var(--link-hover);
+
+  text-decoration: underline;
+}

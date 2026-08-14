@@ -11,18 +11,52 @@
     {{ entry.title }}
   </div>
 
+
   <!-- =========================
        AUTHORS
        ========================= -->
-  
+
   <div class="publication-authors">
-    {{ entry.author }}
+
+    {% assign authors = entry.author_array %}
+
+    {% for author in authors %}
+
+      {% assign first_initial = author.first | slice: 0 %}
+
+      {% if author.last == site.publication.author_last_name
+            and author.first == site.publication.author_first_name %}
+
+        <span class="my-name">
+          {{ author.last }}, {{ first_initial }}.
+        </span>
+
+      {% else %}
+
+        {{ author.last }}, {{ first_initial }}.
+
+      {% endif %}
+
+
+      {% unless forloop.last %}
+
+        {% if forloop.rindex == 2 %}
+          , &nbsp;&amp;&nbsp;
+        {% else %}
+          ,&nbsp;
+        {% endif %}
+
+      {% endunless %}
+
+    {% endfor %}
+
   </div>
+
 
   <!-- =========================
        JOURNAL
        ========================= -->
-  
+
   <div class="publication-journal">
 
     {% if entry.journal %}
@@ -44,13 +78,14 @@
     {% if entry.year %}
       ({{ entry.year }})
     {% endif %}
-    
+
   </div>
+
 
   <!-- =========================
        LINKS
        ========================= -->
-  
+
   {% if entry.pdf or entry.doi or entry.code %}
 
     <div class="publication-links">
@@ -91,6 +126,7 @@
 
   {% endif %}
 
+
   <!-- =========================
        RESEARCH THEME
        ========================= -->
@@ -98,7 +134,9 @@
   {% if entry.theme %}
 
     <div class="publication-theme">
+
       {{ entry.theme }}
+
     </div>
 
   {% endif %}

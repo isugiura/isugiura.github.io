@@ -8,17 +8,15 @@ title: Home
   <aside class="profile-sidebar">
 
     <img
-      src="{{ '/assets/images/profile.jpg' | relative_url }}"
+      src="{{ '/assets/images/profile.JPG' | relative_url }}"
       alt="Your Name"
       class="profile-photo"
     >
 
-    <h2>Your Name</h2>
+    <h2>Ibuki Sugiura</h2>
 
     <p class="profile-position">
       Ph.D. candidate<br>
-      Department of Earth & Environmental Sciences<br>
-      Columbia University
     </p>
 
     <div class="profile-links">

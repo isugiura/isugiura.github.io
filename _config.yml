@@ -1,11 +1,17 @@
-title: "Ibuki Sugiura"
+title: "Your Name"
 description: "Personal website"
-url: "https://isugiura.github.io"
+url: "https://yourname.github.io"
 
 theme: null
-
 markdown: kramdown
 
 collections:
   publications:
     output: true
+    permalink: /publications/:name/
+
+defaults:
+  - scope:
+      path: ""
+    values:
+      layout: default

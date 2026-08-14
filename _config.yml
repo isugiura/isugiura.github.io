@@ -8,7 +8,12 @@ markdown: kramdown
 plugins:
   - jekyll-scholar
 
+# =========================
+# JEKYLL SCHOLAR
+# =========================
+
 scholar:
+
   source: assets/files
   bibliography: papers.bib
 

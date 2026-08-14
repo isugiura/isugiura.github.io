@@ -31,7 +31,12 @@
 
 </head>
 
+
 <body>
+
+  <!-- =========================
+       HEADER
+       ========================= -->
 
   <header class="site-header">
 
@@ -49,14 +54,23 @@
 
       </div>
 
+
       <nav class="site-nav">
 
         <a href="{{ '/' | relative_url }}">
           Home
         </a>
 
+        <a href="{{ '/research-interests/' | relative_url }}">
+          Research Interests
+        </a>
+
         <a href="{{ '/publications/' | relative_url }}">
           Publications
+        </a>
+
+        <a href="{{ '/about/' | relative_url }}">
+          About
         </a>
 
         <a href="{{ '/cv/' | relative_url }}">
@@ -64,7 +78,11 @@
         </a>
 
         <a href="{{ '/teaching/' | relative_url }}">
-          Teaching
+          Teaching Statement
+        </a>
+
+        <a href="{{ '/contact/' | relative_url }}">
+          Contact
         </a>
 
       </nav>
@@ -73,6 +91,10 @@
 
   </header>
 
+
+  <!-- =========================
+       PAGE
+       ========================= -->
 
   <div class="page-layout">
 
@@ -85,9 +107,20 @@
   </div>
 
 
+  <!-- =========================
+       FOOTER
+       ========================= -->
+
   <footer class="site-footer">
-    © {{ 'now' | date: "%Y" }} {{ site.title }}
+
+    <div class="footer-inner">
+
+      © {{ 'now' | date: "%Y" }} {{ site.title }}
+
+    </div>
+
   </footer>
+
 
 </body>
 

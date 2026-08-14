@@ -28,6 +28,12 @@ body {
    ========================= */
 
 .site-header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+
+  background: #fff;
+
   border-bottom: 1px solid #e5e5e5;
 }
 
@@ -35,7 +41,7 @@ body {
   max-width: 1200px;
   margin: 0 auto;
 
-  padding: 22px 40px;
+  padding: 18px 40px;
 
   display: flex;
   align-items: center;
@@ -74,12 +80,13 @@ body {
   text-decoration: none;
 
   font-size: 0.95rem;
+
+  transition: color 0.15s ease;
 }
 
 .site-nav a:hover {
   color: #1769d1;
 }
-
 
 /* =========================
    PAGE LAYOUT

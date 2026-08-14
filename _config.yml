@@ -5,12 +5,22 @@ url: "https://yourname.github.io"
 theme: null
 markdown: kramdown
 
+plugins:
+  - jekyll-scholar
+
 scholar:
   source: assets/files
-  bibliography: papers
+  bibliography: papers.bib
+
+  bibliography_template: bib
+
   style: apa
+  locale: en
+
   sort_by: year
   order: descending
+
+  query: "@*"
 
 defaults:
   - scope:

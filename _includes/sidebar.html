@@ -1,7 +1,7 @@
 <aside class="sidebar">
 
   <img
-    src="{{ '/assets/images/profile.jpg' | relative_url }}"
+    src="{{ '/assets/profile.jpg' | relative_url }}"
     alt="{{ site.title }}"
     class="profile-photo"
   >
@@ -16,6 +16,7 @@
   <div class="sidebar-divider"></div>
 
 
+  <!-- Contact -->
   <div class="contact-info">
 
     <a href="mailto:your.email@example.com">
@@ -43,7 +44,36 @@
 
   <div class="sidebar-divider"></div>
 
+  <!-- Resources -->
+  <div class="sidebar-section">
 
+    <h3>Resources</h3>
+
+    <div class="resource-links">
+
+      <a
+        href="{{ '/assets/files/CV.pdf' | relative_url }}"
+        target="_blank"
+      >
+        <i class="fa-solid fa-file-pdf icon"></i>
+        <span>Download CV</span>
+      </a>
+
+      <a
+        href="https://github.com/yourusername/project-collection"
+        target="_blank"
+      >
+        <i class="fa-brands fa-github icon"></i>
+        <span>Research Code</span>
+      </a>
+
+    </div>
+
+  </div>
+
+  <div class="sidebar-divider"></div>
+
+  <!-- Academic profiles -->
   <div class="academic-links">
 
     <a href="https://scholar.google.com/citations?user=YOUR-ID" target="_blank">
@@ -61,11 +91,6 @@
       <span>ORCID</span>
     </a>
 
-    <a href="https://github.com/yourusername" target="_blank">
-      <i class="fa-brands fa-github icon"></i>
-      <span>GitHub</span>
-    </a>
-
     <a href="https://www.linkedin.com/in/yourusername/" target="_blank">
       <i class="fa-brands fa-linkedin-in icon"></i>
       <span>LinkedIn</span>
@@ -75,6 +100,24 @@
       <i class="fa-solid fa-building-columns icon"></i>
       <span>Institutional Web Page</span>
     </a>
+
+  </div>
+
+  <div class="sidebar-divider"></div>
+
+  <!-- Past affiliations -->
+  <div class="sidebar-section">
+
+    <h3>Past Affiliations</h3>
+
+    <div class="past-affiliations">
+
+      <div>
+        <i class="fa-solid fa-building-columns icon"></i>
+        <span>Current affiliation</span>
+      </div>
+
+    </div>
 
   </div>
 

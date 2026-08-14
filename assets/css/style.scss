@@ -19,7 +19,7 @@
   
   --text-section: #560319;
   --text-main: #1C1C1C;
-  --accent: #B22222;
+  --accent: #E42217;
 
   --icon: #560319;
   --link: #E67451;
@@ -494,7 +494,7 @@ body {
 }
 
 .publication-title {
-  color: #f0f0f0;
+  color: var(--text-main);
 
   font-size: 1.05rem;
   font-weight: 600;
@@ -505,7 +505,7 @@ body {
 }
 
 .publication-authors {
-  color: #d0d1d5;
+  color: var(--text-main);
 
   font-size: 0.9rem;
 
@@ -515,7 +515,7 @@ body {
 }
 
 .publication-journal {
-  color: #aeb1b8;
+  color: var(--text-main);
 
   font-size: 0.9rem;
 

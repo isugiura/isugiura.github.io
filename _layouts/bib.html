@@ -1,0 +1,63 @@
+---
+---
+
+<div class="publication">
+
+  <div class="publication-title">
+    {{ entry.title }}
+  </div>
+
+  <div class="publication-authors">
+    {{ entry.author }}
+  </div>
+
+  <div class="publication-journal">
+
+    {% if entry.journal %}
+      {{ entry.journal }}
+    {% endif %}
+
+    {% if entry.volume %}
+      , {{ entry.volume }}
+    {% endif %}
+
+    {% if entry.number %}
+      ({{ entry.number }})
+    {% endif %}
+
+    {% if entry.pages %}
+      , {{ entry.pages }}
+    {% endif %}
+
+    {% if entry.year %}
+      ({{ entry.year }})
+    {% endif %}
+
+  </div>
+
+  <div class="publication-links">
+
+    {% if entry.pdf %}
+      <a href="{{ entry.pdf }}" target="_blank">
+        Paper
+      </a>
+    {% endif %}
+
+    {% if entry.doi %}
+      <a
+        href="https://doi.org/{{ entry.doi }}"
+        target="_blank"
+      >
+        DOI
+      </a>
+    {% endif %}
+
+    {% if entry.code %}
+      <a href="{{ entry.code }}" target="_blank">
+        Code
+      </a>
+    {% endif %}
+
+  </div>
+
+</div>

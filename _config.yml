@@ -22,6 +22,12 @@ scholar:
 
   query: "@*"
 
+  last_name:
+  - YourLastName
+
+  first_name:
+    - YourFirstName
+
 defaults:
   - scope:
       path: ""

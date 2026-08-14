@@ -2,11 +2,11 @@
 
   <img
     src="{{ '/assets/images/profile.jpg' | relative_url }}"
-    alt="Your Name"
+    alt="{{ site.title }}"
     class="profile-photo"
   >
 
-  <h2>Your Name</h2>
+  <h2>{{ site.title }}</h2>
 
   <p class="position">
     Your Position<br>
@@ -14,13 +14,25 @@
     Your University
   </p>
 
+
   <div class="sidebar-divider"></div>
+
 
   <div class="academic-links">
 
-    <a href="https://www.linkedin.com/in/yourusername/" target="_blank">
-      <span class="icon">in</span>
-      <span>LinkedIn</span>
+    <a href="https://github.com/yourusername" target="_blank">
+      <i class="fa-brands fa-github icon"></i>
+      <span>GitHub</span>
+    </a>
+
+    <a href="https://scholar.google.com/citations?user=YOUR-ID" target="_blank">
+      <i class="fa-brands fa-google-scholar icon"></i>
+      <span>Google Scholar</span>
+    </a>
+
+    <a href="https://orcid.org/YOUR-ORCID-ID" target="_blank">
+      <i class="fa-brands fa-orcid icon"></i>
+      <span>ORCID</span>
     </a>
 
     <a href="https://www.researchgate.net/profile/Your-Name" target="_blank">
@@ -28,29 +40,26 @@
       <span>ResearchGate</span>
     </a>
 
+    <a href="https://www.linkedin.com/in/yourusername/" target="_blank">
+      <i class="fa-brands fa-linkedin-in icon"></i>
+      <span>LinkedIn</span>
+    </a>
+
     <a href="https://www.webofscience.com/" target="_blank">
       <span class="icon circle-icon">W</span>
       <span>Web of Science</span>
     </a>
 
-    <a href="https://orcid.org/YOUR-ORCID-ID" target="_blank">
-      <span class="icon circle-icon">iD</span>
-      <span>ORCID</span>
-    </a>
-
-    <a href="https://scholar.google.com/citations?user=YOUR-ID" target="_blank">
-      <span class="icon scholar">♟</span>
-      <span>Google Scholar</span>
-    </a>
-
     <a href="https://www.youruniversity.edu/" target="_blank">
-      <span class="icon circle-icon">i</span>
+      <i class="fa-solid fa-building-columns icon"></i>
       <span>Institutional Web Page</span>
     </a>
 
   </div>
 
+
   <div class="sidebar-divider"></div>
+
 
   <div class="contact-info">
 

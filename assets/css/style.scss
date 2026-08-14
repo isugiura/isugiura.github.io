@@ -132,7 +132,9 @@ body {
    ========================= */
 
 .page-layout {
+  width: 100%;
   max-width: 1200px;
+
   margin: 0 auto;
 
   padding-top: 75px;
@@ -140,7 +142,7 @@ body {
   display: grid;
   grid-template-columns: 250px 1fr;
 
-  min-height: calc(100vh - 75px);
+  flex: 1;
 }
 
 
@@ -623,9 +625,18 @@ body {
 
   border-top: 1px solid var(--border);
 
-  padding: 10px 40px;
-
   color: var(--text-header-footer);
 
   font-size: 0.85rem;
+
+  padding: 8px 0;
+}
+
+
+.footer-inner {
+  max-width: 1200px;
+
+  margin: 0 auto;
+
+  padding: 0 40px;
 }

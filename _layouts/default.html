@@ -38,13 +38,15 @@
     <div class="header-inner">
 
       <div class="header-name">
+
         <a href="{{ '/' | relative_url }}">
-          Your Name
+          {{ site.title }}
         </a>
 
         <span>
           Your Position
         </span>
+
       </div>
 
       <nav class="site-nav">
@@ -66,7 +68,7 @@
         </a>
 
         <a href="{{ '/teaching/' | relative_url }}">
-          Teaching Statement
+          Teaching
         </a>
 
         <a href="{{ '/contact/' | relative_url }}">
@@ -92,7 +94,7 @@
 
 
   <footer class="site-footer">
-    © {{ 'now' | date: "%Y" }} Your Name
+    © {{ 'now' | date: "%Y" }} {{ site.title }}
   </footer>
 
 </body>

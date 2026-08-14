@@ -2,8 +2,13 @@
 <html lang="en">
 
 <head>
+
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1"
+  >
 
   <title>
     {% if page.title %}
@@ -13,33 +18,83 @@
     {% endif %}
   </title>
 
+  <!-- Font Awesome -->
   <link
     rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
   >
 
-  <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
+  <link
+    rel="stylesheet"
+    href="{{ '/assets/css/style.css' | relative_url }}"
+  >
+
 </head>
 
-  <header class="site-header">
-    <div class="container">
-      <a class="site-title" href="{{ '/' | relative_url }}">
-        {{ site.title }}
-      </a>
+<body>
 
-      {% include navigation.html %}
+  <header class="site-header">
+
+    <div class="header-inner">
+
+      <div class="header-name">
+        <a href="{{ '/' | relative_url }}">
+          Your Name
+        </a>
+
+        <span>
+          Your Position
+        </span>
+      </div>
+
+      <nav class="site-nav">
+
+        <a href="{{ '/' | relative_url }}">
+          Home
+        </a>
+
+        <a href="{{ '/publications/' | relative_url }}">
+          Publications
+        </a>
+
+        <a href="{{ '/about/' | relative_url }}">
+          About
+        </a>
+
+        <a href="{{ '/cv/' | relative_url }}">
+          CV
+        </a>
+
+        <a href="{{ '/teaching/' | relative_url }}">
+          Teaching Statement
+        </a>
+
+        <a href="{{ '/contact/' | relative_url }}">
+          Contact
+        </a>
+
+      </nav>
+
     </div>
+
   </header>
 
-  <main class="container">
-    {{ content }}
-  </main>
+
+  <div class="page-layout">
+
+    {% include sidebar.html %}
+
+    <main class="main-content">
+      {{ content }}
+    </main>
+
+  </div>
+
 
   <footer class="site-footer">
-    <div class="container">
-      © {{ 'now' | date: "%Y" }} {{ site.title }}
-    </div>
+    © {{ 'now' | date: "%Y" }} Your Name
   </footer>
 
 </body>
+
 </html>

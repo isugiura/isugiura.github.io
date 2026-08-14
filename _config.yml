@@ -5,9 +5,12 @@ url: "https://yourname.github.io"
 theme: null
 markdown: kramdown
 
-collections:
-  publications:
-    output: true
+scholar:
+  source: assets/files
+  bibliography: papers
+  style: apa
+  sort_by: year
+  order: descending
 
 defaults:
   - scope:

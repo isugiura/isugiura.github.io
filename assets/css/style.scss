@@ -11,12 +11,15 @@
    ========================= */
 
 :root {
-  --bg-main: #151B54;
-  --bg-header-footer: #191970;
+  --bg-main: #2B3856;
+  --bg-header-footer: #123456;
 
   --text-main: #f0f0f0;
   --text-secondary: #c5c7cc;
   --text-muted: #a5a7ad;
+
+  --link: #F87217;
+  --link-hover: #954535;
 
   --border: #363b75;
 
@@ -232,7 +235,7 @@ body {
 }
 
 .contact-info a:hover {
-  color: var(--accent-hover);
+  color: var(--link-hover);
 }
 
 .contact-info i {
@@ -288,7 +291,7 @@ body {
 }
 
 .resource-links a:hover {
-  color: var(--accent-hover);
+  color: var(--link-hover);
 }
 
 
@@ -321,7 +324,7 @@ body {
 }
 
 .academic-links a:hover {
-  color: var(--accent-hover);
+  color: var(--link-hover);
 }
 
 
@@ -347,7 +350,7 @@ body {
 
 .academic-links a:hover .icon,
 .resource-links a:hover .icon {
-  color: var(--accent-hover);
+  color: var(--link-hover);
 }
 
 .researchgate {
@@ -480,7 +483,7 @@ body {
 }
 
 .main-content a:hover {
-  color: var(--accent-hover);
+  color: var(--link-hover);
 }
 
 

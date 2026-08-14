@@ -33,6 +33,19 @@ scholar:
   first_name:
     - YourFirstName
 
+# =========================
+# YOUR PUBLICATION SETTINGS
+# =========================
+
+publication:
+
+  author_last_name: "YourLastName"
+  author_first_name: "YourFirstName"
+
+# =========================
+# DEFAULT LAYOUT
+# =========================
+
 defaults:
   - scope:
       path: ""

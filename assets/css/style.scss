@@ -14,16 +14,19 @@
   --bg-main: #FFF5EE;
   --bg-header-footer: #2F0909;
 
-  --text-header: #560319;
+  --text-header-footer: #FFF5EE;
+  --text-section: #560319;
   --text-main: #1C1C1C;
   --text-muted: #1B8A6B;
 
+  --icon: #560319;
   --link: #E67451;
-  --link-hover: #954535;
+  --link-hover: #9E4638;
 
   --border: #733635;
 
-  --accent-hover: #2F539B;
+  --accent: #FFF5EE;
+  --accent-hover: #E67451;
 }
 
 
@@ -87,7 +90,7 @@ body {
 }
 
 .header-name a {
-  color: var(--text-header);
+  color: var(--text-header-footer);
   text-decoration: none;
 
   font-size: 1.25rem;
@@ -107,7 +110,7 @@ body {
 }
 
 .site-nav a {
-  color: var(--text-header);
+  color: var(--accent);
   text-decoration: none;
 
   font-size: 0.95rem;
@@ -175,7 +178,7 @@ body {
 .sidebar h2 {
   margin: 0;
 
-  color: var(--text-header);
+  color: var(--text-section);
 
   font-size: 1.5rem;
   font-weight: 600;
@@ -240,7 +243,7 @@ body {
 }
 
 .contact-info i {
-  color: var(--text-muted);
+  color: var(--icon);
 }
 
 
@@ -253,7 +256,7 @@ body {
 
   text-align: left;
 
-  color: var(--text-header);
+  color: var(--text-section);
 
   font-size: 0.75rem;
   font-weight: 600;
@@ -342,7 +345,7 @@ body {
   align-items: center;
   justify-content: center;
 
-  color: var(--text-header);
+  color: var(--icon);
 
   font-size: 0.9rem;
 
@@ -389,7 +392,7 @@ body {
 }
 
 .past-affiliations small {
-  color: var(--text-muted);
+  color: var(--text-main);
 
   font-size: 0.75rem;
 }
@@ -454,7 +457,7 @@ body {
   font-size: 2.4rem;
   font-weight: 600;
 
-  color: var(--text-header);
+  color: var(--text-section);
 
   line-height: 1.3;
 }
@@ -501,7 +504,7 @@ body {
 
   padding: 20px 40px;
 
-  color: var(--text-muted);
+  color: var(text-header-footer);
 
   font-size: 0.85rem;
 }

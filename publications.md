@@ -35,8 +35,6 @@ permalink: /publications/
   class="publication-view active"
 >
 
-  <!-- Hidden source bibliography -->
-
   <div
     id="year-publication-source"
     style="display: none;"
@@ -49,7 +47,7 @@ permalink: /publications/
 
   <div id="year-publication-lists">
 
-    <!-- SUBMITTED -->
+    <!-- Submitted -->
 
     <section class="publication-status-section">
 
@@ -66,7 +64,7 @@ permalink: /publications/
     </section>
 
 
-    <!-- IN PREPARATION -->
+    <!-- In Preparation -->
 
     <section class="publication-status-section">
 
@@ -83,13 +81,14 @@ permalink: /publications/
     </section>
 
 
-    <!-- PUBLISHED YEARS -->
+    <!-- Published by year -->
 
     <div id="year-sections"></div>
 
   </div>
 
 </div>
+
 
 <!-- =========================================================
      BY RESEARCH THEME
@@ -100,8 +99,6 @@ permalink: /publications/
   class="publication-view"
 >
 
-  <!-- Hidden source bibliography -->
-
   <div
     id="theme-publication-source"
     style="display: none;"
@@ -111,8 +108,6 @@ permalink: /publications/
 
   </div>
 
-
-  <!-- Theme publications will be inserted here -->
 
   <div id="theme-publication-lists">
 
@@ -145,52 +140,226 @@ permalink: /publications/
 </div>
 
 
+<!-- =========================================================
+     JAVASCRIPT
+     ========================================================= -->
+
 <script>
 
-/* =========================================================
-   PUBLICATION VIEW SWITCHER
-   ========================================================= */
+document.addEventListener("DOMContentLoaded", function() {
 
-document
-  .querySelectorAll(".publication-tab")
-  .forEach(function(button) {
 
-    button.addEventListener("click", function() {
+  /* =========================================================
+     VIEW SWITCHER
+     ========================================================= */
 
-      document
-        .querySelectorAll(".publication-tab")
-        .forEach(function(tab) {
-          tab.classList.remove("active");
-        });
+  document
+    .querySelectorAll(".publication-tab")
+    .forEach(function(button) {
 
-      document
-        .querySelectorAll(".publication-view")
-        .forEach(function(view) {
-          view.classList.remove("active");
-        });
+      button.addEventListener("click", function() {
 
-      button.classList.add("active");
+        document
+          .querySelectorAll(".publication-tab")
+          .forEach(function(tab) {
+            tab.classList.remove("active");
+          });
 
-      document
-        .getElementById(button.dataset.view)
-        .classList.add("active");
+
+        document
+          .querySelectorAll(".publication-view")
+          .forEach(function(view) {
+            view.classList.remove("active");
+          });
+
+
+        button.classList.add("active");
+
+
+        document
+          .getElementById(button.dataset.view)
+          .classList.add("active");
+
+      });
 
     });
+
+
+  /* =========================================================
+     SOURCE PUBLICATIONS
+     ========================================================= */
+
+  const yearSource = document.getElementById(
+    "year-publication-source"
+  );
+
+  const yearPublications = yearSource.querySelectorAll(
+    ".publication"
+  );
+
+
+  /* =========================================================
+     BY YEAR
+     ========================================================= */
+
+  const yearSections = document.getElementById(
+    "year-sections"
+  );
+
+  const publicationsByYear = {};
+
+
+  yearPublications.forEach(function(publication) {
+
+    const journalElement = publication.querySelector(
+      ".publication-journal"
+    );
+
+
+    if (!journalElement) {
+      return;
+    }
+
+
+    const yearMatch =
+      journalElement.textContent.match(
+        /\((\d{4})\)/
+      );
+
+
+    if (!yearMatch) {
+      return;
+    }
+
+
+    const year = yearMatch[1];
+
+
+    if (!publicationsByYear[year]) {
+      publicationsByYear[year] = [];
+    }
+
+
+    publicationsByYear[year].push(
+      publication
+    );
 
   });
 
 
-/* =========================================================
-   ORGANIZE PUBLICATIONS BY RESEARCH THEME
-   ========================================================= */
+  Object
+    .keys(publicationsByYear)
+    .sort(function(a, b) {
+      return b - a;
+    })
+    .forEach(function(year) {
 
-document.addEventListener("DOMContentLoaded", function() {
+      const section = document.createElement(
+        "section"
+      );
 
-  const source = document.getElementById(
+      section.className =
+        "publication-year-section";
+
+
+      const heading = document.createElement(
+        "h2"
+      );
+
+      heading.className =
+        "publication-year";
+
+      heading.textContent = year;
+
+
+      const list = document.createElement(
+        "div"
+      );
+
+      list.className =
+        "publication-year-list";
+
+
+      publicationsByYear[year].forEach(
+        function(publication) {
+
+          list.appendChild(
+            publication.cloneNode(true)
+          );
+
+        }
+      );
+
+
+      section.appendChild(heading);
+      section.appendChild(list);
+
+      yearSections.appendChild(section);
+
+    });
+
+
+  /* =========================================================
+     SUBMITTED / IN PREPARATION
+     ========================================================= */
+
+  const statusLists = document.querySelectorAll(
+    ".publication-status-list"
+  );
+
+
+  statusLists.forEach(function(statusList) {
+
+    const status = statusList.dataset.status;
+
+    let count = 0;
+
+
+    yearPublications.forEach(function(publication) {
+
+      const publicationStatus =
+        (
+          publication.dataset.status || ""
+        )
+        .trim()
+        .toLowerCase();
+
+
+      if (publicationStatus === status) {
+
+        statusList.appendChild(
+          publication.cloneNode(true)
+        );
+
+        count++;
+
+      }
+
+    });
+
+
+    /* Hide empty sections */
+
+    if (count === 0) {
+
+      statusList
+        .closest(".publication-status-section")
+        .style.display = "none";
+
+    }
+
+  });
+
+
+  /* =========================================================
+     BY RESEARCH THEME
+     ========================================================= */
+
+  const themeSource = document.getElementById(
     "theme-publication-source"
   );
 
-  const publications = source.querySelectorAll(
+  const themePublications = themeSource.querySelectorAll(
     ".publication"
   );
 
@@ -204,11 +373,12 @@ document.addEventListener("DOMContentLoaded", function() {
     const themeId = themeList.dataset.themeId;
 
 
-    publications.forEach(function(publication) {
+    themePublications.forEach(function(publication) {
 
-      const themeIds = publication
-        .dataset
-        .themeIds
+      const themeIds =
+        (
+          publication.dataset.themeIds || ""
+        )
         .split(",")
         .map(function(theme) {
           return theme.trim();

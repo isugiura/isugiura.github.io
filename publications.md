@@ -26,9 +26,9 @@ permalink: /publications/
 </div>
 
 
-<!-- =========================
+<!-- =========================================================
      BY YEAR
-     ========================= -->
+     ========================================================= -->
 
 <div
   id="year-view"
@@ -40,21 +40,65 @@ permalink: /publications/
 </div>
 
 
-<!-- =========================
+<!-- =========================================================
      BY RESEARCH THEME
-     ========================= -->
+     ========================================================= -->
 
 <div
   id="theme-view"
   class="publication-view"
 >
 
-  {% bibliography %}
+  <!-- Hidden source bibliography -->
+
+  <div
+    id="theme-publication-source"
+    style="display: none;"
+  >
+
+    {% bibliography %}
+
+  </div>
+
+
+  <!-- Theme publications will be inserted here -->
+
+  <div id="theme-publication-lists">
+
+    {% for theme_pair in site.data.themes %}
+
+      {% assign theme_id = theme_pair[0] %}
+      {% assign theme = theme_pair[1] %}
+
+      <section
+        class="publication-theme-section"
+        id="publication-theme-{{ theme_id }}"
+      >
+
+        <h2 class="publication-theme-heading">
+          {{ theme.name }}
+        </h2>
+
+        <div
+          class="publication-theme-list"
+          data-theme-id="{{ theme_id }}"
+        >
+        </div>
+
+      </section>
+
+    {% endfor %}
+
+  </div>
 
 </div>
 
 
 <script>
+
+/* =========================================================
+   PUBLICATION VIEW SWITCHER
+   ========================================================= */
 
 document
   .querySelectorAll(".publication-tab")
@@ -83,5 +127,55 @@ document
     });
 
   });
+
+
+/* =========================================================
+   ORGANIZE PUBLICATIONS BY RESEARCH THEME
+   ========================================================= */
+
+document.addEventListener("DOMContentLoaded", function() {
+
+  const source = document.getElementById(
+    "theme-publication-source"
+  );
+
+  const publications = source.querySelectorAll(
+    ".publication"
+  );
+
+  const themeLists = document.querySelectorAll(
+    ".publication-theme-list"
+  );
+
+
+  themeLists.forEach(function(themeList) {
+
+    const themeId = themeList.dataset.themeId;
+
+
+    publications.forEach(function(publication) {
+
+      const themeIds = publication
+        .dataset
+        .themeIds
+        .split(",")
+        .map(function(theme) {
+          return theme.trim();
+        });
+
+
+      if (themeIds.includes(themeId)) {
+
+        themeList.appendChild(
+          publication.cloneNode(true)
+        );
+
+      }
+
+    });
+
+  });
+
+});
 
 </script>

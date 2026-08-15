@@ -655,8 +655,9 @@ body {
 .publication-themes {
   display: flex;
   flex-wrap: wrap;
+  align-items: center;
 
-  gap: 6px;
+  gap: 5px;
 
   margin-top: 6px;
 }
@@ -675,37 +676,16 @@ body {
 
 
 /* Keyword text */
-// .publication-theme {
-//   display: inline-block;
+.publication-themes .publication-theme {
+  display: inline;
 
-//   padding: 2px 9px;
-
-//   border: 1px solid var(--accent);
-//   border-radius: 999px;
-
-//   color: var(--accent);
-//   background: transparent;
-
-//   font-size: 0.75rem;
-//   line-height: 1.5;
-
-//   text-decoration: none;
-//   white-space: nowrap;
-
-//   transition:
-//     color 0.15s ease,
-//     background-color 0.15s ease;
-// }
-.publication-theme {
-  display: inline-block;
-
-  padding: 1px 5px;
+  padding: 1px 4px;
 
   border: none;
-  border-radius: 3px;
+  border-radius: 0;
 
   color: var(--accent);
-  background: var(--accent-muted);
+  background-color: var(--accent-muted);
 
   font-size: 0.75rem;
   line-height: 1.5;
@@ -719,43 +699,9 @@ body {
 }
 
 
-// /* Linked themes */
-
-// a.publication-theme {
-//   color: var(--accent);
-
-//   background: transparent;
-
-//   border-color: var(--accent);
-
-//   text-decoration: none;
-// }
-
-
-// a.publication-theme:hover {
-//   color: var(--link);
-
-//   background: var(--accent);
-
-//   border-color: var(--accent);
-
-//   text-decoration: none;
-// }
-
-
-// /* Unlinked themes */
-
-// span.publication-theme {
-//   color: var(--accent);
-
-//   background: transparent;
-
-//   border-color: var(--accent);
-// }
-
 /* Linked themes */
 
-a.publication-theme {
+.publication-themes a.publication-theme {
   color: var(--accent);
 
   background: var(--accent-muted);
@@ -766,7 +712,7 @@ a.publication-theme {
 }
 
 
-a.publication-theme:hover {
+.publication-themes a.publication-theme:hover {
   color: var(--link-hover);
 
   background: var(--accent-muted);
@@ -778,8 +724,7 @@ a.publication-theme:hover {
 
 
 /* Unlinked themes */
-
-span.publication-theme {
+.publication-themes span.publication-theme {
   color: var(--accent);
 
   background: var(--accent-muted);

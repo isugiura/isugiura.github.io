@@ -685,12 +685,25 @@ body {
     background-color 0.15s ease;
 }
 
-.publication-theme:hover {
+/* Linked themes */
+
+a.publication-theme:hover {
   color: var(--link);
 
-  background: var(--link-hover);
+  background: var(--accent);
 
   text-decoration: none;
+}
+
+
+/* Unlinked themes */
+
+span.publication-theme {
+  color: var(--link);
+
+  background: var(--accent);
+
+  border-color: var(--accent);
 }
 
 

@@ -30,8 +30,7 @@
   --icon: #560319;
 
   --link: #F08080;
-  // --link-hover: #C11B17;
-  --link-hover: #E67451;
+  --link-hover: #C11B17;
 
   --border: #733635;
 }
@@ -279,7 +278,7 @@ body {
 
 
 .contact-info a {
-  color: var(--accent-muted);
+  color: var(--link);
 
   text-decoration: none;
 }
@@ -973,14 +972,14 @@ body {
 */
 
 .error-page .error-email {
-  color: var(--accent-muted);
+  color: var(--link);
 
   text-decoration: none;
 }
 
 
 .error-page .error-email:hover {
-  color: var(--accent-muted);
+  color: var(--link);
 
   text-decoration: none;
 }

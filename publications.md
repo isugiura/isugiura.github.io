@@ -146,7 +146,7 @@ permalink: /publications/
       >
 
         <h2 class="publication-theme-heading">
-          {{ theme.name }}
+          {{ theme.theme-name }}
         </h2>
 
 

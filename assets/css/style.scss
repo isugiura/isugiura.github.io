@@ -623,14 +623,14 @@ body {
 
 
 .publication-tab:hover {
-  color: var(--link);
+  color: var(--accent);
 }
 
 
 .publication-tab.active {
-  color: var(--link);
+  color: var(--accent);
 
-  border-bottom-color: var(--link);
+  border-bottom-color: var(--accent);
 }
 
 

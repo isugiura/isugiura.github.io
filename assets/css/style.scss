@@ -580,14 +580,14 @@ body {
 
 
 .publication-title {
-  margin-bottom: 3px;
+  margin-bottom: 2px;
 
   color: var(--text-main);
 
-  font-size: 1.05rem;
-  font-weight: 600;
+  font-size: 0.9rem;
+  font-weight: 500;
 
-  line-height: 1.5;
+  line-height: 1.2;
 }
 
 
@@ -598,7 +598,7 @@ body {
 
   font-size: 0.9rem;
 
-  line-height: 1.5;
+  line-height: 1.2;
 }
 
 
@@ -607,7 +607,7 @@ body {
 
   font-size: 0.9rem;
 
-  line-height: 1.5;
+  line-height: 1.2;
 }
 
 
@@ -626,6 +626,7 @@ body {
   color: var(--link);
 
   font-size: 0.85rem;
+  font-weight: 300;
 
   text-decoration: none;
 }
@@ -643,7 +644,7 @@ body {
 .my-name {
   color: var(--text-section);
 
-  font-weight: 700;
+  font-weight: 600;
 }
 
 
@@ -656,7 +657,7 @@ body {
 
   gap: 6px;
 
-  margin-top: 8px;
+  margin-top: 6px;
 }
 
 .publication-theme {
@@ -752,14 +753,14 @@ span.publication-theme {
 
 
 .publication-tab:hover {
-  color: var(--text-header);
+  color: var(--text-section);
 }
 
 
 .publication-tab.active {
-  color: var(--text-header);
+  color: var(--text-section);
   
-  border-bottom-color: 3px solid var(--text-header);
+  border-bottom-color: 3px solid var(--text-section);
 }
 
 
@@ -796,7 +797,12 @@ span.publication-theme {
 }
 
 
-.publication-theme-section:first-child .publication-theme-heading {
+.main-content h2.publication-year {
+  color: var(--accent);
+}
+
+
+.publication-year:first-child .publication-year {
   margin-top: 0;
   
   border-top: none;

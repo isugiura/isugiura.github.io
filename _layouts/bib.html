@@ -133,12 +133,30 @@
 
   {% if entry.theme %}
 
-    <div class="publication-theme">
+  <div class="publication-themes">
 
-      {{ entry.theme }}
+    {% assign themes = entry.theme | split: "," %}
 
-    </div>
+    {% for theme in themes %}
 
-  {% endif %}
+      {% assign theme_clean = theme | strip | downcase %}
+      {% assign theme_id = theme_clean
+        | replace: " ", "-"
+        | replace: "&", "and"
+        | replace: "/", "-"
+      %}
+
+      <a
+        class="publication-theme"
+        href="{{ '/research-interests/' | relative_url }}#{{ theme_id }}"
+      >
+        {{ theme_clean }}
+      </a>
+
+    {% endfor %}
+
+  </div>
+
+{% endif %}
 
 </div>

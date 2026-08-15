@@ -32,8 +32,8 @@ permalink: /research-interests/
 
       <div class="research-publications-list">
 
-        {% bibliography %}
-
+        {% bibliography --query @*[theme_id=climate-variability] %}
+      
       </div>
 
     </details>

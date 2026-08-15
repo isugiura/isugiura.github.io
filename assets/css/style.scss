@@ -778,6 +778,28 @@ span.publication-theme {
 
 
 /* =========================================================
+   PUBLICATION LISTS
+   ========================================================= */
+
+/*
+   Shared styling for publication groups.
+
+   This creates the vertical line beside the publications
+   while keeping the actual publication entries unchanged.
+*/
+
+.publication-year-list,
+.publication-theme-list,
+.publication-status-list {
+  margin-top: 20px;
+
+  padding-left: 20px;
+
+  border-left: 2px solid var(--border);
+}
+
+
+/* =========================================================
    PUBLICATIONS — BY YEAR
    ========================================================= */
 
@@ -807,15 +829,6 @@ span.publication-theme {
 }
 
 
-.publication-year-list {
-  margin-top: 20px;
-
-  padding-left: 20px;
-
-  border-left: 2px solid var(--border);
-}
-
-
 /* =========================================================
    PUBLICATIONS — BY RESEARCH THEME
    ========================================================= */
@@ -841,18 +854,48 @@ span.publication-theme {
 
 /* First theme: no space above it */
 
-.publication-view.active .publication-theme-section:first-child
+.publication-view.active
+.publication-theme-section:first-child
 .publication-theme-heading {
   margin-top: 0;
 }
 
 
-.publication-theme-list {
-  margin-top: 20px;
+/* =========================================================
+   PUBLICATIONS — BY STATUS
+   ========================================================= */
 
-  padding-left: 20px;
+/*
+   The status view uses .publication-status-list
+   for the same vertical-line treatment as the
+   year and research-theme views.
+*/
 
-  border-left: 2px solid var(--border);
+.main-content h2.publication-status-heading {
+  position: relative;
+
+  margin-top: 25px;
+  margin-bottom: 10px;
+
+  padding-top: 0;
+  padding-bottom: 7px;
+
+  border-top: none;
+  border-bottom: none;
+
+  color: var(--accent);
+
+  font-size: 1.35rem;
+  font-weight: 600;
+}
+
+
+/* First status section: no space above it */
+
+.publication-view.active
+.publication-status-section:first-child
+.publication-status-heading {
+  margin-top: 0;
 }
 
 
@@ -897,14 +940,21 @@ span.publication-theme {
 }
 
 
-.error-email {
+/*
+   The general .main-content a:hover rule changes
+   links to --link-hover. The 404 email is intentionally
+   kept at --link on hover, so this selector is more
+   specific and does not require !important.
+*/
+
+.error-page .error-email {
   color: var(--link);
 
   text-decoration: none;
 }
 
 
-.error-email:hover {
+.error-page .error-email:hover {
   color: var(--link);
 
   text-decoration: none;

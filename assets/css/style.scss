@@ -150,7 +150,7 @@ body {
    ========================================================= */
 
 .page-layout {
-  width: 100%;
+  width: calc(100% - 80px);
   max-width: 1200px;
 
   margin: 0 auto;

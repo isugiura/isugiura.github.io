@@ -35,10 +35,61 @@ permalink: /publications/
   class="publication-view active"
 >
 
-  {% bibliography %}
+  <!-- Hidden source bibliography -->
+
+  <div
+    id="year-publication-source"
+    style="display: none;"
+  >
+
+    {% bibliography %}
+
+  </div>
+
+
+  <div id="year-publication-lists">
+
+    <!-- SUBMITTED -->
+
+    <section class="publication-status-section">
+
+      <h2 class="publication-year">
+        Submitted
+      </h2>
+
+      <div
+        class="publication-status-list"
+        data-status="submitted"
+      >
+      </div>
+
+    </section>
+
+
+    <!-- IN PREPARATION -->
+
+    <section class="publication-status-section">
+
+      <h2 class="publication-year">
+        In Preparation
+      </h2>
+
+      <div
+        class="publication-status-list"
+        data-status="in-preparation"
+      >
+      </div>
+
+    </section>
+
+
+    <!-- PUBLISHED YEARS -->
+
+    <div id="year-sections"></div>
+
+  </div>
 
 </div>
-
 
 <!-- =========================================================
      BY RESEARCH THEME

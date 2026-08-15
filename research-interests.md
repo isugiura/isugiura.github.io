@@ -6,11 +6,10 @@ permalink: /research-interests/
 
 <h1>Research Interests</h1>
 
-<!--
-  Render the bibliography once.
-  The individual publication elements contain their theme_id
-  information through data-theme-ids in bib.html.
--->
+
+<!-- =========================================================
+     HIDDEN PUBLICATION SOURCE
+     ========================================================= -->
 
 <div
   id="research-publication-source"
@@ -20,29 +19,37 @@ permalink: /research-interests/
 </div>
 
 
+<!-- =========================================================
+     RESEARCH THEMES
+     ========================================================= -->
+
 {% for theme_pair in site.data.themes %}
 
   {% assign theme_id = theme_pair[0] %}
   {% assign theme = theme_pair[1] %}
 
+
   <section
     class="research-interest"
-    id="{{ theme_id }}"
+    id="research-theme-{{ theme_id }}"
   >
 
     <h2>
       {{ theme.theme-name }}
     </h2>
 
+
     <p>
       {{ theme.description }}
     </p>
+
 
     <details class="research-publications">
 
       <summary>
         Publications
       </summary>
+
 
       <div
         class="research-publications-list"
@@ -57,38 +64,57 @@ permalink: /research-interests/
 {% endfor %}
 
 
+<!-- =========================================================
+     JAVASCRIPT
+     ========================================================= -->
+
 <script>
 
 document.addEventListener("DOMContentLoaded", function() {
 
-  const source = document.getElementById(
-    "research-publication-source"
-  );
 
-  const publications = source.querySelectorAll(
-    ".publication"
-  );
+  const source =
+    document.getElementById(
+      "research-publication-source"
+    );
 
-  const themeLists = document.querySelectorAll(
-    ".research-publications-list"
-  );
+
+  const publications =
+    source.querySelectorAll(
+      ".publication"
+    );
+
+
+  const themeLists =
+    document.querySelectorAll(
+      ".research-publications-list"
+    );
 
 
   themeLists.forEach(function(themeList) {
 
-    const themeId = themeList.dataset.themeId;
+
+    const themeId =
+      themeList.dataset.themeId;
+
 
     publications.forEach(function(publication) {
 
-      const themeIds = publication
-        .dataset
-        .themeIds
+
+      const themeIds =
+        (
+          publication.dataset.themeIds || ""
+        )
         .split(",")
         .map(function(theme) {
+
           return theme.trim();
+
         });
 
+
       if (themeIds.includes(themeId)) {
+
 
         themeList.appendChild(
           publication.cloneNode(true)

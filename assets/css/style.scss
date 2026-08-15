@@ -25,8 +25,7 @@
   --text-main: #1C1C1C;
 
   --accent: #C11B17;
-  --accent-secondary: #FF7900;
-  // --accent-muted: #F7CAC9;
+  // --accent-muted: #FFDFDD;
   --accent-muted: #F2D4D7;
 
   --icon: #560319;
@@ -676,7 +675,7 @@ body {
 
 
 .publication-keyword {
-  color: var(--accent-secondary);
+  color: var(--text-main);
 
   white-space: nowrap;
 }
@@ -731,7 +730,7 @@ body {
 /* Linked themes */
 
 .publication-themes a.publication-theme {
-  color: var(--text-section);
+  color: var(--accent);
 
   background: var(--accent-muted);
 
@@ -754,7 +753,7 @@ body {
 
 /* Unlinked themes */
 .publication-themes span.publication-theme {
-  color: var(--text-section);
+  color: var(--accent);
 
   background: transparent;
 

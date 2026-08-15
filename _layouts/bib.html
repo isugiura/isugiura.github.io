@@ -3,18 +3,18 @@
 
 <div class="publication">
 
-  <!-- =========================================================
+  <!-- =====================================================
        TITLE
-       ========================================================= -->
+       ===================================================== -->
 
   <div class="publication-title">
     {{ entry.title }}
   </div>
 
 
-  <!-- =========================================================
+  <!-- =====================================================
        AUTHORS
-       ========================================================= -->
+       ===================================================== -->
 
   <div class="publication-authors">
 
@@ -53,9 +53,9 @@
   </div>
 
 
-  <!-- =========================================================
+  <!-- =====================================================
        JOURNAL
-       ========================================================= -->
+       ===================================================== -->
 
   <div class="publication-journal">
 
@@ -82,9 +82,9 @@
   </div>
 
 
-  <!-- =========================================================
+  <!-- =====================================================
        LINKS
-       ========================================================= -->
+       ===================================================== -->
 
   {% if entry.pdf or entry.doi or entry.code %}
 
@@ -127,32 +127,36 @@
   {% endif %}
 
 
-  <!-- =========================================================
+  <!-- =====================================================
        RESEARCH THEMES
-       ========================================================= -->
+       ===================================================== -->
 
-  {% if entry.theme %}
+  {% if entry.theme_id %}
 
     <div class="publication-themes">
 
-      {% assign themes = entry.theme | split: "," %}
+      {% assign themes = entry.theme_id | split: "," %}
 
       {% for theme in themes %}
 
-        {% assign theme_clean = theme | strip | downcase %}
+        {% assign theme_id = theme | strip %}
 
-        {% assign theme_id = theme_clean
-          | replace: " ", "-"
-          | replace: "&", "and"
-          | replace: "/", "-"
-        %}
+        {% if site.data.themes[theme_id] %}
 
-        <a
-          class="publication-theme"
-          href="{{ '/research-interests/' | relative_url }}#{{ theme_id }}"
-        >
-          {{ theme_clean }}
-        </a>
+          <a
+            class="publication-theme"
+            href="{{ '/research-interests/' | relative_url }}#{{ theme_id }}"
+          >
+            {{ site.data.themes[theme_id].name | downcase }}
+          </a>
+
+        {% else %}
+
+          <span class="publication-theme">
+            {{ theme_id | replace: "-", " " | downcase }}
+          </span>
+
+        {% endif %}
 
       {% endfor %}
 

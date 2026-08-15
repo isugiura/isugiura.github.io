@@ -13,8 +13,7 @@ plugins:
 # =========================
 
 scholar:
-
-  source: assets/files
+  source: assets/bibliography
   bibliography: papers.bib
 
   bibliography_template: bib
@@ -28,7 +27,7 @@ scholar:
   query: "@*"
 
   last_name:
-  - YourLastName
+    - YourLastName
 
   first_name:
     - YourFirstName

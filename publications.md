@@ -7,17 +7,6 @@ permalink: /publications/
 <h1>Publications</h1>
 
 
-<style>
-.publication-themes::before {
-  content: "Keywords:";
-  color: var(--text-main);
-  font-size: 0.75rem;
-  font-weight: 400;
-  margin-right: 4px;
-}
-</style>
-
-
 <div class="publication-tabs">
 
   <button
@@ -334,7 +323,6 @@ document.addEventListener("DOMContentLoaded", function() {
       publicationsByYear[year].forEach(
         function(publication) {
 
-
           list.appendChild(
             publication.cloneNode(true)
           );
@@ -414,7 +402,6 @@ document.addEventListener("DOMContentLoaded", function() {
 
     if (count === 0) {
 
-
       statusList
         .closest(
           ".publication-status-section"
@@ -484,6 +471,23 @@ document.addEventListener("DOMContentLoaded", function() {
 
       }
     );
+
+
+    /*
+       Hide empty research-theme sections.
+    */
+
+    if (
+      themeList.children.length === 0
+    ) {
+
+      themeList
+        .closest(
+          ".publication-theme-section"
+        )
+        .style.display = "none";
+
+    }
 
   });
 

@@ -152,15 +152,17 @@ body {
    ========================================================= */
 
 .page-layout {
-  width: calc(100% - 150px);
+  width: calc(100% - 120px);
   max-width: 1200px;
 
   margin: 0 auto;
+  transform: translateX(25px);
+
   padding-top: 75px;
 
   display: grid;
 
-  grid-template-columns: 250px 1fr;
+  grid-template-columns: 240px 1fr;
 
   flex: 1;
 }
@@ -759,7 +761,7 @@ span.publication-theme {
 .publication-tab.active {
   color: var(--text-section);
 
-  border-bottom: 5px solid var(--text-section);
+  border-bottom: 3.5px solid var(--text-section);
 }
 
 
@@ -779,29 +781,28 @@ span.publication-theme {
    PUBLICATIONS — BY YEAR
    ========================================================= */
 
-.publication-year {
-  margin-top: 10px;
+.main-content h2.publication-year {
+  position: relative;
+
+  margin-top: 25px;
   margin-bottom: 10px;
 
   padding-top: 0;
   padding-bottom: 7px;
 
+  border-top: none;
+  border-bottom: none;
+
   color: var(--accent);
 
   font-size: 1.35rem;
   font-weight: 600;
-
-  border-top: none;
-  border-bottom: none;
 }
 
 
-.main-content h2.publication-year {
-  color: var(--accent);
-}
+/* First year: no space above it */
 
-
-.publication-year-section:first-child .publication-year {
+.publication-view.active .publication-year:first-child {
   margin-top: 0;
 }
 
@@ -819,12 +820,7 @@ span.publication-theme {
    PUBLICATIONS — BY RESEARCH THEME
    ========================================================= */
 
-.publication-theme-section {
-  margin-bottom: 30px;
-}
-
-
-.publication-theme-heading {
+.main-content h2.publication-theme-heading {
   position: relative;
 
   margin-top: 25px;
@@ -833,38 +829,20 @@ span.publication-theme {
   padding-top: 0;
   padding-bottom: 7px;
 
+  border-top: none;
+  border-bottom: none;
+
   color: var(--accent);
 
   font-size: 1.35rem;
   font-weight: 600;
-
-  border-top: none;
-  border-bottom: none;
 }
 
 
-.main-content h2.publication-theme-heading {
-  color: var(--accent);
-}
+/* First theme: no space above it */
 
-
-/* Short underline */
-
-.publication-theme-heading::after {
-  content: "";
-
-  display: block;
-
-  width: 80px;
-  height: 3px;
-
-  margin-top: 6px;
-
-  background: var(--border);
-}
-
-
-.publication-theme-section:first-child .publication-theme-heading {
+.publication-view.active .publication-theme-section:first-child
+.publication-theme-heading {
   margin-top: 0;
 }
 

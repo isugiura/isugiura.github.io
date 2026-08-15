@@ -661,16 +661,50 @@ body {
 }
 
 
+.publication-themes::before {
+  content: "Keywords:";
+
+  color: var(--text-main);
+
+  font-size: 0.75rem;
+  font-weight: 400;
+
+  margin-right: 2px;
+}
+
+
+/* Keyword text */
+// .publication-theme {
+//   display: inline-block;
+
+//   padding: 2px 9px;
+
+//   border: 1px solid var(--accent);
+//   border-radius: 999px;
+
+//   color: var(--accent);
+//   background: transparent;
+
+//   font-size: 0.75rem;
+//   line-height: 1.5;
+
+//   text-decoration: none;
+//   white-space: nowrap;
+
+//   transition:
+//     color 0.15s ease,
+//     background-color 0.15s ease;
+// }
 .publication-theme {
   display: inline-block;
 
-  padding: 2px 9px;
+  padding: 1px 5px;
 
-  border: 1px solid var(--accent);
-  border-radius: 999px;
+  border: none;
+  border-radius: 3px;
 
   color: var(--accent);
-  background: transparent;
+  background: var(--accent-muted);
 
   font-size: 0.75rem;
   line-height: 1.5;
@@ -684,25 +718,59 @@ body {
 }
 
 
+// /* Linked themes */
+
+// a.publication-theme {
+//   color: var(--accent);
+
+//   background: transparent;
+
+//   border-color: var(--accent);
+
+//   text-decoration: none;
+// }
+
+
+// a.publication-theme:hover {
+//   color: var(--link);
+
+//   background: var(--accent);
+
+//   border-color: var(--accent);
+
+//   text-decoration: none;
+// }
+
+
+// /* Unlinked themes */
+
+// span.publication-theme {
+//   color: var(--accent);
+
+//   background: transparent;
+
+//   border-color: var(--accent);
+// }
+
 /* Linked themes */
 
 a.publication-theme {
   color: var(--accent);
 
-  background: transparent;
+  background: var(--accent-muted);
 
-  border-color: var(--accent);
+  border: none;
 
   text-decoration: none;
 }
 
 
 a.publication-theme:hover {
-  color: var(--link);
+  color: var(--link-hover);
 
-  background: var(--accent);
+  background: var(--accent-muted);
 
-  border-color: var(--accent);
+  border: none;
 
   text-decoration: none;
 }
@@ -713,9 +781,9 @@ a.publication-theme:hover {
 span.publication-theme {
   color: var(--accent);
 
-  background: transparent;
+  background: var(--accent-muted);
 
-  border-color: var(--accent);
+  border: none;
 }
 
 
@@ -782,15 +850,16 @@ span.publication-theme {
    ========================================================= */
 
 /*
-   Shared styling for publication groups.
+   All publication lists use the same vertical-line
+   treatment, including:
 
-   This creates the vertical line beside the publications
-   while keeping the actual publication entries unchanged.
+   - Submitted
+   - In Preparation
+   - Publications by Year
+   - Publications by Research Theme
 */
 
-.publication-year-list,
-.publication-theme-list,
-.publication-status-list {
+.publication-list {
   margin-top: 20px;
 
   padding-left: 20px;
@@ -824,7 +893,10 @@ span.publication-theme {
 
 /* First year: no space above it */
 
-.publication-view.active .publication-year:first-child {
+// .publication-view.active .publication-year:first-child {
+//   margin-top: 0;
+// }
+.publication-year-section:first-child .publication-year {
   margin-top: 0;
 }
 
@@ -854,9 +926,12 @@ span.publication-theme {
 
 /* First theme: no space above it */
 
-.publication-view.active
-.publication-theme-section:first-child
-.publication-theme-heading {
+// .publication-view.active
+// .publication-theme-section:first-child
+// .publication-theme-heading {
+//   margin-top: 0;
+// }
+.publication-theme-section:first-child .publication-theme-heading {
   margin-top: 0;
 }
 
@@ -892,9 +967,12 @@ span.publication-theme {
 
 /* First status section: no space above it */
 
-.publication-view.active
-.publication-status-section:first-child
-.publication-status-heading {
+// .publication-view.active
+// .publication-status-section:first-child
+// .publication-status-heading {
+//   margin-top: 0;
+// }
+.publication-status-section:first-child .publication-year {
   margin-top: 0;
 }
 

@@ -225,7 +225,7 @@ body {
   color: var(--accent);
 
   font-size: 0.88rem;
-  font-weight: 300;
+  font-weight: 500;
 
   line-height: 1.4;
 }
@@ -728,7 +728,7 @@ span.publication-theme {
 
   margin-bottom: 35px;
 
-  border-bottom: 1px solid var(--border);
+  border-bottom: 2px solid var(--border);
 }
 
 
@@ -736,7 +736,7 @@ span.publication-theme {
   padding: 8px 14px;
 
   border: none;
-  border-bottom: 2px solid transparent;
+  border-bottom: 3px solid transparent;
 
   background: transparent;
 
@@ -744,7 +744,8 @@ span.publication-theme {
 
   font-family: inherit;
 
-  font-size: 0.9rem;
+  font-size: 1.2rem;
+  font-weight: 600;
 
   cursor: pointer;
 }

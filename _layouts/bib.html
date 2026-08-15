@@ -194,6 +194,15 @@
             {{ theme_data["theme-name"] }}
           </a>
 
+        {% else %}
+
+          <span
+            class="publication-theme"
+            data-theme-id="{{ theme_id }}"
+          >
+            {{ theme_id | replace: "-", " " }}
+          </span>
+
         {% endif %}
 
       {% endfor %}

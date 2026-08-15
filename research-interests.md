@@ -32,7 +32,7 @@ permalink: /research-interests/
 
       <div class="research-publications-list">
 
-        {% bibliography --query "@*[theme_id=climate-variability, volcanic-forcing]" %}
+        {% bibliography --query "@*[theme_id ~= climate-variability]" %}
       
       </div>
 

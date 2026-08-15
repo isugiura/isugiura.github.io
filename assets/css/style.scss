@@ -687,6 +687,16 @@ body {
 
 /* Linked themes */
 
+a.publication-theme {
+  color: var(--accent);
+
+  background: transparent;
+
+  border-color: var(--accent);
+
+  text-decoration: none;
+}
+
 a.publication-theme:hover {
   color: var(--link);
 

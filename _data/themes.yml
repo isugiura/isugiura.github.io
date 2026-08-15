@@ -1,22 +1,19 @@
 climate-variability:
-  keyword: climate variability
-  section-name: Modes of variability and their teleconnections
+  theme-name: Modes of variability and their teleconnections
   description: >
     My research examines variability in the climate system across
     different spatial and temporal scales, with a particular focus on
     understanding the mechanisms driving regional and global changes.
 
 volcanic-forcing:
-  keyword: volcanic forcing
-  section-name: Interactions of volcanic forcing and the climate system
+  theme-name: Interactions of volcanic forcing and the climate system
   description: >
     My research investigates the climatic impacts of volcanic eruptions,
     including the spatial and temporal evolution of post-eruption
     temperature and precipitation responses.
 
 climate-dynamics:
-  keyword: climate dynamics
-  section-name: Basic physical understanding of the climate system
+  theme-name: Basic physical understanding of the climate system
   description: >
     I study interactions among different components of the climate
     system and how large-scale modes of climate variability influence

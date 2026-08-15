@@ -580,12 +580,48 @@ body {
 
 /* Publication research theme */
 
+.publication-themes {
+  display: flex;
+
+  flex-wrap: wrap;
+
+  gap: 6px;
+
+  margin-top: 8px;
+}
+
 .publication-theme {
-  margin-top: 5px;
+  display: inline-block;
+
+  padding: 2px 9px;
+
+  border: 1px solid var(--accent);
+
+  border-radius: 999px;
 
   color: var(--accent);
 
-  font-size: 0.82rem;
+  background: transparent;
+
+  font-size: 0.75rem;
+
+  line-height: 1.5;
+
+  text-decoration: none;
+
+  white-space: nowrap;
+
+  transition:
+    color 0.15s ease,
+    background-color 0.15s ease;
+}
+
+.publication-theme:hover {
+  color: var(--bg-main);
+
+  background: var(--accent);
+
+  text-decoration: none;
 }
 
 

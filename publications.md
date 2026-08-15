@@ -7,6 +7,17 @@ permalink: /publications/
 <h1>Publications</h1>
 
 
+<style>
+.publication-themes::before {
+  content: "Keywords:";
+  color: var(--text-main);
+  font-size: 0.75rem;
+  font-weight: 400;
+  margin-right: 4px;
+}
+</style>
+
+
 <div class="publication-tabs">
 
   <button

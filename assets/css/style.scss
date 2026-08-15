@@ -25,6 +25,7 @@
   --text-main: #1C1C1C;
 
   --accent: #C11B17;
+  --accent-muted: #F08080;
 
   --icon: #560319;
 
@@ -277,7 +278,7 @@ body {
 
 
 .contact-info a {
-  color: var(--link);
+  color: var(--accent-muted);
 
   text-decoration: none;
 }
@@ -625,7 +626,7 @@ body {
   color: var(--link);
 
   font-size: 0.85rem;
-  font-weight: 300;
+  font-weight: 500;
 
   text-decoration: none;
 }
@@ -666,8 +667,8 @@ body {
 
   color: var(--text-main);
 
-  font-size: 0.75rem;
-  font-weight: 400;
+  font-size: 0.8rem;
+  font-weight: 500;
 
   margin-right: 2px;
 }
@@ -1026,14 +1027,14 @@ span.publication-theme {
 */
 
 .error-page .error-email {
-  color: var(--link);
+  color: var(--accent-muted);
 
   text-decoration: none;
 }
 
 
 .error-page .error-email:hover {
-  color: var(--link);
+  color: var(--accent-muted);
 
   text-decoration: none;
 }

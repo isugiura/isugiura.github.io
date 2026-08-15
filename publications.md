@@ -35,6 +35,8 @@ permalink: /publications/
   class="publication-view active"
 >
 
+  <!-- Hidden source bibliography -->
+
   <div
     id="year-publication-source"
     style="display: none;"
@@ -47,7 +49,10 @@ permalink: /publications/
 
   <div id="year-publication-lists">
 
-    <!-- Submitted -->
+
+    <!-- =====================================================
+         SUBMITTED
+         ===================================================== -->
 
     <section class="publication-status-section">
 
@@ -56,7 +61,7 @@ permalink: /publications/
       </h2>
 
       <div
-        class="publication-status-list"
+        class="publication-status-list publication-list"
         data-status="submitted"
       >
       </div>
@@ -64,7 +69,9 @@ permalink: /publications/
     </section>
 
 
-    <!-- In Preparation -->
+    <!-- =====================================================
+         IN PREPARATION
+         ===================================================== -->
 
     <section class="publication-status-section">
 
@@ -73,7 +80,7 @@ permalink: /publications/
       </h2>
 
       <div
-        class="publication-status-list"
+        class="publication-status-list publication-list"
         data-status="in-preparation"
       >
       </div>
@@ -81,7 +88,9 @@ permalink: /publications/
     </section>
 
 
-    <!-- Published by year -->
+    <!-- =====================================================
+         PUBLISHED BY YEAR
+         ===================================================== -->
 
     <div id="year-sections"></div>
 
@@ -99,6 +108,8 @@ permalink: /publications/
   class="publication-view"
 >
 
+  <!-- Hidden source bibliography -->
+
   <div
     id="theme-publication-source"
     style="display: none;"
@@ -111,10 +122,12 @@ permalink: /publications/
 
   <div id="theme-publication-lists">
 
+
     {% for theme_pair in site.data.themes %}
 
       {% assign theme_id = theme_pair[0] %}
       {% assign theme = theme_pair[1] %}
+
 
       <section
         class="publication-theme-section"
@@ -125,8 +138,9 @@ permalink: /publications/
           {{ theme.name }}
         </h2>
 
+
         <div
-          class="publication-theme-list"
+          class="publication-list"
           data-theme-id="{{ theme_id }}"
         >
         </div>
@@ -134,6 +148,7 @@ permalink: /publications/
       </section>
 
     {% endfor %}
+
 
   </div>
 
@@ -159,17 +174,22 @@ document.addEventListener("DOMContentLoaded", function() {
 
       button.addEventListener("click", function() {
 
+
         document
           .querySelectorAll(".publication-tab")
           .forEach(function(tab) {
+
             tab.classList.remove("active");
+
           });
 
 
         document
           .querySelectorAll(".publication-view")
           .forEach(function(view) {
+
             view.classList.remove("active");
+
           });
 
 
@@ -189,31 +209,38 @@ document.addEventListener("DOMContentLoaded", function() {
      SOURCE PUBLICATIONS
      ========================================================= */
 
-  const yearSource = document.getElementById(
-    "year-publication-source"
-  );
+  const yearSource =
+    document.getElementById(
+      "year-publication-source"
+    );
 
-  const yearPublications = yearSource.querySelectorAll(
-    ".publication"
-  );
+
+  const yearPublications =
+    yearSource.querySelectorAll(
+      ".publication"
+    );
 
 
   /* =========================================================
      BY YEAR
      ========================================================= */
 
-  const yearSections = document.getElementById(
-    "year-sections"
-  );
+  const yearSections =
+    document.getElementById(
+      "year-sections"
+    );
+
 
   const publicationsByYear = {};
 
 
   yearPublications.forEach(function(publication) {
 
-    const journalElement = publication.querySelector(
-      ".publication-journal"
-    );
+
+    const journalElement =
+      publication.querySelector(
+        ".publication-journal"
+      );
 
 
     if (!journalElement) {
@@ -236,7 +263,9 @@ document.addEventListener("DOMContentLoaded", function() {
 
 
     if (!publicationsByYear[year]) {
+
       publicationsByYear[year] = [];
+
     }
 
 
@@ -250,38 +279,50 @@ document.addEventListener("DOMContentLoaded", function() {
   Object
     .keys(publicationsByYear)
     .sort(function(a, b) {
+
       return b - a;
+
     })
     .forEach(function(year) {
 
-      const section = document.createElement(
-        "section"
-      );
+
+      const section =
+        document.createElement(
+          "section"
+        );
+
 
       section.className =
         "publication-year-section";
 
 
-      const heading = document.createElement(
-        "h2"
-      );
+      const heading =
+        document.createElement(
+          "h2"
+        );
+
 
       heading.className =
         "publication-year";
 
-      heading.textContent = year;
+
+      heading.textContent =
+        year;
 
 
-      const list = document.createElement(
-        "div"
-      );
+      const list =
+        document.createElement(
+          "div"
+        );
+
 
       list.className =
-        "publication-year-list";
+        "publication-list";
 
 
       publicationsByYear[year].forEach(
         function(publication) {
+
 
           list.appendChild(
             publication.cloneNode(true)
@@ -291,10 +332,19 @@ document.addEventListener("DOMContentLoaded", function() {
       );
 
 
-      section.appendChild(heading);
-      section.appendChild(list);
+      section.appendChild(
+        heading
+      );
 
-      yearSections.appendChild(section);
+
+      section.appendChild(
+        list
+      );
+
+
+      yearSections.appendChild(
+        section
+      );
 
     });
 
@@ -303,47 +353,61 @@ document.addEventListener("DOMContentLoaded", function() {
      SUBMITTED / IN PREPARATION
      ========================================================= */
 
-  const statusLists = document.querySelectorAll(
-    ".publication-status-list"
-  );
+  const statusLists =
+    document.querySelectorAll(
+      ".publication-status-list"
+    );
 
 
   statusLists.forEach(function(statusList) {
 
-    const status = statusList.dataset.status;
+
+    const status =
+      statusList.dataset.status;
+
 
     let count = 0;
 
 
-    yearPublications.forEach(function(publication) {
-
-      const publicationStatus =
-        (
-          publication.dataset.status || ""
-        )
-        .trim()
-        .toLowerCase();
+    yearPublications.forEach(
+      function(publication) {
 
 
-      if (publicationStatus === status) {
+        const publicationStatus =
+          (
+            publication.dataset.status || ""
+          )
+          .trim()
+          .toLowerCase();
 
-        statusList.appendChild(
-          publication.cloneNode(true)
-        );
 
-        count++;
+        if (
+          publicationStatus === status
+        ) {
+
+
+          statusList.appendChild(
+            publication.cloneNode(true)
+          );
+
+
+          count++;
+
+        }
 
       }
-
-    });
+    );
 
 
     /* Hide empty sections */
 
     if (count === 0) {
 
+
       statusList
-        .closest(".publication-status-section")
+        .closest(
+          ".publication-status-section"
+        )
         .style.display = "none";
 
     }
@@ -355,47 +419,63 @@ document.addEventListener("DOMContentLoaded", function() {
      BY RESEARCH THEME
      ========================================================= */
 
-  const themeSource = document.getElementById(
-    "theme-publication-source"
-  );
+  const themeSource =
+    document.getElementById(
+      "theme-publication-source"
+    );
 
-  const themePublications = themeSource.querySelectorAll(
-    ".publication"
-  );
 
-  const themeLists = document.querySelectorAll(
-    ".publication-theme-list"
-  );
+  const themePublications =
+    themeSource.querySelectorAll(
+      ".publication"
+    );
+
+
+  const themeLists =
+    document.querySelectorAll(
+      ".publication-list[data-theme-id]"
+    );
 
 
   themeLists.forEach(function(themeList) {
 
-    const themeId = themeList.dataset.themeId;
+
+    const themeId =
+      themeList.dataset.themeId;
 
 
-    themePublications.forEach(function(publication) {
-
-      const themeIds =
-        (
-          publication.dataset.themeIds || ""
-        )
-        .split(",")
-        .map(function(theme) {
-          return theme.trim();
-        });
+    themePublications.forEach(
+      function(publication) {
 
 
-      if (themeIds.includes(themeId)) {
+        const themeIds =
+          (
+            publication.dataset.themeIds || ""
+          )
+          .split(",")
+          .map(function(theme) {
 
-        themeList.appendChild(
-          publication.cloneNode(true)
-        );
+            return theme.trim();
+
+          });
+
+
+        if (
+          themeIds.includes(themeId)
+        ) {
+
+
+          themeList.appendChild(
+            publication.cloneNode(true)
+          );
+
+        }
 
       }
-
-    });
+    );
 
   });
+
 
 });
 

@@ -651,6 +651,43 @@ body {
 
 
 /* =========================================================
+   PUBLICATION KEYWORDS
+   ========================================================= */
+
+.publication-keywords {
+  margin-top: 6px;
+
+  color: var(--text-main);
+
+  font-size: 0.8rem;
+  line-height: 1.5;
+}
+
+
+.publication-label {
+  color: var(--text-main);
+
+  font-weight: 400;
+
+  margin-right: 4px;
+}
+
+
+.publication-keyword {
+  color: var(--accent);
+
+  white-space: nowrap;
+}
+
+
+.publication-keyword:not(:last-child)::after {
+  content: " · ";
+
+  color: var(--text-main);
+}
+
+
+/* =========================================================
    PUBLICATION RESEARCH THEMES
    ========================================================= */
 
@@ -662,18 +699,6 @@ body {
   gap: 5px;
 
   margin-top: 6px;
-}
-
-
-.publication-themes::before {
-  content: "Keywords:";
-
-  color: var(--text-main);
-
-  font-size: 0.8rem;
-  font-weight: 500;
-
-  margin-right: 2px;
 }
 
 

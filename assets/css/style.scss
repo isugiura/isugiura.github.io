@@ -712,7 +712,7 @@ body {
   border-radius: 0;
 
   color: var(--accent);
-  background-color: var(--accent-muted);
+  // background-color: var(--accent-muted);
 
   font-size: 0.75rem;
   line-height: 1.5;
@@ -729,7 +729,7 @@ body {
 /* Linked themes */
 
 .publication-themes a.publication-theme {
-  color: var(--accent);
+  color: var(--link-hover);
 
   background: var(--accent-muted);
 
@@ -740,7 +740,7 @@ body {
 
 
 .publication-themes a.publication-theme:hover {
-  color: var(--link-hover);
+  color: var(--link);
 
   background: var(--accent-muted);
 
@@ -752,7 +752,7 @@ body {
 
 /* Unlinked themes */
 .publication-themes span.publication-theme {
-  color: var(--accent);
+  color: var(--text-main);
 
   background: transparent;
 
@@ -899,55 +899,44 @@ body {
 
 /* First theme: no space above it */
 
-// .publication-view.active
-// .publication-theme-section:first-child
-// .publication-theme-heading {
-//   margin-top: 0;
-// }
 .publication-theme-section:first-child .publication-theme-heading {
   margin-top: 0;
 }
 
 
-/* =========================================================
-   PUBLICATIONS — BY STATUS
-   ========================================================= */
+// /* =========================================================
+//    PUBLICATIONS — BY STATUS
+//    ========================================================= */
 
-/*
-   The status view uses .publication-status-list
-   for the same vertical-line treatment as the
-   year and research-theme views.
-*/
+// /*
+//    The status view uses .publication-status-list
+//    for the same vertical-line treatment as the
+//    year and research-theme views.
+// */
 
-.main-content h2.publication-status-heading {
-  position: relative;
+// // .main-content h2.publication-status-heading {
+// //   position: relative;
 
-  margin-top: 25px;
-  margin-bottom: 10px;
+// //   margin-top: 25px;
+// //   margin-bottom: 10px;
 
-  padding-top: 0;
-  padding-bottom: 7px;
+// //   padding-top: 0;
+// //   padding-bottom: 7px;
 
-  border-top: none;
-  border-bottom: none;
+// //   border-top: none;
+// //   border-bottom: none;
 
-  color: var(--accent);
+// //   color: var(--accent);
 
-  font-size: 1.35rem;
-  font-weight: 600;
-}
+// //   font-size: 1.35rem;
+// //   font-weight: 600;
+// // }
 
 
-/* First status section: no space above it */
-
-// .publication-view.active
-// .publication-status-section:first-child
-// .publication-status-heading {
+// /* First status section: no space above it */
+// .publication-status-section:first-child .publication-year {
 //   margin-top: 0;
 // }
-.publication-status-section:first-child .publication-year {
-  margin-top: 0;
-}
 
 
 /* =========================================================

@@ -25,7 +25,9 @@
   --text-main: #1C1C1C;
 
   --accent: #C11B17;
-  --accent-muted: #F7CAC9;
+  --accent-secondary: #FF7900;
+  // --accent-muted: #F7CAC9;
+  --accent-muted: #F2D4D7;
 
   --icon: #560319;
 
@@ -522,7 +524,7 @@ body {
 
   padding-top: 25px;
 
-  color: var(--text-section);
+  color: var(--accent);
 
   font-size: 1.5rem;
 
@@ -667,14 +669,14 @@ body {
 .publication-label {
   color: var(--text-main);
 
-  font-weight: 400;
+  font-weight: 600;
 
   margin-right: 4px;
 }
 
 
 .publication-keyword {
-  color: var(--accent);
+  color: var(--accent-secondary);
 
   white-space: nowrap;
 }
@@ -711,7 +713,7 @@ body {
   border: none;
   border-radius: 0;
 
-  color: var(--accent);
+  color: var(--text-section);
   // background-color: var(--accent-muted);
 
   font-size: 0.75rem;
@@ -729,7 +731,7 @@ body {
 /* Linked themes */
 
 .publication-themes a.publication-theme {
-  color: var(--link-hover);
+  color: var(--text-section);
 
   background: var(--accent-muted);
 
@@ -752,7 +754,7 @@ body {
 
 /* Unlinked themes */
 .publication-themes span.publication-theme {
-  color: var(--text-main);
+  color: var(--text-section);
 
   background: transparent;
 

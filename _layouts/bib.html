@@ -1,12 +1,10 @@
 ---
 ---
 
-<pre>
-theme_id = {{ entry.theme_id | inspect }}
-</pre>
-
-<div class="publication">
-
+<div
+  class="publication"
+  data-theme-ids="{{ entry.theme_id | escape }}"
+>
   <!-- =====================================================
        TITLE
        ===================================================== -->

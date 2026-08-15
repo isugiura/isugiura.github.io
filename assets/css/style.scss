@@ -20,14 +20,14 @@
 
   --text-section: #560319;
   --text-main: #1C1C1C;
-  --accent: #733635;
+  --accent: #C11B17;
 
   --icon: #560319;
 
   // --link: #E67451;
   // --link-hover: #C34A2C;
   --link: #F08080;
-  --link-hover: #733635;
+  --link-hover: #C11B17;
 
   --border: #733635;
 }
@@ -721,6 +721,21 @@ body {
   margin: 0 auto 10px;
 
   color: var(--text-main);
+}
+
+
+.error-email {
+  
+  color: var(--link);
+  
+  text-decoration: none;
+}
+
+.error-email:hover {
+  
+  color: var(--link);
+  
+  text-decoration: none;
 }
 
 

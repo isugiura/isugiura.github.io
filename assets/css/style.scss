@@ -501,6 +501,75 @@ body {
 }
 
 
+/* =========================
+   RESEARCH INTERESTS
+   ========================= */
+
+.research-interest {
+  margin-bottom: 50px;
+}
+
+
+.research-interest h2 {
+  margin-top: 45px;
+  margin-bottom: 15px;
+
+  color: var(--text-section);
+
+  font-size: 1.5rem;
+
+  border-top: 1px solid var(--border);
+
+  padding-top: 25px;
+}
+
+
+.research-interest > p {
+  margin-bottom: 20px;
+}
+
+
+/* =========================
+   RESEARCH PUBLICATIONS
+   ========================= */
+
+.research-publications {
+  margin-top: 15px;
+}
+
+
+.research-publications summary {
+  display: inline-block;
+
+  color: var(--link);
+
+  font-size: 0.9rem;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  list-style-position: outside;
+}
+
+
+.research-publications summary:hover {
+  color: var(--link-hover);
+}
+
+
+/* =========================
+   PUBLICATION LIST
+   ========================= */
+
+.research-publications-list {
+  margin-top: 20px;
+
+  padding-left: 20px;
+
+  border-left: 2px solid var(--border);
+}
+
+
 /* =========================================================
    PUBLICATIONS
    ========================================================= */

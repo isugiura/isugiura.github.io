@@ -726,7 +726,7 @@ span.publication-theme {
 
   gap: 8px;
 
-  margin-bottom: 35px;
+  margin-bottom: 15px;
 
   border-bottom: 2px solid var(--border);
 }
@@ -736,7 +736,7 @@ span.publication-theme {
   padding: 8px 14px;
 
   border: none;
-  border-bottom: 3px solid transparent;
+  border-bottom: 1px solid transparent;
 
   background: transparent;
 
@@ -817,22 +817,12 @@ span.publication-theme {
 }
 
 
-.publication-theme-heading::after {
-  content: "";
-
-  display: block;
-
-  width: 80px;
-  height: 3px;
-
-  margin-top: 6px;
-
-  background: var(--border);
+.main-content h2.publication-theme-heading {
+  color: var(--accent);
 }
 
 
-.publication-theme-section:first-child
-.publication-theme-heading {
+.publication-theme-section:first-child .publication-theme-heading {
   margin-top: 0;
 }
 

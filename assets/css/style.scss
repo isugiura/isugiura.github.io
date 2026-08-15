@@ -142,12 +142,12 @@ body {
   display: grid;
   grid-template-columns: 250px 1fr;
 
-  /*
-   * Keep the content area tall enough
-   * to contain the sidebar without
-   * overlapping the footer.
-   */
-  min-height: calc(100vh - 75px - 45px);
+  // /*
+  //  * Keep the content area tall enough
+  //  * to contain the sidebar without
+  //  * overlapping the footer.
+  //  */
+  // min-height: calc(100vh - 75px - 45px);
 
   flex: 1;
 }
@@ -169,7 +169,8 @@ body {
 
   top: 75px;
 
-  min-height: calc(100vh - 75px - 45px);
+  // min-height: calc(100vh - 75px - 45px);
+  min-height: calc(100vh - 120px);
 
   height: auto;
 
@@ -416,8 +417,9 @@ body {
 
   .page-layout {
     grid-template-columns: 1fr;
+    flex: none;
 
-    min-height: auto;
+    // min-height: auto;
   }
 
   .sidebar {

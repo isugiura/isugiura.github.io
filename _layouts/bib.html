@@ -3,9 +3,10 @@
 
 <div
   class="publication"
-  data-theme-ids="{{ entry.theme_id | escape }}"
+  data-theme-ids="{{ entry.themes | escape }}"
   data-status="{{ entry.status | escape }}"
 >
+
   <!-- =====================================================
        TITLE
        ===================================================== -->
@@ -129,33 +130,69 @@
 
 
   <!-- =====================================================
+       KEYWORDS
+       ===================================================== -->
+
+  {% if entry.keywords %}
+
+    {% assign keyword_list = entry.keywords | split: "," %}
+
+    <div class="publication-keywords">
+
+      <span class="publication-label">
+        Keywords:
+      </span>
+
+      {% for keyword in keyword_list %}
+
+        {% assign keyword_display =
+          keyword
+          | strip
+          | replace: "-", " "
+        %}
+
+        <span class="publication-keyword">
+          {{ keyword_display }}
+        </span>
+
+      {% endfor %}
+
+    </div>
+
+  {% endif %}
+
+
+  <!-- =====================================================
        RESEARCH THEMES
        ===================================================== -->
 
-  {% if entry.theme_id %}
+  {% if entry.themes %}
 
-    <div class="publication-themes">
+    {% assign theme_list = entry.themes | split: "," %}
 
-      {% assign themes = entry.theme_id | split: "," %}
+    <div
+      class="publication-themes"
+      data-theme-ids="{{ entry.themes | escape }}"
+    >
 
-      {% for theme in themes %}
+      <span class="publication-label publication-theme-label">
+        Relevant research theme(s):
+      </span>
+
+      {% for theme in theme_list %}
 
         {% assign theme_id = theme | strip %}
+        {% assign theme_data = site.data.themes[theme_id] %}
 
-        {% if site.data.themes[theme_id] %}
+        {% if theme_data %}
 
           <a
             class="publication-theme"
-            href="{{ '/research-interests/' | relative_url }}#{{ theme_id | strip }}"
+            data-theme-id="{{ theme_id }}"
+            href="{{ '/research-interests/' | relative_url }}#research-theme-{{ theme_id }}"
           >
-            {{ site.data.themes[theme_id].keyword | downcase }}
+            {{ theme_data["theme-name"] }}
           </a>
-
-        {% else %}
-
-          <span class="publication-theme">
-            {{ theme_id | replace: "-", " " | downcase }}
-          </span>
 
         {% endif %}
 

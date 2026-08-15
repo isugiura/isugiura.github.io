@@ -511,6 +511,8 @@ body {
 
 .research-interest {
   margin-bottom: 50px;
+
+  scroll-margin-top: 100px;
 }
 
 
@@ -727,7 +729,7 @@ body {
 .publication-themes span.publication-theme {
   color: var(--accent);
 
-  background: var(--accent-muted);
+  background: transparent;
 
   border: none;
 }

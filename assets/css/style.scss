@@ -728,7 +728,7 @@ span.publication-theme {
 
   margin-bottom: 15px;
 
-  border-bottom: 2px solid var(--border);
+  border-bottom: 1px solid var(--border);
 }
 
 
@@ -744,7 +744,7 @@ span.publication-theme {
 
   font-family: inherit;
 
-  font-size: 1.2rem;
+  font-size: 1.0rem;
   font-weight: 600;
 
   cursor: pointer;
@@ -752,14 +752,14 @@ span.publication-theme {
 
 
 .publication-tab:hover {
-  color: var(--accent);
+  color: var(--text-header);
 }
 
 
 .publication-tab.active {
-  color: var(--accent);
-
-  border-bottom-color: var(--accent);
+  color: var(--text-header);
+  
+  border-bottom-color: 3px solid var(--text-header);
 }
 
 
@@ -780,18 +780,28 @@ span.publication-theme {
    ========================================================= */
 
 .publication-year {
-  margin-top: 40px;
-  margin-bottom: 22px;
+  margin-top: 10px;
+  margin-bottom: 10px;
 
+  padding-top: 0;
   padding-bottom: 7px;
 
-  border-bottom: 1px solid var(--border);
+  border-top: none;
+  border-bottom: none;
 
-  color: var(--text-section);
+  color: var(--accent);
 
   font-size: 1.35rem;
   font-weight: 600;
 }
+
+
+.publication-theme-section:first-child .publication-theme-heading {
+  margin-top: 0;
+  
+  border-top: none;
+}
+
 
 
 /* =========================================================
@@ -824,6 +834,8 @@ span.publication-theme {
 
 .publication-theme-section:first-child .publication-theme-heading {
   margin-top: 0;
+  
+  border-top: none;
 }
 
 

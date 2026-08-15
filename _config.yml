@@ -13,7 +13,7 @@ plugins:
 # =========================
 
 scholar:
-  source: assets/bibliography
+  source: assets/files
   bibliography: papers.bib
 
   bibliography_template: bib

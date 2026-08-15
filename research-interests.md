@@ -48,13 +48,7 @@ permalink: /research-interests/
 
       <div class="research-publications-list">
 
-        {% bibliography
-           --query "theme_id = {{ theme_id }}"
-           --sort_by year
-           --order descending
-           --group_by year
-           --group_order descending
-        %}
+        {% bibliography %}
 
       </div>
 

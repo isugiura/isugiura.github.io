@@ -641,7 +641,7 @@ body {
 /* Your name */
 
 .my-name {
-  color: var(--accent);
+  color: var(--text-section);
 
   font-weight: 700;
 }
@@ -686,9 +686,9 @@ body {
 }
 
 .publication-theme:hover {
-  color: var(--bg-main);
+  color: var(--link);
 
-  background: var(--accent);
+  background: var(--link-hover);
 
   text-decoration: none;
 }

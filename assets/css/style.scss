@@ -692,16 +692,16 @@ a.publication-theme:hover {
 
   background: var(--accent);
 
-  text-decoration: none;
+  border-color: var(--accent);
 }
 
 
 /* Unlinked themes */
 
 span.publication-theme {
-  color: var(--link);
+  color: var(--accent);
 
-  background: var(--accent);
+  background: transparent;
 
   border-color: var(--accent);
 }

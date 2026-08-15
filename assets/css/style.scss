@@ -798,17 +798,41 @@ span.publication-theme {
    ========================================================= */
 
 .publication-theme-heading {
-  margin-top: 40px;
-  margin-bottom: 22px;
+  position: relative;
+  
+  margin-top: 25px;
+  margin-bottom: 10px;
 
+  padding-top: 0;
   padding-bottom: 7px;
 
-  border-bottom: 1px solid var(--border);
+  border-top: none;
+  border-bottom: none;
 
-  color: var(--text-section);
+  color: var(--accent);
 
   font-size: 1.35rem;
   font-weight: 600;
+}
+
+
+.publication-theme-heading::after {
+  content: "";
+
+  display: block;
+
+  width: 80px;
+  height: 3px;
+
+  margin-top: 6px;
+
+  background: var(--border);
+}
+
+
+.publication-theme-section:first-child
+.publication-theme-heading {
+  margin-top: 0;
 }
 
 

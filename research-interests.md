@@ -31,7 +31,7 @@ permalink: /research-interests/
   >
 
     <h2>
-      {{ theme.name }}
+      {{ theme.section-name }}
     </h2>
 
     <p>

@@ -1,6 +1,10 @@
 ---
 ---
 
+/* =========================================================
+   GLOBAL
+   ========================================================= */
+
 * {
   box-sizing: border-box;
 }
@@ -15,17 +19,15 @@
   --bg-header-footer: #2F0909;
 
   --text-header-footer: #FFF5EE;
-  // --text-header-footer-hover: #E67451;
   --text-header-footer-hover: #F08080;
 
   --text-section: #560319;
   --text-main: #1C1C1C;
+
   --accent: #C11B17;
 
   --icon: #560319;
 
-  // --link: #E67451;
-  // --link-hover: #C34A2C;
   --link: #F08080;
   --link-hover: #C11B17;
 
@@ -169,6 +171,15 @@ body {
    ========================================================= */
 
 .sidebar {
+  position: sticky;
+
+  top: 75px;
+
+  align-self: start;
+
+  min-height: calc(100vh - 120px);
+  height: auto;
+
   padding: 50px 25px;
 
   background: var(--bg-main);
@@ -176,16 +187,6 @@ body {
   border-right: 1px solid var(--border);
 
   text-align: center;
-
-  position: sticky;
-
-  top: 75px;
-
-  min-height: calc(100vh - 120px);
-
-  height: auto;
-
-  align-self: start;
 }
 
 
@@ -245,7 +246,7 @@ body {
 
 
 /* =========================================================
-   SIDEBAR CONTACT INFORMATION
+   SIDEBAR CONTACT
    ========================================================= */
 
 .contact-info {
@@ -501,9 +502,9 @@ body {
 }
 
 
-/* =========================
+/* =========================================================
    RESEARCH INTERESTS
-   ========================= */
+   ========================================================= */
 
 .research-interest {
   margin-bottom: 50px;
@@ -514,13 +515,13 @@ body {
   margin-top: 45px;
   margin-bottom: 15px;
 
+  padding-top: 25px;
+
   color: var(--text-section);
 
   font-size: 1.5rem;
 
   border-top: 1px solid var(--border);
-
-  padding-top: 25px;
 }
 
 
@@ -529,9 +530,7 @@ body {
 }
 
 
-/* =========================
-   RESEARCH PUBLICATIONS
-   ========================= */
+/* Research publications */
 
 .research-publications {
   margin-top: 15px;
@@ -557,10 +556,6 @@ body {
 }
 
 
-/* =========================
-   PUBLICATION LIST
-   ========================= */
-
 .research-publications-list {
   margin-top: 20px;
 
@@ -571,7 +566,7 @@ body {
 
 
 /* =========================================================
-   PUBLICATIONS
+   PUBLICATIONS — GENERAL
    ========================================================= */
 
 .publication {
@@ -611,7 +606,9 @@ body {
 }
 
 
-/* Publication links */
+/* =========================================================
+   PUBLICATION LINKS
+   ========================================================= */
 
 .publication-links {
   display: flex;
@@ -648,11 +645,12 @@ body {
 }
 
 
-/* Publication research theme */
+/* =========================================================
+   PUBLICATION RESEARCH THEMES
+   ========================================================= */
 
 .publication-themes {
   display: flex;
-
   flex-wrap: wrap;
 
   gap: 6px;
@@ -660,31 +658,29 @@ body {
   margin-top: 6px;
 }
 
+
 .publication-theme {
   display: inline-block;
 
   padding: 2px 9px;
 
   border: 1px solid var(--accent);
-
   border-radius: 999px;
 
   color: var(--accent);
-
   background: transparent;
 
   font-size: 0.75rem;
-
   line-height: 1.5;
 
   text-decoration: none;
-
   white-space: nowrap;
 
   transition:
     color 0.15s ease,
     background-color 0.15s ease;
 }
+
 
 /* Linked themes */
 
@@ -698,12 +694,15 @@ a.publication-theme {
   text-decoration: none;
 }
 
+
 a.publication-theme:hover {
   color: var(--link);
 
   background: var(--accent);
 
   border-color: var(--accent);
+
+  text-decoration: none;
 }
 
 
@@ -745,7 +744,7 @@ span.publication-theme {
 
   font-family: inherit;
 
-  font-size: 1.0rem;
+  font-size: 1rem;
   font-weight: 600;
 
   cursor: pointer;
@@ -759,8 +758,8 @@ span.publication-theme {
 
 .publication-tab.active {
   color: var(--text-section);
-  
-  border-bottom-color: 3px solid var(--text-section);
+
+  border-bottom: 5px solid var(--text-section);
 }
 
 
@@ -777,7 +776,7 @@ span.publication-theme {
 
 
 /* =========================================================
-   PUBLICATION YEAR HEADINGS
+   PUBLICATIONS — BY YEAR
    ========================================================= */
 
 .publication-year {
@@ -787,13 +786,13 @@ span.publication-theme {
   padding-top: 0;
   padding-bottom: 7px;
 
-  border-top: none;
-  border-bottom: none;
-
   color: var(--accent);
 
   font-size: 1.35rem;
   font-weight: 600;
+
+  border-top: none;
+  border-bottom: none;
 }
 
 
@@ -802,10 +801,8 @@ span.publication-theme {
 }
 
 
-.publication-year:first-child .publication-year {
+.publication-year-section:first-child .publication-year {
   margin-top: 0;
-  
-  border-top: none;
 }
 
 
@@ -819,25 +816,30 @@ span.publication-theme {
 
 
 /* =========================================================
-   PUBLICATION THEME HEADINGS
+   PUBLICATIONS — BY RESEARCH THEME
    ========================================================= */
+
+.publication-theme-section {
+  margin-bottom: 30px;
+}
+
 
 .publication-theme-heading {
   position: relative;
-  
+
   margin-top: 25px;
   margin-bottom: 10px;
 
   padding-top: 0;
   padding-bottom: 7px;
 
-  border-top: none;
-  border-bottom: none;
-
   color: var(--accent);
 
   font-size: 1.35rem;
   font-weight: 600;
+
+  border-top: none;
+  border-bottom: none;
 }
 
 
@@ -846,10 +848,24 @@ span.publication-theme {
 }
 
 
+/* Short underline */
+
+.publication-theme-heading::after {
+  content: "";
+
+  display: block;
+
+  width: 80px;
+  height: 3px;
+
+  margin-top: 6px;
+
+  background: var(--border);
+}
+
+
 .publication-theme-section:first-child .publication-theme-heading {
   margin-top: 0;
-  
-  border-top: none;
 }
 
 
@@ -904,16 +920,15 @@ span.publication-theme {
 
 
 .error-email {
-  
   color: var(--link);
-  
+
   text-decoration: none;
 }
 
+
 .error-email:hover {
-  
   color: var(--link);
-  
+
   text-decoration: none;
 }
 
@@ -971,7 +986,7 @@ span.publication-theme {
 
 
 /* =========================================================
-   MOBILE
+   MOBILE — TABLET
    ========================================================= */
 
 @media (max-width: 850px) {
@@ -1066,7 +1081,7 @@ span.publication-theme {
 
 
 /* =========================================================
-   SMALL MOBILE
+   MOBILE — SMALL
    ========================================================= */
 
 @media (max-width: 500px) {

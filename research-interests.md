@@ -31,13 +31,34 @@ permalink: /research-interests/
 
     <div class="research-publications-list">
 
-      {% bibliography
-         --query "@*[theme_id*=climate-variability]"
-         --sort_by year
-         --order descending
-         --group_by year
-         --group_order descending
+      {% assign theme_publications = site.bibliography
+        | where_exp: "entry", "entry.theme contains 'climate variability'"
       %}
+
+      {% assign years = theme_publications
+        | map: "year"
+        | uniq
+        | sort
+        | reverse
+      %}
+
+      {% for year in years %}
+
+        <h3 class="publication-year">
+          {{ year }}
+        </h3>
+
+        {% for entry in theme_publications %}
+
+          {% if entry.year == year %}
+
+            {% include bib.html %}
+
+          {% endif %}
+
+        {% endfor %}
+
+      {% endfor %}
 
     </div>
 
@@ -70,13 +91,34 @@ permalink: /research-interests/
 
     <div class="research-publications-list">
 
-      {% bibliography
-         --query "@*[theme_id*=volcanic-forcing]"
-         --sort_by year
-         --order descending
-         --group_by year
-         --group_order descending
+      {% assign theme_publications = site.bibliography
+        | where_exp: "entry", "entry.theme contains 'volcanic forcing'"
       %}
+
+      {% assign years = theme_publications
+        | map: "year"
+        | uniq
+        | sort
+        | reverse
+      %}
+
+      {% for year in years %}
+
+        <h3 class="publication-year">
+          {{ year }}
+        </h3>
+
+        {% for entry in theme_publications %}
+
+          {% if entry.year == year %}
+
+            {% include bib.html %}
+
+          {% endif %}
+
+        {% endfor %}
+
+      {% endfor %}
 
     </div>
 
@@ -109,13 +151,34 @@ permalink: /research-interests/
 
     <div class="research-publications-list">
 
-      {% bibliography
-         --query "@*[theme_id*=climate-dynamics]"
-         --sort_by year
-         --order descending
-         --group_by year
-         --group_order descending
+      {% assign theme_publications = site.bibliography
+        | where_exp: "entry", "entry.theme contains 'climate dynamics'"
       %}
+
+      {% assign years = theme_publications
+        | map: "year"
+        | uniq
+        | sort
+        | reverse
+      %}
+
+      {% for year in years %}
+
+        <h3 class="publication-year">
+          {{ year }}
+        </h3>
+
+        {% for entry in theme_publications %}
+
+          {% if entry.year == year %}
+
+            {% include bib.html %}
+
+          {% endif %}
+
+        {% endfor %}
+
+      {% endfor %}
 
     </div>
 

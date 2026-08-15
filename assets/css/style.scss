@@ -20,14 +20,14 @@
 
   --text-section: #560319;
   --text-main: #1C1C1C;
-  --accent: #931314;
+  --accent: #733635;
 
   --icon: #560319;
 
   // --link: #E67451;
   // --link-hover: #C34A2C;
   --link: #F08080;
-  --link-hover: #931314;
+  --link-hover: #733635;
 
   --border: #733635;
 }
@@ -276,11 +276,6 @@ body {
   color: var(--link);
 
   text-decoration: none;
-}
-
-
-.contact-info a:hover {
-  color: var(--link-hover);
 }
 
 

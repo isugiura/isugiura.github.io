@@ -73,6 +73,10 @@ permalink: /research-interests/
 document.addEventListener("DOMContentLoaded", function() {
 
 
+  /* =========================================================
+     SOURCE PUBLICATIONS
+     ========================================================= */
+
   const source =
     document.getElementById(
       "research-publication-source"
@@ -90,6 +94,10 @@ document.addEventListener("DOMContentLoaded", function() {
       ".research-publications-list"
     );
 
+
+  /* =========================================================
+     BUILD PUBLICATIONS FOR EACH RESEARCH THEME
+     ========================================================= */
 
   themeLists.forEach(function(themeList) {
 
@@ -113,6 +121,11 @@ document.addEventListener("DOMContentLoaded", function() {
         });
 
 
+      /*
+       * Only include publications associated
+       * with the current research theme.
+       */
+
       if (
         themeIds.includes(themeId)
       ) {
@@ -127,10 +140,15 @@ document.addEventListener("DOMContentLoaded", function() {
           publication.cloneNode(true);
 
 
-        /*
-         * Remove the theme currently being used
-         * as the section header.
-         */
+        /* ===================================================
+           REMOVE CURRENT THEME
+           ===================================================
+
+           The theme being used as the section heading
+           should not also appear under:
+
+           "Other relevant theme(s):"
+        */
 
         clone
           .querySelectorAll(
@@ -150,10 +168,51 @@ document.addEventListener("DOMContentLoaded", function() {
           });
 
 
-        /*
-         * Add the modified clone to the
-         * appropriate research-theme section.
-         */
+        /* ===================================================
+           REMOVE EMPTY THEME LABEL
+           ===================================================
+
+           If the publication had only the current theme,
+           there are no "other" themes to display.
+
+           Therefore remove the entire theme container.
+
+           This prevents:
+
+           Other relevant theme(s):
+
+           from appearing by itself.
+        */
+
+        const themeContainer =
+          clone.querySelector(
+            ".publication-themes"
+          );
+
+
+        if (themeContainer) {
+
+
+          const remainingThemes =
+            themeContainer.querySelectorAll(
+              ".publication-theme"
+            );
+
+
+          if (
+            remainingThemes.length === 0
+          ) {
+
+            themeContainer.remove();
+
+          }
+
+        }
+
+
+        /* ===================================================
+           ADD PUBLICATION
+           =================================================== */
 
         themeList.appendChild(
           clone

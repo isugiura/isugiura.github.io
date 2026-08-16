@@ -754,68 +754,75 @@ body {
 }
 
 
+/* "Other relevant theme(s):" label */
+
 .publication-theme-label {
   font-size: 0.8rem;
   font-weight: 600;
 }
 
 
-/* Theme text */
+/* Theme labels - general */
 
 .publication-themes .publication-theme {
-  display: inline;
+  display: inline-block;
 
-  padding: 1px 4px;
+  padding: 0 3px;
 
-  border: none;
-  border-radius: 0;
+  border: 1px solid transparent;
+  border-radius: 2px;
 
-  color: var(--text-section);
+  color: var(--accent);
 
-  font-size: 0.75rem;
-  line-height: 1.5;
+  font-size: 0.72rem;
+  line-height: 1.4;
 
   text-decoration: none;
   white-space: nowrap;
 
   transition:
     color 0.15s ease,
-    background-color 0.15s ease;
+    background-color 0.15s ease,
+    border-color 0.15s ease;
 }
 
 
-/* Linked themes */
+/* Linked themes - filled rectangle */
 
 .publication-themes a.publication-theme {
   color: var(--accent);
 
-  background: var(--accent-muted);
+  background-color: var(--accent-muted);
 
-  border: none;
+  border-color: transparent;
 
   text-decoration: none;
 }
 
 
 .publication-themes a.publication-theme:hover {
-  color: var(--link-hover);
+  color: var(--link);
 
-  background: var(--accent-muted);
+  background-color: var(--accent-muted);
 
-  border: none;
+  border-color: transparent;
 
   text-decoration: none;
 }
 
 
-/* Unlinked themes */
+/* Unlinked themes - unfilled rectangle */
 
 .publication-themes span.publication-theme {
   color: var(--accent);
 
-  background: transparent;
+  background-color: transparent;
 
-  border: none;
+  border-color: var(--accent-muted);
+
+  border-style: solid;
+
+  text-decoration: none;
 }
 
 

@@ -543,7 +543,10 @@ body {
 
 
 .research-publications summary {
-  display: inline-block;
+  display: inline-flex;
+
+  align-items: center;
+  gap: 7px;
 
   color: var(--link);
 
@@ -552,11 +555,41 @@ body {
 
   cursor: pointer;
 
-  list-style-position: outside;
+  list-style: none;
+}
+
+
+.research-publications summary::-webkit-details-marker {
+  display: none;
+}
+
+
+/* Closed: arrow points right */
+
+.research-publications summary::before {
+  content: "▸";
+
+  color: var(--link);
+
+  font-size: 0.85rem;
+
+  transition: transform 0.15s ease;
+}
+
+
+/* Open: arrow points down */
+
+.research-publications[open] summary::before {
+  transform: rotate(90deg);
 }
 
 
 .research-publications summary:hover {
+  color: var(--link-hover);
+}
+
+
+.research-publications summary:hover::before {
   color: var(--link-hover);
 }
 

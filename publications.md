@@ -327,6 +327,10 @@ document.addEventListener("DOMContentLoaded", function() {
           /*
            * Keep all research themes in the
            * By Year view.
+           *
+           * This means the label remains:
+           *
+           * Relevant research theme(s):
            */
 
           list.appendChild(
@@ -483,15 +487,43 @@ document.addEventListener("DOMContentLoaded", function() {
             publication.cloneNode(true);
 
 
-          /*
-           * Remove the theme currently being
-           * used as the section header.
-           *
-           * For example, inside the
-           * "Climate variability" section,
-           * climate-variability is removed from
-           * "Relevant research theme(s)".
-           */
+          /* -------------------------------------------------
+             CHANGE THE LABEL
+             -------------------------------------------------
+
+             In the By Research Theme view,
+             the themes shown underneath a publication
+             are additional themes, so use:
+
+             Other relevant theme(s):
+          */
+
+          const themeLabel =
+            clone.querySelector(
+              ".publication-theme-label"
+            );
+
+
+          if (themeLabel) {
+
+            themeLabel.textContent =
+              "Other relevant theme(s):";
+
+          }
+
+
+          /* -------------------------------------------------
+             REMOVE THE CURRENT SECTION THEME
+             -------------------------------------------------
+
+             For example, inside:
+
+             Modes of variability and their
+             teleconnections
+
+             remove "climate-variability" from
+             the publication's theme list.
+          */
 
           clone
             .querySelectorAll(
@@ -509,6 +541,41 @@ document.addEventListener("DOMContentLoaded", function() {
               }
 
             });
+
+
+          /*
+           * If removing the current theme leaves
+           * no other themes, remove the entire
+           * theme container so we don't show:
+
+           * Other relevant theme(s):
+           *
+           * with nothing after it.
+           */
+
+          const remainingThemes =
+            clone.querySelectorAll(
+              ".publication-theme"
+            );
+
+
+          if (
+            remainingThemes.length === 0
+          ) {
+
+            const themesContainer =
+              clone.querySelector(
+                ".publication-themes"
+              );
+
+
+            if (themesContainer) {
+
+              themesContainer.remove();
+
+            }
+
+          }
 
 
           /*

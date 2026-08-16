@@ -113,11 +113,50 @@ document.addEventListener("DOMContentLoaded", function() {
         });
 
 
-      if (themeIds.includes(themeId)) {
+      if (
+        themeIds.includes(themeId)
+      ) {
 
+
+        /*
+         * Clone the publication so that the
+         * hidden source remains unchanged.
+         */
+
+        const clone =
+          publication.cloneNode(true);
+
+
+        /*
+         * Remove the theme currently being used
+         * as the section header.
+         */
+
+        clone
+          .querySelectorAll(
+            ".publication-theme"
+          )
+          .forEach(function(themeElement) {
+
+
+            if (
+              themeElement.dataset.themeId === themeId
+            ) {
+
+              themeElement.remove();
+
+            }
+
+          });
+
+
+        /*
+         * Add the modified clone to the
+         * appropriate research-theme section.
+         */
 
         themeList.appendChild(
-          publication.cloneNode(true)
+          clone
         );
 
       }

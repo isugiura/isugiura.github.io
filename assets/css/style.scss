@@ -619,7 +619,9 @@ body {
 .publication-links {
   display: flex;
 
-  gap: 12px;
+  align-items: center;
+
+  gap: 0;
 
   margin-top: 7px;
 }
@@ -639,6 +641,16 @@ body {
   color: var(--link-hover);
 
   text-decoration: underline;
+}
+
+
+.publication-links a:not(:last-child)::after {
+  content: " · ";
+
+  color: var(--text-main);
+
+  margin-left: 12px;
+  margin-right: 12px;
 }
 
 
@@ -872,10 +884,6 @@ body {
 
 
 /* First year: no space above it */
-
-// .publication-view.active .publication-year:first-child {
-//   margin-top: 0;
-// }
 .publication-year-section:first-child .publication-year {
   margin-top: 0;
 }

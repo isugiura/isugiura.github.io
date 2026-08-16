@@ -47,7 +47,7 @@ permalink: /research-interests/
     <details class="research-publications">
 
       <summary>
-        Publications
+        Relevant publications
       </summary>
 
 

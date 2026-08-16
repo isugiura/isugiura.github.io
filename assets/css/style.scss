@@ -26,7 +26,6 @@
 
   --accent: #C11B17;
   --accent-muted: #FFDFDD;
-  // --accent-muted: #F2D4D7;
 
   --icon: #560319;
 
@@ -644,17 +643,24 @@ body {
 }
 
 
+/*
+   Separator between DOI, Paper, and Code.
+   Smaller margins keep the links visually compact.
+*/
+
 .publication-links a:not(:last-child)::after {
   content: " · ";
 
   color: var(--text-main);
 
-  margin-left: 12px;
-  margin-right: 12px;
+  margin-left: 5px;
+  margin-right: 5px;
 }
 
 
-/* Your name */
+/* =========================================================
+   YOUR NAME
+   ========================================================= */
 
 .my-name {
   color: var(--text-section);
@@ -721,7 +727,8 @@ body {
 }
 
 
-/* Topics/themes text */
+/* Theme text */
+
 .publication-themes .publication-theme {
   display: inline;
 
@@ -731,7 +738,6 @@ body {
   border-radius: 0;
 
   color: var(--text-section);
-  // background-color: var(--accent-muted);
 
   font-size: 0.75rem;
   line-height: 1.5;
@@ -759,7 +765,7 @@ body {
 
 
 .publication-themes a.publication-theme:hover {
-  color: var(--link);
+  color: var(--link-hover);
 
   background: var(--accent-muted);
 
@@ -770,6 +776,7 @@ body {
 
 
 /* Unlinked themes */
+
 .publication-themes span.publication-theme {
   color: var(--accent);
 
@@ -788,7 +795,7 @@ body {
 
   gap: 8px;
 
-  margin-bottom: 15px;
+  margin-bottom: 0;
 
   border-bottom: 1px solid var(--border);
 }
@@ -829,6 +836,8 @@ body {
 
 .publication-view {
   display: none;
+
+  padding-top: 25px;
 }
 
 
@@ -883,7 +892,9 @@ body {
 }
 
 
-/* First year: no space above it */
+/* First heading in the By Year view */
+
+.publication-status-section:first-child .publication-year,
 .publication-year-section:first-child .publication-year {
   margin-top: 0;
 }
@@ -912,46 +923,12 @@ body {
 }
 
 
-/* First theme: no space above it */
+/* First heading in the By Research Theme view */
 
-.publication-theme-section:first-child .publication-theme-heading {
+.publication-theme-section:first-child
+.publication-theme-heading {
   margin-top: 0;
 }
-
-
-// /* =========================================================
-//    PUBLICATIONS — BY STATUS
-//    ========================================================= */
-
-// /*
-//    The status view uses .publication-status-list
-//    for the same vertical-line treatment as the
-//    year and research-theme views.
-// */
-
-// // .main-content h2.publication-status-heading {
-// //   position: relative;
-
-// //   margin-top: 25px;
-// //   margin-bottom: 10px;
-
-// //   padding-top: 0;
-// //   padding-bottom: 7px;
-
-// //   border-top: none;
-// //   border-bottom: none;
-
-// //   color: var(--accent);
-
-// //   font-size: 1.35rem;
-// //   font-weight: 600;
-// // }
-
-
-// /* First status section: no space above it */
-// .publication-status-section:first-child .publication-year {
-//   margin-top: 0;
-// }
 
 
 /* =========================================================

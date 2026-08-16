@@ -323,6 +323,12 @@ document.addEventListener("DOMContentLoaded", function() {
       publicationsByYear[year].forEach(
         function(publication) {
 
+
+          /*
+           * Keep all research themes in the
+           * By Year view.
+           */
+
           list.appendChild(
             publication.cloneNode(true)
           );
@@ -384,6 +390,11 @@ document.addEventListener("DOMContentLoaded", function() {
           publicationStatus === status
         ) {
 
+
+          /*
+           * Keep all research themes in the
+           * status sections.
+           */
 
           statusList.appendChild(
             publication.cloneNode(true)
@@ -463,8 +474,50 @@ document.addEventListener("DOMContentLoaded", function() {
         ) {
 
 
+          /*
+           * Clone the publication so that the
+           * hidden source remains unchanged.
+           */
+
+          const clone =
+            publication.cloneNode(true);
+
+
+          /*
+           * Remove the theme currently being
+           * used as the section header.
+           *
+           * For example, inside the
+           * "Climate variability" section,
+           * climate-variability is removed from
+           * "Relevant research theme(s)".
+           */
+
+          clone
+            .querySelectorAll(
+              ".publication-theme"
+            )
+            .forEach(function(themeElement) {
+
+
+              if (
+                themeElement.dataset.themeId === themeId
+              ) {
+
+                themeElement.remove();
+
+              }
+
+            });
+
+
+          /*
+           * Add the modified publication to
+           * this research-theme section.
+           */
+
           themeList.appendChild(
-            publication.cloneNode(true)
+            clone
           );
 
         }

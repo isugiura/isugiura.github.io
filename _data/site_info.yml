@@ -1,0 +1,54 @@
+# =========================================================
+# PERSONAL INFORMATION
+# =========================================================
+
+name:
+  first: June
+  last: Atwood
+  display: June Atwood
+
+position: Assistant Professor
+
+department: Department
+
+institution: Your University
+
+email: your.email@university.edu
+
+location: Hoboken, NJ
+
+
+# =========================================================
+# PROFILE
+# =========================================================
+
+profile:
+  photo: /assets/files/profile.jpg
+  bio: ...
+
+
+# =========================================================
+# ACADEMIC PROFILES
+# =========================================================
+
+profiles:
+  github: https://github.com/yourusername
+  scholar: https://scholar.google.com/...
+  researchgate: https://www.researchgate.net/...
+
+
+# =========================================================
+# DOCUMENTS
+# =========================================================
+
+documents:
+  cv: /assets/files/cv.pdf
+  # teaching_statement: /assets/files/teaching-statement.pdf
+
+
+# =========================================================
+# SITE
+# =========================================================
+
+site:
+  email: your.email@university.edu

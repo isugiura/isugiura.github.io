@@ -794,7 +794,7 @@ body {
 
   background-color: var(--accent-muted);
 
-  border-color: transparent;
+  border-color: var(--accent);
 
   text-decoration: none;
 }
@@ -805,7 +805,7 @@ body {
 
   background-color: var(--accent-muted);
 
-  border-color: transparent;
+  border-color: var(--accent);
 
   text-decoration: none;
 }
@@ -818,9 +818,9 @@ body {
 
   background-color: transparent;
 
-  border-color: var(--accent-muted);
-
+  border-color: var(--accent);
   border-style: solid;
+  border-width: 1.5px;
 
   text-decoration: none;
 }

@@ -1,7 +1,7 @@
 ---
 layout: default
-title: Research Interests
-permalink: /research-interests/
+title: Research
+permalink: /research/
 ---
 
 <h1>Research Interests</h1>

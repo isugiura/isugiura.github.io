@@ -20,11 +20,15 @@ title: Home
 
 {% if site.data.site_info.profile.research_interests %}
 
+<ul class="home-research-interests">
+
 {% for interest in site.data.site_info.profile.research_interests %}
 
-- {{ interest }}
+  <li>{{ interest }}</li>
 
 {% endfor %}
+
+</ul>
 
 {% endif %}
 

@@ -535,7 +535,9 @@ body {
 }
 
 
-/* Research publications */
+/* =========================================================
+   RESEARCH PUBLICATIONS TOGGLE
+   ========================================================= */
 
 .research-publications {
   margin-top: 15px;
@@ -546,6 +548,7 @@ body {
   display: inline-flex;
 
   align-items: center;
+
   gap: 7px;
 
   color: var(--link);
@@ -564,14 +567,24 @@ body {
 }
 
 
-/* Closed: arrow points right */
+/* Triangle */
 
 .research-publications summary::before {
   content: "▸";
 
+  display: inline-flex;
+
+  align-items: center;
+  justify-content: center;
+
+  width: 14px;
+  height: 14px;
+
   color: var(--link);
 
-  font-size: 1.5rem;
+  font-size: 1.15rem;
+
+  line-height: 1;
 
   transition: transform 0.15s ease;
 }
@@ -594,12 +607,20 @@ body {
 }
 
 
+/* =========================================================
+   RESEARCH PUBLICATION LIST
+   ========================================================= */
+
+/*
+   There is intentionally NO continuous vertical line here.
+
+   Each individual publication receives its own line below.
+*/
+
 .research-publications-list {
   margin-top: 20px;
 
-  padding-left: 20px;
-
-  border-left: 2px solid var(--border);
+  padding-left: 0;
 }
 
 
@@ -707,6 +728,7 @@ body {
   color: var(--text-main);
 
   font-size: 0.8rem;
+
   line-height: 1.5;
 }
 
@@ -740,7 +762,9 @@ body {
 
 .publication-topics {
   display: flex;
+
   flex-wrap: wrap;
+
   align-items: center;
 
   gap: 5px;
@@ -770,9 +794,11 @@ body {
   color: var(--accent);
 
   font-size: 0.72rem;
+
   line-height: 1.4;
 
   text-decoration: none;
+
   white-space: nowrap;
 
   transition:
@@ -814,6 +840,7 @@ body {
   background-color: transparent;
 
   border-color: var(--accent);
+
   border-style: solid;
   border-width: 1.5px;
 
@@ -867,7 +894,9 @@ body {
 }
 
 
-/* Publication views */
+/* =========================================================
+   PUBLICATION VIEWS
+   ========================================================= */
 
 .publication-view {
   display: none;
@@ -885,19 +914,24 @@ body {
    PUBLICATION LISTS
    ========================================================= */
 
-/*
-   The vertical line belongs to each individual
-   publication rather than to the entire list.
-*/
-
 .publication-list {
   margin-top: 20px;
+
+  padding-left: 0;
 }
 
 
-/* Individual publication */
+/*
+   Individual publication line.
 
-.publication-view .publication {
+   This applies to publications in:
+   - By Year
+   - By Topic
+   - Research page
+*/
+
+.publication-view .publication,
+.research-publications-list .publication {
   margin-bottom: 28px;
 
   padding-left: 18px;
@@ -906,10 +940,10 @@ body {
 }
 
 
-/* Keep the final publication from adding
-   unnecessary bottom spacing */
+/* Last publication in each list */
 
-.publication-view .publication:last-child {
+.publication-view .publication:last-child,
+.research-publications-list .publication:last-child {
   margin-bottom: 0;
 }
 
@@ -937,9 +971,13 @@ body {
 }
 
 
-.publication-status-section + .publication-year-section
-.publication-year {
-  margin-top: 40px;
+/*
+   Space between the Submitted section
+   and the first year.
+*/
+
+.publication-status-section {
+  margin-bottom: 40px;
 }
 
 
@@ -1030,13 +1068,14 @@ body {
 /*
    CV section headings.
 
-   These intentionally use the same visual treatment
-   as the research topic headings, except that the
-   horizontal border is removed.
+   These use the same visual treatment as the
+   research topic headings, including the
+   horizontal border.
 */
 
 .main-content .cv-section-heading {
   margin-top: 45px;
+
   margin-bottom: 15px;
 
   padding-top: 25px;
@@ -1141,9 +1180,9 @@ body {
 }
 
 
-/*
-   Download CV link
-*/
+/* =========================================================
+   CV DOWNLOAD LINK
+   ========================================================= */
 
 .main-content > p:first-of-type a {
   font-weight: 500;
@@ -1165,6 +1204,7 @@ body {
 
 .home-research-interests {
   margin-top: 0;
+
   margin-bottom: 25px;
 
   padding-left: 22px;

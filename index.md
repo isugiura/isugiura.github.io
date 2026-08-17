@@ -35,7 +35,9 @@ title: Home
 
     {% for interest in site.data.site_info.profile.research_interests %}
 
-      <li>{{ interest }}</li>
+      <li>
+        {{ interest }}
+      </li>
 
     {% endfor %}
 
@@ -69,15 +71,19 @@ title: Home
       </div>
 
       {% if item.years %}
+
         <div>
           {{ item.years }}
         </div>
+
       {% endif %}
 
       {% if item.details %}
+
         <p>
           {{ item.details }}
         </p>
+
       {% endif %}
 
     </div>

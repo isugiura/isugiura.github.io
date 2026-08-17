@@ -44,11 +44,3 @@ profiles:
 documents:
   cv: /assets/files/cv.pdf
   # teaching_statement: /assets/files/teaching-statement.pdf
-
-
-# =========================================================
-# SITE
-# =========================================================
-
-site:
-  email: your.email@university.edu

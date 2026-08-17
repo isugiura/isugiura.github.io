@@ -9,9 +9,6 @@ name:
 
 position: Assistant Professor
 
-department: Department
-institution: Your University
-
 email: your.email@university.edu
 
 location: Hoboken, NJ
@@ -70,6 +67,8 @@ profiles:
   orcid: https://orcid.org/...
 
   linkedin: https://www.linkedin.com/in/...
+
+  institutional: https://www.youruniversity.edu/
 
 
 # =========================================================

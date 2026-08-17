@@ -10,7 +10,6 @@ name:
 position: Assistant Professor
 
 department: Department
-
 institution: Your University
 
 email: your.email@university.edu
@@ -23,8 +22,37 @@ location: Hoboken, NJ
 # =========================================================
 
 profile:
+
   photo: /assets/files/profile.jpg
+
   bio: ...
+
+  # -------------------------------------------------------
+  # CURRENT AFFILIATIONS
+  # -------------------------------------------------------
+
+  current_affiliations:
+
+    - institution: Your University
+      department: Department
+
+    - institution: Another University
+      department: Another Department
+
+
+  # -------------------------------------------------------
+  # PAST AFFILIATIONS
+  # -------------------------------------------------------
+
+  past_affiliations:
+
+    - institution: University Name
+      department: Department Name
+      years: 2020–2024
+
+    - institution: Another University
+      department: Another Department
+      years: 2018–2020
 
 
 # =========================================================
@@ -32,9 +60,16 @@ profile:
 # =========================================================
 
 profiles:
+
   github: https://github.com/yourusername
+
   scholar: https://scholar.google.com/...
-  researchgate: https://www.researchgate.net/...
+
+  researchgate: https://www.researchgate.net/profile/...
+
+  orcid: https://orcid.org/...
+
+  linkedin: https://www.linkedin.com/in/...
 
 
 # =========================================================
@@ -42,5 +77,5 @@ profiles:
 # =========================================================
 
 documents:
+
   cv: /assets/files/cv.pdf
-  # teaching_statement: /assets/files/teaching-statement.pdf

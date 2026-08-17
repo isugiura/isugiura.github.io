@@ -327,10 +327,6 @@ document.addEventListener("DOMContentLoaded", function() {
           /*
            * Keep all research themes in the
            * By Year view.
-           *
-           * This means the label remains:
-           *
-           * Relevant research theme(s):
            */
 
           list.appendChild(
@@ -470,6 +466,11 @@ document.addEventListener("DOMContentLoaded", function() {
 
             return theme.trim();
 
+          })
+          .filter(function(theme) {
+
+            return theme !== "";
+
           });
 
 
@@ -488,31 +489,6 @@ document.addEventListener("DOMContentLoaded", function() {
 
 
           /* -------------------------------------------------
-             CHANGE THE LABEL
-             -------------------------------------------------
-
-             In the By Research Theme view,
-             the themes shown underneath a publication
-             are additional themes, so use:
-
-             Other relevant theme(s):
-          */
-
-          const themeLabel =
-            clone.querySelector(
-              ".publication-theme-label"
-            );
-
-
-          if (themeLabel) {
-
-            themeLabel.textContent =
-              "Other relevant theme(s):";
-
-          }
-
-
-          /* -------------------------------------------------
              REMOVE THE CURRENT SECTION THEME
              -------------------------------------------------
 
@@ -521,8 +497,8 @@ document.addEventListener("DOMContentLoaded", function() {
              Modes of variability and their
              teleconnections
 
-             remove "climate-variability" from
-             the publication's theme list.
+             remove that theme from the publication's
+             list of themes.
           */
 
           clone
@@ -543,15 +519,24 @@ document.addEventListener("DOMContentLoaded", function() {
             });
 
 
-          /*
-           * If removing the current theme leaves
-           * no other themes, remove the entire
-           * theme container so we don't show:
+          /* -------------------------------------------------
+             CHECK FOR OTHER THEMES
+             -------------------------------------------------
 
-           * Other relevant theme(s):
-           *
-           * with nothing after it.
-           */
+             If there are remaining themes, change the
+             label to:
+
+             Other relevant theme(s):
+
+             If there are no remaining themes, remove
+             the entire theme container.
+          */
+
+          const themesContainer =
+            clone.querySelector(
+              ".publication-themes"
+            );
+
 
           const remainingThemes =
             clone.querySelectorAll(
@@ -560,14 +545,36 @@ document.addEventListener("DOMContentLoaded", function() {
 
 
           if (
-            remainingThemes.length === 0
+            remainingThemes.length > 0
           ) {
 
-            const themesContainer =
+            /*
+             * There are other themes, so show
+             * the "Other relevant theme(s):"
+             * label.
+             */
+
+            const themeLabel =
               clone.querySelector(
-                ".publication-themes"
+                ".publication-theme-label"
               );
 
+
+            if (themeLabel) {
+
+              themeLabel.textContent =
+                "Other relevant theme(s):";
+
+            }
+
+          } else {
+
+            /*
+             * The publication has no other themes.
+             *
+             * Remove the entire theme container,
+             * including its label.
+             */
 
             if (themesContainer) {
 

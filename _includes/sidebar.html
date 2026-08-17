@@ -1,9 +1,8 @@
 <aside class="sidebar">
 
-
-  <!-- =====================================================
+  <!-- =========================================================
        PROFILE
-       ===================================================== -->
+       ========================================================= -->
 
   <img
     src="{{ site.data.site_info.profile.photo | relative_url }}"
@@ -16,71 +15,55 @@
   </h2>
 
   <p class="position">
-    {{ site.data.site_info.position }}<br>
+    {{ site.data.site_info.position }}
   </p>
 
 
   <div class="sidebar-divider"></div>
 
 
-  <!-- =====================================================
+  <!-- =========================================================
        CONTACT
-       ===================================================== -->
+       ========================================================= -->
 
   <div class="contact-info">
-
-
-    <!-- Current affiliations -->
 
     {% for affiliation in site.data.site_info.profile.current_affiliations %}
 
       <div>
-
         <i class="fa-solid fa-building-columns icon"></i>
 
         <span>
-
           {{ affiliation.institution }}
 
           {% if affiliation.department %}
             <br>
             {{ affiliation.department }}
           {% endif %}
-
         </span>
-
       </div>
 
     {% endfor %}
 
 
-    <!-- Email -->
-
     <a
       href="mailto:{{ site.data.site_info.email }}"
     >
-
       <i class="fa-solid fa-envelope icon"></i>
 
       <span>
         {{ site.data.site_info.email }}
       </span>
-
     </a>
 
 
-    <!-- Location -->
-
     <div>
-
       <i class="fa-solid fa-location-dot icon"></i>
 
       <span>
         {{ site.data.site_info.location }}
       </span>
-
     </div>
-
 
   </div>
 
@@ -88,50 +71,36 @@
   <div class="sidebar-divider"></div>
 
 
-  <!-- =====================================================
+  <!-- =========================================================
        RESOURCES
-       ===================================================== -->
+       ========================================================= -->
 
   <div class="resource-links">
-
-
-    <!-- CV -->
 
     <a
       href="{{ site.data.site_info.documents.cv | relative_url }}"
       target="_blank"
       rel="noopener"
     >
-
       <i class="fa-solid fa-file-pdf icon"></i>
 
       <span>
         Download CV
       </span>
-
     </a>
 
 
-    <!-- GitHub -->
+    <a
+      href="{{ site.data.site_info.profiles.project_collection }}"
+      target="_blank"
+      rel="noopener"
+    >
+      <i class="fa-brands fa-github icon"></i>
 
-    {% if site.data.site_info.profiles.github %}
-
-      <a
-        href="{{ site.data.site_info.profiles.github }}"
-        target="_blank"
-        rel="noopener"
-      >
-
-        <i class="fa-brands fa-github icon"></i>
-
-        <span>
-          Code for Published Projects
-        </span>
-
-      </a>
-
-    {% endif %}
-
+      <span>
+        Code for Published Projects
+      </span>
+    </a>
 
   </div>
 
@@ -139,119 +108,98 @@
   <div class="sidebar-divider"></div>
 
 
-  <!-- =====================================================
+  <!-- =========================================================
        ACADEMIC PROFILES
-       ===================================================== -->
+       ========================================================= -->
 
   <div class="academic-links">
 
 
     <!-- Google Scholar -->
 
-    {% if site.data.site_info.profiles.scholar %}
+    <a
+      href="{{ site.data.site_info.profiles.scholar }}"
+      target="_blank"
+      rel="noopener"
+    >
 
-      <a
-        href="{{ site.data.site_info.profiles.scholar }}"
-        target="_blank"
-        rel="noopener"
-      >
+      <i class="fa-brands fa-google-scholar icon"></i>
 
-        <i class="fa-brands fa-google-scholar icon"></i>
+      <span>
+        Google Scholar
+      </span>
 
-        <span>
-          Google Scholar
-        </span>
-
-      </a>
-
-    {% endif %}
+    </a>
 
 
     <!-- ResearchGate -->
 
-    {% if site.data.site_info.profiles.researchgate %}
+    <a
+      href="{{ site.data.site_info.profiles.researchgate }}"
+      target="_blank"
+      rel="noopener"
+    >
 
-      <a
-        href="{{ site.data.site_info.profiles.researchgate }}"
-        target="_blank"
-        rel="noopener"
-      >
+      <span class="icon researchgate">
+        R<sup>G</sup>
+      </span>
 
-        <span class="icon researchgate">
-          R<sup>G</sup>
-        </span>
+      <span>
+        ResearchGate
+      </span>
 
-        <span>
-          ResearchGate
-        </span>
-
-      </a>
-
-    {% endif %}
+    </a>
 
 
     <!-- ORCID -->
 
-    {% if site.data.site_info.profiles.orcid %}
+    <a
+      href="{{ site.data.site_info.profiles.orcid }}"
+      target="_blank"
+      rel="noopener"
+    >
 
-      <a
-        href="{{ site.data.site_info.profiles.orcid }}"
-        target="_blank"
-        rel="noopener"
-      >
+      <i class="fa-brands fa-orcid icon"></i>
 
-        <i class="fa-brands fa-orcid icon"></i>
+      <span>
+        ORCID
+      </span>
 
-        <span>
-          ORCID
-        </span>
-
-      </a>
-
-    {% endif %}
+    </a>
 
 
     <!-- LinkedIn -->
 
-    {% if site.data.site_info.profiles.linkedin %}
+    <a
+      href="{{ site.data.site_info.profiles.linkedin }}"
+      target="_blank"
+      rel="noopener"
+    >
 
-      <a
-        href="{{ site.data.site_info.profiles.linkedin }}"
-        target="_blank"
-        rel="noopener"
-      >
+      <i class="fa-brands fa-linkedin-in icon"></i>
 
-        <i class="fa-brands fa-linkedin-in icon"></i>
+      <span>
+        LinkedIn
+      </span>
 
-        <span>
-          LinkedIn
-        </span>
-
-      </a>
-
-    {% endif %}
+    </a>
 
 
     <!-- Institutional Web Page -->
 
-    {% if site.data.site_info.profiles.institutional %}
+    <a
+      href="{{ site.data.site_info.profiles.institutional }}"
+      target="_blank"
+      rel="noopener"
+    >
 
-      <a
-        href="{{ site.data.site_info.profiles.institutional }}"
-        target="_blank"
-        rel="noopener"
-      >
+      <i class="fa-solid fa-building-columns icon"></i>
 
-        <i class="fa-solid fa-building-columns icon"></i>
+      <span>
+        Institutional Web Page
+      </span>
 
-        <span>
-          Institutional Web Page
-        </span>
-
-      </a>
-
-    {% endif %}
-
+    </a>
 
   </div>
 
@@ -259,57 +207,51 @@
   <div class="sidebar-divider"></div>
 
 
-  <!-- =====================================================
+  <!-- =========================================================
        PAST AFFILIATIONS
-       ===================================================== -->
+       ========================================================= -->
 
-  {% if site.data.site_info.profile.past_affiliations %}
+  <div class="sidebar-section">
 
-    <div class="sidebar-section">
-
-
-      <h3>
-        Past Affiliations
-      </h3>
+    <h3>
+      Past Affiliations
+    </h3>
 
 
-      <div class="past-affiliations">
+    <div class="past-affiliations">
 
+      {% for affiliation in site.data.site_info.profile.past_affiliations %}
 
-        {% for affiliation in site.data.site_info.profile.past_affiliations %}
+        <div>
 
-          <div>
+          <i class="fa-solid fa-building-columns icon"></i>
 
-            <i class="fa-solid fa-building-columns icon"></i>
+          <span>
 
-            <span>
+            {{ affiliation.institution }}
 
-              {{ affiliation.institution }}
-
-              {% if affiliation.department %}
-                <br>
+            {% if affiliation.department %}
+              <br>
+              <small>
                 {{ affiliation.department }}
-              {% endif %}
+              </small>
+            {% endif %}
 
-              {% if affiliation.years %}
-                <br>
-                <small>
-                  {{ affiliation.years }}
-                </small>
-              {% endif %}
+            {% if affiliation.years %}
+              <br>
+              <small>
+                {{ affiliation.years }}
+              </small>
+            {% endif %}
 
-            </span>
+          </span>
 
-          </div>
+        </div>
 
-        {% endfor %}
-
-
-      </div>
+      {% endfor %}
 
     </div>
 
-  {% endif %}
-
+  </div>
 
 </aside>

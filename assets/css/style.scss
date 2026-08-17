@@ -972,14 +972,14 @@ body {
 
 
 /*
-   Space between the Submitted section
-   and the first year.
+   Space between the final visible status section
+   (Submitted / In Preparation) and the first
+   published year.
 */
 
-.publication-status-section {
-  margin-bottom: 40px;
+#year-sections.has-status-sections {
+  margin-top: 40px;
 }
-
 
 /* First heading in the By Year view */
 

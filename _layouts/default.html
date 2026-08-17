@@ -12,9 +12,9 @@
 
   <title>
     {% if page.title %}
-      {{ page.title }} | {{ site.title }}
+      {{ page.title }} | {{ site.data.site_info.name.display }}
     {% else %}
-      {{ site.title }}
+      {{ site.data.site_info.name.display }}
     {% endif %}
   </title>
 
@@ -45,7 +45,7 @@
       <div class="header-name">
 
         <a href="{{ '/' | relative_url }}">
-          {{ site.title }}
+          {{ site.data.site_info.name.display }}
         </a>
 
         <span>
@@ -107,7 +107,7 @@
 
     <div class="footer-inner">
 
-      © {{ 'now' | date: "%Y" }} {{ site.title }}
+      © {{ 'now' | date: "%Y" }} {{ site.data.site_info.name.display }}
 
     </div>
 

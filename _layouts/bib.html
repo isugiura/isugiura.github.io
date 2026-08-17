@@ -7,6 +7,7 @@
   data-status="{{ entry.status | escape }}"
 >
 
+
   <!-- =====================================================
        TITLE
        ===================================================== -->
@@ -28,8 +29,9 @@
 
       {% assign first_initial = author.first | slice: 0 %}
 
-      {% if author.last == site.publication.author_last_name
-            and author.first == site.publication.author_first_name %}
+
+      {% if author.last == site.data.site_info.name.last
+            and author.first == site.data.site_info.name.first %}
 
         <span class="my-name">
           {{ author.last }}, {{ first_initial }}.
@@ -45,9 +47,13 @@
       {% unless forloop.last %}
 
         {% if forloop.rindex == 2 %}
+
           , &nbsp;&amp;&nbsp;
+
         {% else %}
+
           ,&nbsp;
+
         {% endif %}
 
       {% endunless %}
@@ -94,7 +100,9 @@
 
     <div class="publication-links">
 
+
       {% if entry.doi %}
+
         <a
           href="https://doi.org/{{ entry.doi }}"
           target="_blank"
@@ -102,9 +110,12 @@
         >
           DOI
         </a>
+
       {% endif %}
 
+
       {% if entry.pdf %}
+
         <a
           href="{{ entry.pdf }}"
           target="_blank"
@@ -112,9 +123,12 @@
         >
           Paper
         </a>
+
       {% endif %}
 
+
       {% if entry.code %}
+
         <a
           href="{{ entry.code }}"
           target="_blank"
@@ -122,7 +136,9 @@
         >
           Code
         </a>
+
       {% endif %}
+
 
     </div>
 
@@ -137,11 +153,13 @@
 
     {% assign keyword_list = entry.keywords | split: "," %}
 
+
     <div class="publication-keywords">
 
       <span class="publication-label">
         Keywords:
       </span>
+
 
       {% for keyword in keyword_list %}
 
@@ -150,6 +168,7 @@
           | strip
           | replace: "-", " "
         %}
+
 
         <span class="publication-keyword">
           {{ keyword_display }}
@@ -170,19 +189,26 @@
 
     {% assign theme_list = entry.themes | split: "," %}
 
+
     <div
       class="publication-themes"
       data-theme-ids="{{ entry.themes | escape }}"
     >
 
+
       <span class="publication-label publication-theme-label">
-        Relevant research theme(s):
+        Other relevant theme(s):
       </span>
+
 
       {% for theme in theme_list %}
 
         {% assign theme_id = theme | strip %}
-        {% assign theme_data = site.data.themes[theme_id] %}
+
+        {% assign theme_data =
+          site.data.themes[theme_id]
+        %}
+
 
         {% if theme_data %}
 
@@ -193,6 +219,7 @@
           >
             {{ theme_data["theme-name"] }}
           </a>
+
 
         {% else %}
 
@@ -205,10 +232,13 @@
 
         {% endif %}
 
+
       {% endfor %}
+
 
     </div>
 
   {% endif %}
+
 
 </div>

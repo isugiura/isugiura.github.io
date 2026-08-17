@@ -18,9 +18,9 @@ permalink: /publications/
 
   <button
     class="publication-tab"
-    data-view="theme-view"
+    data-view="topic-view"
   >
-    By Research Theme
+    By Research Topic
   </button>
 
 </div>
@@ -100,18 +100,18 @@ permalink: /publications/
 
 
 <!-- =========================================================
-     BY RESEARCH THEME
+     BY RESEARCH TOPIC
      ========================================================= -->
 
 <div
-  id="theme-view"
+  id="topic-view"
   class="publication-view"
 >
 
   <!-- Hidden source bibliography -->
 
   <div
-    id="theme-publication-source"
+    id="topic-publication-source"
     style="display: none;"
   >
 
@@ -120,28 +120,28 @@ permalink: /publications/
   </div>
 
 
-  <div id="theme-publication-lists">
+  <div id="topic-publication-lists">
 
 
-    {% for theme_pair in site.data.themes %}
+    {% for topic_pair in site.data.research-topics %}
 
-      {% assign theme_id = theme_pair[0] %}
-      {% assign theme = theme_pair[1] %}
+      {% assign topic_id = topic_pair[0] %}
+      {% assign topic = topic_pair[1] %}
 
 
       <section
-        class="publication-theme-section"
-        id="publication-theme-{{ theme_id }}"
+        class="publication-topic-section"
+        id="publication-topic-{{ topic_id }}"
       >
 
-        <h2 class="publication-theme-heading">
-          {{ theme.theme-name }}
+        <h2 class="publication-topic-heading">
+          {{ topic.topic-name }}
         </h2>
 
 
         <div
           class="publication-list"
-          data-theme-id="{{ theme_id }}"
+          data-topic-id="{{ topic_id }}"
         >
         </div>
 
@@ -325,7 +325,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
 
           /*
-           * Keep all research themes in the
+           * Keep all research topics in the
            * By Year view.
            */
 
@@ -392,7 +392,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
 
           /*
-           * Keep all research themes in the
+           * Keep all research topics in the
            * status sections.
            */
 
@@ -425,57 +425,62 @@ document.addEventListener("DOMContentLoaded", function() {
 
 
   /* =========================================================
-     BY RESEARCH THEME
+     BY RESEARCH TOPIC
      ========================================================= */
 
-  const themeSource =
+  const topicSource =
     document.getElementById(
-      "theme-publication-source"
+      "topic-publication-source"
     );
 
 
-  const themePublications =
-    themeSource.querySelectorAll(
+  const topicPublications =
+    topicSource.querySelectorAll(
       ".publication"
     );
 
 
-  const themeLists =
+  const topicLists =
     document.querySelectorAll(
-      ".publication-list[data-theme-id]"
+      ".publication-list[data-topic-id]"
     );
 
 
-  themeLists.forEach(function(themeList) {
+  topicLists.forEach(function(topicList) {
 
 
-    const themeId =
-      themeList.dataset.themeId;
+    const topicId =
+      topicList.dataset.topicId;
 
 
-    themePublications.forEach(
+    topicPublications.forEach(
       function(publication) {
 
 
-        const themeIds =
+        /*
+         * bib.html exposes the BibTeX
+         * "topics" field as data-topic-ids.
+         */
+
+        const topicIds =
           (
-            publication.dataset.themeIds || ""
+            publication.dataset.topicIds || ""
           )
           .split(",")
-          .map(function(theme) {
+          .map(function(topic) {
 
-            return theme.trim();
+            return topic.trim();
 
           })
-          .filter(function(theme) {
+          .filter(function(topic) {
 
-            return theme !== "";
+            return topic !== "";
 
           });
 
 
         if (
-          themeIds.includes(themeId)
+          topicIds.includes(topicId)
         ) {
 
 
@@ -489,30 +494,26 @@ document.addEventListener("DOMContentLoaded", function() {
 
 
           /* -------------------------------------------------
-             REMOVE THE CURRENT SECTION THEME
+             REMOVE CURRENT TOPIC
              -------------------------------------------------
 
-             For example, inside:
-
-             Modes of variability and their
-             teleconnections
-
-             remove that theme from the publication's
-             list of themes.
+             The topic being used as the section
+             heading should not also appear as an
+             "Other relevant topic."
           */
 
           clone
             .querySelectorAll(
-              ".publication-theme"
+              ".publication-topic"
             )
-            .forEach(function(themeElement) {
+            .forEach(function(topicElement) {
 
 
               if (
-                themeElement.dataset.themeId === themeId
+                topicElement.dataset.topicId === topicId
               ) {
 
-                themeElement.remove();
+                topicElement.remove();
 
               }
 
@@ -520,65 +521,60 @@ document.addEventListener("DOMContentLoaded", function() {
 
 
           /* -------------------------------------------------
-             CHECK FOR OTHER THEMES
+             CHECK FOR OTHER TOPICS
              -------------------------------------------------
 
-             If there are remaining themes, change the
-             label to:
+             If there are remaining topics, keep:
 
-             Other relevant theme(s):
+             Other relevant topic(s):
 
-             If there are no remaining themes, remove
-             the entire theme container.
+             If there are no remaining topics,
+             remove the entire topic container.
           */
 
-          const themesContainer =
+          const topicsContainer =
             clone.querySelector(
-              ".publication-themes"
+              ".publication-topics"
             );
 
 
-          const remainingThemes =
+          const remainingTopics =
             clone.querySelectorAll(
-              ".publication-theme"
+              ".publication-topic"
             );
 
 
           if (
-            remainingThemes.length > 0
+            remainingTopics.length > 0
           ) {
 
-            /*
-             * There are other themes, so show
-             * the "Other relevant theme(s):"
-             * label.
-             */
 
-            const themeLabel =
+            const topicLabel =
               clone.querySelector(
-                ".publication-theme-label"
+                ".publication-topic-label"
               );
 
 
-            if (themeLabel) {
+            if (topicLabel) {
 
-              themeLabel.textContent =
-                "Other relevant theme(s):";
+              topicLabel.textContent =
+                "Other relevant topic(s):";
 
             }
 
           } else {
 
+
             /*
-             * The publication has no other themes.
+             * No other topics remain.
              *
-             * Remove the entire theme container,
-             * including its label.
+             * Remove the entire container so
+             * that no empty label is displayed.
              */
 
-            if (themesContainer) {
+            if (topicsContainer) {
 
-              themesContainer.remove();
+              topicsContainer.remove();
 
             }
 
@@ -587,10 +583,10 @@ document.addEventListener("DOMContentLoaded", function() {
 
           /*
            * Add the modified publication to
-           * this research-theme section.
+           * this research-topic section.
            */
 
-          themeList.appendChild(
+          topicList.appendChild(
             clone
           );
 
@@ -600,17 +596,17 @@ document.addEventListener("DOMContentLoaded", function() {
     );
 
 
-    /*
-       Hide empty research-theme sections.
-    */
+    /* -------------------------------------------------------
+       HIDE EMPTY RESEARCH-TOPIC SECTIONS
+       ------------------------------------------------------- */
 
     if (
-      themeList.children.length === 0
+      topicList.children.length === 0
     ) {
 
-      themeList
+      topicList
         .closest(
-          ".publication-theme-section"
+          ".publication-topic-section"
         )
         .style.display = "none";
 

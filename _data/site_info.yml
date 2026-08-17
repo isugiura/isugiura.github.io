@@ -168,19 +168,19 @@ cv:
   # GRANTS
   # -------------------------------------------------------
 
-  grants:
+  # grants:
 
-    # - title: Grant Title
-    #   agency: Funding Agency
-    #   role: Principal Investigator
-    #   amount: $XXX,XXX
-    #   years: 2025–2028
+  #   - title: Grant Title
+  #     agency: Funding Agency
+  #     role: Principal Investigator
+  #     amount: $XXX,XXX
+  #     years: 2025–2028
 
-    # - title: Another Grant
-    #   agency: Another Funding Agency
-    #   role: Co-Investigator
-    #   amount: $XX,XXX
-    #   years: 2023–2025
+  #   - title: Another Grant
+  #     agency: Another Funding Agency
+  #     role: Co-Investigator
+  #     amount: $XX,XXX
+  #     years: 2023–2025
 
 
   # -------------------------------------------------------

@@ -44,6 +44,10 @@ permalink: /research-interests/
     </p>
 
 
+    <!-- =====================================================
+         RELEVANT PUBLICATIONS TOGGLE
+         ===================================================== -->
+
     <details class="research-publications">
 
       <summary>
@@ -118,6 +122,11 @@ document.addEventListener("DOMContentLoaded", function() {
 
           return theme.trim();
 
+        })
+        .filter(function(theme) {
+
+          return theme !== "";
+
         });
 
 
@@ -127,98 +136,133 @@ document.addEventListener("DOMContentLoaded", function() {
        */
 
       if (
-        themeIds.includes(themeId)
+        !themeIds.includes(themeId)
       ) {
 
+        return;
 
-        /*
-         * Clone the publication so that the
-         * hidden source remains unchanged.
-         */
-
-        const clone =
-          publication.cloneNode(true);
+      }
 
 
-        /* ===================================================
-           REMOVE CURRENT THEME
-           ===================================================
+      /* =====================================================
+         CLONE PUBLICATION
+         =====================================================
 
-           The theme being used as the section heading
-           should not also appear under:
+         Keep the hidden bibliography source unchanged.
+      */
 
-           "Other relevant theme(s):"
-        */
-
-        clone
-          .querySelectorAll(
-            ".publication-theme"
-          )
-          .forEach(function(themeElement) {
+      const clone =
+        publication.cloneNode(true);
 
 
-            if (
-              themeElement.dataset.themeId === themeId
-            ) {
+      /* =====================================================
+         REMOVE CURRENT THEME
+         =====================================================
 
-              themeElement.remove();
+         The theme being used as the section heading
+         should not also appear as an "other" theme.
+      */
 
-            }
-
-          });
-
-
-        /* ===================================================
-           REMOVE EMPTY THEME LABEL
-           ===================================================
-
-           If the publication had only the current theme,
-           there are no "other" themes to display.
-
-           Therefore remove the entire theme container.
-
-           This prevents:
-
-           Other relevant theme(s):
-
-           from appearing by itself.
-        */
-
-        const themeContainer =
-          clone.querySelector(
-            ".publication-themes"
-          );
-
-
-        if (themeContainer) {
-
-
-          const remainingThemes =
-            themeContainer.querySelectorAll(
-              ".publication-theme"
-            );
+      clone
+        .querySelectorAll(
+          ".publication-theme"
+        )
+        .forEach(function(themeElement) {
 
 
           if (
-            remainingThemes.length === 0
+            themeElement.dataset.themeId === themeId
           ) {
 
-            themeContainer.remove();
+            themeElement.remove();
+
+          }
+
+        });
+
+
+      /* =====================================================
+         HANDLE OTHER RELEVANT THEMES
+         =====================================================
+
+         If other themes remain, change the label to:
+
+         Other relevant theme(s):
+
+         If no other themes remain, remove the entire
+         theme container, including the label.
+      */
+
+      const themeContainer =
+        clone.querySelector(
+          ".publication-themes"
+        );
+
+
+      if (themeContainer) {
+
+
+        const remainingThemes =
+          themeContainer.querySelectorAll(
+            ".publication-theme"
+          );
+
+
+        if (
+          remainingThemes.length === 0
+        ) {
+
+
+          /*
+           * Publication has only the current theme.
+           *
+           * Remove the entire theme container so
+           * "Other relevant theme(s):" does not appear.
+           */
+
+          themeContainer.remove();
+
+
+        } else {
+
+
+          /*
+           * Publication has additional themes.
+           *
+           * Change the label from:
+           *
+           * Relevant research theme(s):
+           *
+           * to:
+           *
+           * Other relevant theme(s):
+           */
+
+          const themeLabel =
+            themeContainer.querySelector(
+              ".publication-theme-label"
+            );
+
+
+          if (themeLabel) {
+
+            themeLabel.textContent =
+              "Other relevant theme(s):";
 
           }
 
         }
 
-
-        /* ===================================================
-           ADD PUBLICATION
-           =================================================== */
-
-        themeList.appendChild(
-          clone
-        );
-
       }
+
+
+      /* =====================================================
+         ADD PUBLICATION
+         ===================================================== */
+
+      themeList.appendChild(
+        clone
+      );
 
     });
 

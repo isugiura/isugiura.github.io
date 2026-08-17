@@ -1,8 +1,8 @@
 theme: null
 markdown: kramdown
 
-kramdown:
-  parse_block_html: true
+# kramdown:
+#   parse_block_html: true
 
 plugins:
   - jekyll-scholar

@@ -1,49 +1,34 @@
----
-layout: default
-title: Home
----
-
-# About Me
-
-{% if site.data.site_info.profile.bio %}
-
-{% for paragraph in site.data.site_info.profile.bio %}
-
-{{ paragraph }}
-
-{% endfor %}
-
-{% endif %}
-
-
-## Research Interests
-
-{% if site.data.site_info.profile.research_interests %}
-
-{% for interest in site.data.site_info.profile.research_interests %}
-- {{ interest }}
-{% endfor %}
-
-{% endif %}
-
-
-## Education
+<!-- =========================================================
+     EDUCATION
+     ========================================================= -->
 
 {% if site.data.site_info.cv.education %}
 
+<h2>Education</h2>
+
 {% for item in site.data.site_info.cv.education %}
 
-**{{ item.degree }}**
+<div class="cv-entry">
 
-{{ item.institution }}{% if item.location %} · {{ item.location }}{% endif %}
+  <strong>{{ item.degree }}</strong>
 
-{% if item.years %}
-{{ item.years }}
-{% endif %}
+  <div>
+    {{ item.institution }}
+  </div>
 
-{% if item.details %}
-{{ item.details }}
-{% endif %}
+  {% if item.years %}
+  <div>
+    {{ item.years }}
+  </div>
+  {% endif %}
+
+  {% if item.details %}
+  <p>
+    {{ item.details }}
+  </p>
+  {% endif %}
+
+</div>
 
 {% endfor %}
 

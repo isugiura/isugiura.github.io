@@ -672,7 +672,7 @@ body {
 .publication-links a:hover {
   color: var(--link-hover);
 
-  text-decoration: underline;
+  text-decoration: none;
 }
 
 
@@ -885,12 +885,32 @@ body {
    PUBLICATION LISTS
    ========================================================= */
 
+/*
+   The vertical line belongs to each individual
+   publication rather than to the entire list.
+*/
+
 .publication-list {
   margin-top: 20px;
+}
 
-  padding-left: 20px;
+
+/* Individual publication */
+
+.publication-view .publication {
+  margin-bottom: 28px;
+
+  padding-left: 18px;
 
   border-left: 2px solid var(--border);
+}
+
+
+/* Keep the final publication from adding
+   unnecessary bottom spacing */
+
+.publication-view .publication:last-child {
+  margin-bottom: 0;
 }
 
 
@@ -1002,20 +1022,11 @@ body {
    ========================================================= */
 
 /*
-   General CV entry.
+   CV section headings.
 
-   The CV page now pulls all information from
-   site_info.yml, including:
-
-   - Education
-   - Research Experience
-   - Teaching
-   - Awards and Honors
-   - Grants
-   - Presentations
-   - Professional Memberships
-   - Service
-   - Outreach
+   These intentionally use the same visual treatment
+   as the research topic headings, except that the
+   horizontal border is removed.
 */
 
 .main-content .cv-section-heading {
@@ -1029,7 +1040,7 @@ body {
   font-size: 1.5rem;
   font-weight: 600;
 
-  border-top: none;
+  border-top: 1px solid var(--border);
 }
 
 
@@ -1038,16 +1049,38 @@ body {
 }
 
 
-/* CV entires */
+/* =========================================================
+   CV ENTRIES
+   ========================================================= */
+
+/*
+   Each CV item gets its own vertical line.
+
+   The padding creates space between the line and
+   the content, while the margin creates space
+   between adjacent entries.
+*/
 
 .cv-entry {
   margin: 0 0 28px;
+
+  padding-left: 18px;
+
+  border-left: 2px solid var(--border);
 
   color: var(--text-main);
 
   font-size: 0.95rem;
 
   line-height: 1.5;
+}
+
+
+/* Keep the final CV entry from adding
+   unnecessary bottom spacing */
+
+.cv-entry:last-child {
+  margin-bottom: 0;
 }
 
 
@@ -1119,8 +1152,25 @@ body {
 
 
 /* =========================================================
-   HOME PAGE — EDUCATION
+   HOME PAGE
    ========================================================= */
+
+/* Research interests */
+
+.home-research-interests {
+  margin-top: 0;
+  margin-bottom: 25px;
+
+  padding-left: 22px;
+}
+
+
+.home-research-interests li {
+  margin-bottom: 2px;
+
+  line-height: 1.4;
+}
+
 
 /*
    Education entries on index.md reuse .cv-entry.

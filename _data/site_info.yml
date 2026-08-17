@@ -74,9 +74,153 @@ profiles:
 
 
 # =========================================================
-# DOCUMENTS
+# CURRICULUM VITAE
 # =========================================================
 
-documents:
+cv:
 
-  cv: /assets/files/cv.pdf
+  # -------------------------------------------------------
+  # CV DOCUMENT
+  # -------------------------------------------------------
+
+  document: /assets/files/cv.pdf
+
+
+  # -------------------------------------------------------
+  # EDUCATION
+  # -------------------------------------------------------
+
+  education:
+
+    - degree: Ph.D. in Your Field
+      institution: Your University
+      location: City, State
+      years: 2020–2025
+      details: Dissertation title or other relevant information.
+
+    - degree: M.S. in Your Field
+      institution: Another University
+      location: City, State
+      years: 2018–2020
+      details: Additional information.
+
+
+  # -------------------------------------------------------
+  # TEACHING
+  # -------------------------------------------------------
+
+  teaching:
+
+    - position: Instructor
+      course: Course Name
+      institution: Your University
+      years: 2025–Present
+      details:
+        - Course responsibility
+        - Another teaching responsibility
+
+    - position: Teaching Assistant
+      course: Another Course
+      institution: Another University
+      years: 2020–2024
+      details:
+        - Course responsibility
+
+
+  # -------------------------------------------------------
+  # AWARDS AND HONORS
+  # -------------------------------------------------------
+
+  awards:
+
+    - name: Outstanding Research Award
+      institution: Your Institution
+      year: 2025
+
+    - name: Fellowship
+      institution: Another Organization
+      year: 2023
+
+
+  # -------------------------------------------------------
+  # GRANTS
+  # -------------------------------------------------------
+
+  grants:
+
+    # - title: Grant Title
+    #   agency: Funding Agency
+    #   role: Principal Investigator
+    #   amount: $XXX,XXX
+    #   years: 2025–2028
+
+    # - title: Another Grant
+    #   agency: Another Funding Agency
+    #   role: Co-Investigator
+    #   amount: $XX,XXX
+    #   years: 2023–2025
+
+
+  # -------------------------------------------------------
+  # PRESENTATIONS
+  # -------------------------------------------------------
+
+  presentations:
+
+    - title: Presentation Title
+      venue: Conference or Seminar Name
+      location: City, State
+      year: 2025
+
+    - title: Another Presentation
+      venue: Department Seminar
+      location: City, State
+      year: 2024
+
+
+  # -------------------------------------------------------
+  # PROFESSIONAL MEMBERSHIPS
+  # -------------------------------------------------------
+
+  professional_memberships:
+
+    - organization: American Geophysical Union
+      years: 2020–Present
+
+    - organization: American Meteorological Society
+      years: 2021–Present
+
+
+  # -------------------------------------------------------
+  # SERVICE
+  # -------------------------------------------------------
+
+  service:
+
+    # - role: Reviewer
+    #   organization: Journal Name
+    #   years: 2024–Present
+
+    # - role: Committee Member
+    #   organization: Your University
+    #   years: 2023–2025
+
+
+  # -------------------------------------------------------
+  # OUTREACH
+  # -------------------------------------------------------
+
+  outreach:
+
+    - activity: Outreach Program
+      organization: Your Organization
+      location: City, State
+      year: 2025
+      details: Description of outreach activity.
+
+    - activity: Public Lecture
+      organization: Another Organization
+      location: City, State
+      year: 2024
+      details: Description of outreach activity.
+

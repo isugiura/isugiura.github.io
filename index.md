@@ -3,16 +3,85 @@ layout: default
 title: Home
 ---
 
-# About Me
+<h1>About Me</h1>
 
-I am a Ph.D. candidate in the Department of Earth and Environmental Sciences at Columbia University.
 
-My research interests are the ocean's role in past, modern, and future climates, including ocean–atmosphere interactions, modes of climate variability, ocean responses to external forcings, and their impacts on hydroclimate.
+<!-- =========================================================
+     BIO
+     ========================================================= -->
 
-I graduated from Smith College in 2022 with cum laude and B.A. in Geosciences and Mathematics. I also received highest honors for my thesis titled “Reconstructing Past Temperature From Lake Sediments at Darwin Crater, Tasmania, Australia Using the brGDGT Biomarker Proxy.”
+{% if site.data.site_info.profile.bio %}
 
-## Research Interests
+  {% for paragraph in site.data.site_info.profile.bio %}
 
-- Climate variability and change
-- Climate–volcano interactions
-- Paleoclimate
+    <p>
+      {{ paragraph }}
+    </p>
+
+  {% endfor %}
+
+{% endif %}
+
+
+<!-- =========================================================
+     RESEARCH INTERESTS
+     ========================================================= -->
+
+{% if site.data.site_info.profile.research_interests %}
+
+  <h2>Research Interests</h2>
+
+  <ul>
+
+    {% for interest in site.data.site_info.profile.research_interests %}
+
+      <li>{{ interest }}</li>
+
+    {% endfor %}
+
+  </ul>
+
+{% endif %}
+
+
+<!-- =========================================================
+     EDUCATION
+     ========================================================= -->
+
+{% if site.data.site_info.cv.education %}
+
+  <h2>Education</h2>
+
+  {% for item in site.data.site_info.cv.education %}
+
+    <div class="cv-entry">
+
+      <strong>
+        {{ item.degree }}
+      </strong>
+
+      <div>
+        {{ item.institution }}
+
+        {% if item.location %}
+          · {{ item.location }}
+        {% endif %}
+      </div>
+
+      {% if item.years %}
+        <div>
+          {{ item.years }}
+        </div>
+      {% endif %}
+
+      {% if item.details %}
+        <p>
+          {{ item.details }}
+        </p>
+      {% endif %}
+
+    </div>
+
+  {% endfor %}
+
+{% endif %}

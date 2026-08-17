@@ -4,7 +4,7 @@ title: Research
 permalink: /research/
 ---
 
-<h1>Research Interests</h1>
+<h1>Research</h1>
 
 
 <!-- =========================================================
@@ -20,27 +20,27 @@ permalink: /research/
 
 
 <!-- =========================================================
-     RESEARCH THEMES
+     RESEARCH TOPICS
      ========================================================= -->
 
-{% for theme_pair in site.data.themes %}
+{% for topic_pair in site.data.research-topics %}
 
-  {% assign theme_id = theme_pair[0] %}
-  {% assign theme = theme_pair[1] %}
+  {% assign topic_id = topic_pair[0] %}
+  {% assign topic = topic_pair[1] %}
 
 
   <section
     class="research-interest"
-    id="research-theme-{{ theme_id }}"
+    id="research-topic-{{ topic_id }}"
   >
 
     <h2>
-      {{ theme.theme-name }}
+      {{ topic.topic-name }}
     </h2>
 
 
     <p>
-      {{ theme.description }}
+      {{ topic.description }}
     </p>
 
 
@@ -57,7 +57,7 @@ permalink: /research/
 
       <div
         class="research-publications-list"
-        data-theme-id="{{ theme_id }}"
+        data-topic-id="{{ topic_id }}"
       >
       </div>
 
@@ -93,50 +93,50 @@ document.addEventListener("DOMContentLoaded", function() {
     );
 
 
-  const themeLists =
+  const topicLists =
     document.querySelectorAll(
       ".research-publications-list"
     );
 
 
   /* =========================================================
-     BUILD PUBLICATIONS FOR EACH RESEARCH THEME
+     BUILD PUBLICATIONS FOR EACH RESEARCH TOPIC
      ========================================================= */
 
-  themeLists.forEach(function(themeList) {
+  topicLists.forEach(function(topicList) {
 
 
-    const themeId =
-      themeList.dataset.themeId;
+    const topicId =
+      topicList.dataset.topicId;
 
 
     publications.forEach(function(publication) {
 
 
-      const themeIds =
+      const topicIds =
         (
-          publication.dataset.themeIds || ""
+          publication.dataset.topicIds || ""
         )
         .split(",")
-        .map(function(theme) {
+        .map(function(topic) {
 
-          return theme.trim();
+          return topic.trim();
 
         })
-        .filter(function(theme) {
+        .filter(function(topic) {
 
-          return theme !== "";
+          return topic !== "";
 
         });
 
 
       /*
        * Only include publications associated
-       * with the current research theme.
+       * with the current research topic.
        */
 
       if (
-        !themeIds.includes(themeId)
+        !topicIds.includes(topicId)
       ) {
 
         return;
@@ -156,25 +156,25 @@ document.addEventListener("DOMContentLoaded", function() {
 
 
       /* =====================================================
-         REMOVE CURRENT THEME
+         REMOVE CURRENT TOPIC
          =====================================================
 
-         The theme being used as the section heading
-         should not also appear as an "other" theme.
+         The topic being used as the section heading
+         should not also appear as an "other" topic.
       */
 
       clone
         .querySelectorAll(
-          ".publication-theme"
+          ".publication-topic"
         )
-        .forEach(function(themeElement) {
+        .forEach(function(topicElement) {
 
 
           if (
-            themeElement.dataset.themeId === themeId
+            topicElement.dataset.topicId === topicId
           ) {
 
-            themeElement.remove();
+            topicElement.remove();
 
           }
 
@@ -182,72 +182,68 @@ document.addEventListener("DOMContentLoaded", function() {
 
 
       /* =====================================================
-         HANDLE OTHER RELEVANT THEMES
+         HANDLE OTHER RELEVANT TOPICS
          =====================================================
 
-         If other themes remain, change the label to:
+         If other topics remain, change the label to:
 
-         Other relevant theme(s):
+         Other relevant topic(s):
 
-         If no other themes remain, remove the entire
-         theme container, including the label.
+         If no other topics remain, remove the entire
+         topic container, including the label.
       */
 
-      const themeContainer =
+      const topicContainer =
         clone.querySelector(
-          ".publication-themes"
+          ".publication-topics"
         );
 
 
-      if (themeContainer) {
+      if (topicContainer) {
 
 
-        const remainingThemes =
-          themeContainer.querySelectorAll(
-            ".publication-theme"
+        const remainingTopics =
+          topicContainer.querySelectorAll(
+            ".publication-topic"
           );
 
 
         if (
-          remainingThemes.length === 0
+          remainingTopics.length === 0
         ) {
 
 
           /*
-           * Publication has only the current theme.
+           * Publication has only the current topic.
            *
-           * Remove the entire theme container so
-           * "Other relevant theme(s):" does not appear.
+           * Remove the entire topic container so
+           * "Other relevant topic(s):" does not appear.
            */
 
-          themeContainer.remove();
+          topicContainer.remove();
 
 
         } else {
 
 
           /*
-           * Publication has additional themes.
+           * Publication has additional topics.
            *
-           * Change the label from:
+           * Change the label to:
            *
-           * Relevant research theme(s):
-           *
-           * to:
-           *
-           * Other relevant theme(s):
+           * Other relevant topic(s):
            */
 
-          const themeLabel =
-            themeContainer.querySelector(
-              ".publication-theme-label"
+          const topicLabel =
+            topicContainer.querySelector(
+              ".publication-topic-label"
             );
 
 
-          if (themeLabel) {
+          if (topicLabel) {
 
-            themeLabel.textContent =
-              "Other relevant theme(s):";
+            topicLabel.textContent =
+              "Other relevant topic(s):";
 
           }
 
@@ -260,7 +256,7 @@ document.addEventListener("DOMContentLoaded", function() {
          ADD PUBLICATION
          ===================================================== */
 
-      themeList.appendChild(
+      topicList.appendChild(
         clone
       );
 

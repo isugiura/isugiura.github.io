@@ -3,7 +3,7 @@
 
 <div
   class="publication"
-  data-topic-ids="{{ entry.themes | escape }}"
+  data-topic-ids="{{ entry.topics | escape }}"
   data-status="{{ entry.status | escape }}"
 >
 
@@ -207,21 +207,21 @@
        RESEARCH TOPICS
        ===================================================== -->
 
-  {% if entry.themes %}
+  {% if entry.topics %}
 
     {% assign topic_list =
-      entry.themes
+      entry.topics
       | split: ","
     %}
 
 
     <div
       class="publication-topics"
-      data-topic-ids="{{ entry.themes | escape }}"
+      data-topic-ids="{{ entry.topics | escape }}"
     >
 
       <span class="publication-label publication-topic-label">
-        Other relevant topic(s):
+        Relevant topic(s):
       </span>
 
 

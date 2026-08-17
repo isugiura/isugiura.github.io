@@ -7,13 +7,14 @@
   data-status="{{ entry.status | escape }}"
 >
 
-
   <!-- =====================================================
        TITLE
        ===================================================== -->
 
   <div class="publication-title">
+
     {{ entry.title }}
+
   </div>
 
 
@@ -70,23 +71,39 @@
   <div class="publication-journal">
 
     {% if entry.journal %}
-      <em>{{ entry.journal }}</em>
+
+      <em>
+        {{ entry.journal }}
+      </em>
+
     {% endif %}
+
 
     {% if entry.volume %}
+
       , {{ entry.volume }}
+
     {% endif %}
+
 
     {% if entry.number %}
+
       ({{ entry.number }})
+
     {% endif %}
+
 
     {% if entry.pages %}
+
       , {{ entry.pages }}
+
     {% endif %}
 
+
     {% if entry.year %}
+
       ({{ entry.year }})
+
     {% endif %}
 
   </div>
@@ -151,7 +168,10 @@
 
   {% if entry.keywords %}
 
-    {% assign keyword_list = entry.keywords | split: "," %}
+    {% assign keyword_list =
+      entry.keywords
+      | split: ","
+    %}
 
 
     <div class="publication-keywords">
@@ -171,7 +191,9 @@
 
 
         <span class="publication-keyword">
+
           {{ keyword_display }}
+
         </span>
 
       {% endfor %}
@@ -187,14 +209,16 @@
 
   {% if entry.themes %}
 
-    {% assign theme_list = entry.themes | split: "," %}
+    {% assign theme_list =
+      entry.themes
+      | split: ","
+    %}
 
 
     <div
       class="publication-themes"
       data-theme-ids="{{ entry.themes | escape }}"
     >
-
 
       <span class="publication-label publication-theme-label">
         Other relevant theme(s):
@@ -203,7 +227,11 @@
 
       {% for theme in theme_list %}
 
-        {% assign theme_id = theme | strip %}
+        {% assign theme_id =
+          theme
+          | strip
+        %}
+
 
         {% assign theme_data =
           site.data.themes[theme_id]
@@ -217,7 +245,9 @@
             data-theme-id="{{ theme_id }}"
             href="{{ '/research-interests/' | relative_url }}#research-theme-{{ theme_id }}"
           >
+
             {{ theme_data["theme-name"] }}
+
           </a>
 
 
@@ -227,18 +257,17 @@
             class="publication-theme"
             data-theme-id="{{ theme_id }}"
           >
+
             {{ theme_id | replace: "-", " " }}
+
           </span>
 
         {% endif %}
 
-
       {% endfor %}
-
 
     </div>
 
   {% endif %}
-
 
 </div>

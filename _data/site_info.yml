@@ -22,7 +22,29 @@ profile:
 
   photo: /assets/files/profile.jpg
 
-  bio: ...
+  bio:
+
+    - >
+      I am a Ph.D. candidate in the Department of Earth and
+      Environmental Sciences at Columbia University. My research
+      examines the ocean's role in past, modern, and future climates.
+
+    - >
+      I am particularly interested in ocean–atmosphere interactions,
+      modes of climate variability, ocean responses to external
+      forcings, and their impacts on hydroclimate.
+
+
+  # -------------------------------------------------------
+  # RESEARCH INTERESTS
+  # -------------------------------------------------------
+
+  research_interests:
+
+    - Climate variability and change
+    - Climate–volcano interactions
+    - Paleoclimate
+
 
   # -------------------------------------------------------
   # CURRENT AFFILIATIONS

@@ -3,7 +3,7 @@
 
 <div
   class="publication"
-  data-theme-ids="{{ entry.themes | escape }}"
+  data-topic-ids="{{ entry.themes | escape }}"
   data-status="{{ entry.status | escape }}"
 >
 
@@ -204,49 +204,49 @@
 
 
   <!-- =====================================================
-       RESEARCH THEMES
+       RESEARCH TOPICS
        ===================================================== -->
 
   {% if entry.themes %}
 
-    {% assign theme_list =
+    {% assign topic_list =
       entry.themes
       | split: ","
     %}
 
 
     <div
-      class="publication-themes"
-      data-theme-ids="{{ entry.themes | escape }}"
+      class="publication-topics"
+      data-topic-ids="{{ entry.themes | escape }}"
     >
 
-      <span class="publication-label publication-theme-label">
-        Other relevant theme(s):
+      <span class="publication-label publication-topic-label">
+        Other relevant topic(s):
       </span>
 
 
-      {% for theme in theme_list %}
+      {% for topic in topic_list %}
 
-        {% assign theme_id =
-          theme
+        {% assign topic_id =
+          topic
           | strip
         %}
 
 
-        {% assign theme_data =
-          site.data.themes[theme_id]
+        {% assign topic_data =
+          site.data.research-topics[topic_id]
         %}
 
 
-        {% if theme_data %}
+        {% if topic_data %}
 
           <a
-            class="publication-theme"
-            data-theme-id="{{ theme_id }}"
-            href="{{ '/research-interests/' | relative_url }}#research-theme-{{ theme_id }}"
+            class="publication-topic"
+            data-topic-id="{{ topic_id }}"
+            href="{{ '/research/' | relative_url }}#research-topic-{{ topic_id }}"
           >
 
-            {{ theme_data["theme-name"] }}
+            {{ topic_data["topic-name"] }}
 
           </a>
 
@@ -254,11 +254,11 @@
         {% else %}
 
           <span
-            class="publication-theme"
-            data-theme-id="{{ theme_id }}"
+            class="publication-topic"
+            data-topic-id="{{ topic_id }}"
           >
 
-            {{ theme_id | replace: "-", " " }}
+            {{ topic_id | replace: "-", " " }}
 
           </span>
 

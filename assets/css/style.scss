@@ -1018,6 +1018,28 @@ body {
    - Outreach
 */
 
+.main-content .cv-section-heading {
+  margin-top: 45px;
+  margin-bottom: 15px;
+
+  padding-top: 25px;
+
+  color: var(--accent);
+
+  font-size: 1.5rem;
+  font-weight: 600;
+
+  border-top: none;
+}
+
+
+.main-content h1 + .cv-section-heading {
+  margin-top: 45px;
+}
+
+
+/* CV entires */
+
 .cv-entry {
   margin: 0 0 28px;
 

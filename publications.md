@@ -364,6 +364,9 @@ document.addEventListener("DOMContentLoaded", function() {
     );
 
 
+  let hasVisibleStatusSection = false;
+
+
   statusLists.forEach(function(statusList) {
 
 
@@ -419,9 +422,36 @@ document.addEventListener("DOMContentLoaded", function() {
         )
         .style.display = "none";
 
+    } else {
+
+      hasVisibleStatusSection = true;
+
     }
 
   });
+
+
+  /* =========================================================
+     SPACE BETWEEN STATUS SECTIONS
+     AND FIRST PUBLISHED YEAR
+     ========================================================= */
+
+  /*
+   * The published-year sections are generated inside
+   * #year-sections, which is a separate container from
+   * the Submitted / In Preparation sections.
+   *
+   * Add spacing only when at least one status section
+   * is actually visible.
+   */
+
+  if (hasVisibleStatusSection) {
+
+    yearSections.classList.add(
+      "has-status-sections"
+    );
+
+  }
 
 
   /* =========================================================

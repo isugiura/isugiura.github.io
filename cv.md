@@ -32,31 +32,32 @@ permalink: /cv/
 
 {% if site.data.site_info.cv.education %}
 
-<h2>Education</h2>
+<h2 class="cv-section-heading">
+  Education
+</h2>
 
 {% for item in site.data.site_info.cv.education %}
 
 <div class="cv-entry">
 
-  <strong>{{ item.degree }}</strong>
+  <strong>
+    {{ item.degree }}
+  </strong>
 
   <div>
     {{ item.institution }}
-    {% if item.location %}
-      · {{ item.location }}
-    {% endif %}
   </div>
 
   {% if item.years %}
-    <div>
-      {{ item.years }}
-    </div>
+  <div>
+    {{ item.years }}
+  </div>
   {% endif %}
 
   {% if item.details %}
-    <p>
-      {{ item.details }}
-    </p>
+  <p>
+    {{ item.details }}
+  </p>
   {% endif %}
 
 </div>
@@ -72,13 +73,17 @@ permalink: /cv/
 
 {% if site.data.site_info.cv.research_experience %}
 
-<h2>Research Experience</h2>
+<h2 class="cv-section-heading">
+  Research Experience
+</h2>
 
 {% for item in site.data.site_info.cv.research_experience %}
 
 <div class="cv-entry">
 
-  <strong>{{ item.position }}</strong>
+  <strong>
+    {{ item.position }}
+  </strong>
 
   <div>
     {{ item.institution }}
@@ -88,9 +93,9 @@ permalink: /cv/
   </div>
 
   {% if item.years %}
-    <div>
-      {{ item.years }}
-    </div>
+  <div>
+    {{ item.years }}
+  </div>
   {% endif %}
 
   {% if item.details %}
@@ -122,13 +127,17 @@ permalink: /cv/
 
 {% if site.data.site_info.cv.teaching %}
 
-<h2>Teaching</h2>
+<h2 class="cv-section-heading">
+  Teaching
+</h2>
 
 {% for item in site.data.site_info.cv.teaching %}
 
 <div class="cv-entry">
 
-  <strong>{{ item.position }}</strong>
+  <strong>
+    {{ item.position }}
+  </strong>
 
   {% if item.course %}
   <div>
@@ -138,16 +147,10 @@ permalink: /cv/
 
   <div>
     {{ item.institution }}
-    {% if item.location %}
-      · {{ item.location }}
+    {% if item.years %}
+      · {{ item.years }}
     {% endif %}
   </div>
-
-  {% if item.years %}
-    <div>
-      {{ item.years }}
-    </div>
-  {% endif %}
 
   {% if item.details %}
 
@@ -178,13 +181,17 @@ permalink: /cv/
 
 {% if site.data.site_info.cv.awards %}
 
-<h2>Awards and Honors</h2>
+<h2 class="cv-section-heading">
+  Awards and Honors
+</h2>
 
 {% for item in site.data.site_info.cv.awards %}
 
 <div class="cv-entry">
 
-  <strong>{{ item.name }}</strong>
+  <strong>
+    {{ item.name }}
+  </strong>
 
   {% if item.institution %}
   <div>
@@ -211,13 +218,17 @@ permalink: /cv/
 
 {% if site.data.site_info.cv.grants %}
 
-<h2>Grants</h2>
+<h2 class="cv-section-heading">
+  Grants
+</h2>
 
 {% for item in site.data.site_info.cv.grants %}
 
 <div class="cv-entry">
 
-  <strong>{{ item.title }}</strong>
+  <strong>
+    {{ item.title }}
+  </strong>
 
   {% if item.agency %}
   <div>
@@ -272,13 +283,17 @@ permalink: /cv/
 
 {% if site.data.site_info.cv.presentations %}
 
-<h2>Presentations</h2>
+<h2 class="cv-section-heading">
+  Presentations
+</h2>
 
 {% for item in site.data.site_info.cv.presentations %}
 
 <div class="cv-entry">
 
-  <strong>{{ item.title }}</strong>
+  <strong>
+    {{ item.title }}
+  </strong>
 
   {% if item.venue %}
   <div>
@@ -299,11 +314,9 @@ permalink: /cv/
   {% endif %}
 
   {% if item.details %}
-
   <p>
     {{ item.details }}
   </p>
-
   {% endif %}
 
 </div>
@@ -319,13 +332,17 @@ permalink: /cv/
 
 {% if site.data.site_info.cv.professional_memberships %}
 
-<h2>Professional Memberships</h2>
+<h2 class="cv-section-heading">
+  Professional Memberships
+</h2>
 
 {% for item in site.data.site_info.cv.professional_memberships %}
 
 <div class="cv-entry">
 
-  <strong>{{ item.organization }}</strong>
+  <strong>
+    {{ item.organization }}
+  </strong>
 
   {% if item.role %}
   <div>
@@ -352,23 +369,24 @@ permalink: /cv/
 
 {% if site.data.site_info.cv.service %}
 
-<h2>Service</h2>
+<h2 class="cv-section-heading">
+  Service
+</h2>
 
 {% for item in site.data.site_info.cv.service %}
 
 <div class="cv-entry">
 
-  <strong>{{ item.role }}</strong>
+  <strong>
+    {{ item.role }}
+  </strong>
 
   {% if item.organization %}
   <div>
     {{ item.organization }}
-  </div>
-  {% endif %}
-
-  {% if item.years %}
-  <div>
-    {{ item.years }}
+    {% if item.years %}
+      · {{ item.years }}
+    {% endif %}
   </div>
   {% endif %}
 
@@ -401,29 +419,30 @@ permalink: /cv/
 
 {% if site.data.site_info.cv.outreach %}
 
-<h2>Outreach</h2>
+<h2 class="cv-section-heading">
+  Outreach
+</h2>
 
 {% for item in site.data.site_info.cv.outreach %}
 
 <div class="cv-entry">
 
-  <strong>{{ item.activity }}</strong>
+  <strong>
+    {{ item.activity }}
+  </strong>
 
   {% if item.organization %}
   <div>
     {{ item.organization }}
+    {% if item.years %}
+      · {{ item.years }}
+    {% endif %}
   </div>
   {% endif %}
 
   {% if item.location %}
   <div>
     {{ item.location }}
-  </div>
-  {% endif %}
-
-  {% if item.year %}
-  <div>
-    {{ item.year }}
   </div>
   {% endif %}
 

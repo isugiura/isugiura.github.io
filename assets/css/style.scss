@@ -506,7 +506,7 @@ body {
 
 
 /* =========================================================
-   RESEARCH INTERESTS
+   RESEARCH TOPICS
    ========================================================= */
 
 .research-interest {
@@ -676,11 +676,6 @@ body {
 }
 
 
-/*
-   Separator between DOI, Paper, and Code.
-   Smaller margins keep the links visually compact.
-*/
-
 .publication-links a:not(:last-child)::after {
   content: " · ";
 
@@ -740,10 +735,10 @@ body {
 
 
 /* =========================================================
-   PUBLICATION RESEARCH THEMES
+   PUBLICATION RESEARCH TOPICS
    ========================================================= */
 
-.publication-themes {
+.publication-topics {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
@@ -754,17 +749,17 @@ body {
 }
 
 
-/* "Other relevant theme(s):" label */
+/* "Other relevant topic(s):" label */
 
-.publication-theme-label {
+.publication-topic-label {
   font-size: 0.8rem;
   font-weight: 600;
 }
 
 
-/* Theme labels - general */
+/* Topic labels - general */
 
-.publication-themes .publication-theme {
+.publication-topics .publication-topic {
   display: inline-block;
 
   padding: 0 3px;
@@ -787,9 +782,9 @@ body {
 }
 
 
-/* Linked themes - filled rectangle */
+/* Linked topics - filled rectangle */
 
-.publication-themes a.publication-theme {
+.publication-topics a.publication-topic {
   color: var(--accent);
 
   background-color: var(--accent-muted);
@@ -800,7 +795,7 @@ body {
 }
 
 
-.publication-themes a.publication-theme:hover {
+.publication-topics a.publication-topic:hover {
   color: var(--link);
 
   background-color: var(--accent-muted);
@@ -811,9 +806,9 @@ body {
 }
 
 
-/* Unlinked themes - unfilled rectangle */
+/* Unlinked topics - unfilled rectangle */
 
-.publication-themes span.publication-theme {
+.publication-topics span.publication-topic {
   color: var(--accent);
 
   background-color: transparent;
@@ -890,16 +885,6 @@ body {
    PUBLICATION LISTS
    ========================================================= */
 
-/*
-   All publication lists use the same vertical-line
-   treatment, including:
-
-   - Submitted
-   - In Preparation
-   - Publications by Year
-   - Publications by Research Theme
-*/
-
 .publication-list {
   margin-top: 20px;
 
@@ -941,10 +926,10 @@ body {
 
 
 /* =========================================================
-   PUBLICATIONS — BY RESEARCH THEME
+   PUBLICATIONS — BY TOPIC
    ========================================================= */
 
-.main-content h2.publication-theme-heading {
+.main-content h2.publication-topic-heading {
   position: relative;
 
   margin-top: 25px;
@@ -963,11 +948,165 @@ body {
 }
 
 
-/* First heading in the By Research Theme view */
+/* First heading in the By Topic view */
 
-.publication-theme-section:first-child
-.publication-theme-heading {
+.publication-topic-section:first-child
+.publication-topic-heading {
   margin-top: 0;
+}
+
+
+/* =========================================================
+   RESEARCH TOPIC SECTIONS
+   ========================================================= */
+
+/*
+   Used by research.md.
+
+   We keep .research-interest as an alias so the page
+   continues to work even if the section class has not
+   yet been renamed to .research-topic.
+*/
+
+.research-topic,
+.research-interest {
+  margin-bottom: 50px;
+
+  scroll-margin-top: 100px;
+}
+
+
+.research-topic h2,
+.research-interest h2 {
+  margin-top: 45px;
+  margin-bottom: 15px;
+
+  padding-top: 25px;
+
+  color: var(--accent);
+
+  font-size: 1.5rem;
+
+  border-top: 1px solid var(--border);
+}
+
+
+.research-topic > p,
+.research-interest > p {
+  margin-bottom: 20px;
+}
+
+
+/* =========================================================
+   CURRICULUM VITAE
+   ========================================================= */
+
+/*
+   General CV entry.
+
+   The CV page now pulls all information from
+   site_info.yml, including:
+
+   - Education
+   - Research Experience
+   - Teaching
+   - Awards and Honors
+   - Grants
+   - Presentations
+   - Professional Memberships
+   - Service
+   - Outreach
+*/
+
+.cv-entry {
+  margin: 0 0 28px;
+
+  color: var(--text-main);
+
+  font-size: 0.95rem;
+
+  line-height: 1.5;
+}
+
+
+/* Main CV entry title */
+
+.cv-entry > strong {
+  display: block;
+
+  margin-bottom: 3px;
+
+  color: var(--text-section);
+
+  font-weight: 600;
+}
+
+
+/* Institution / organization / location */
+
+.cv-entry > div {
+  margin-bottom: 2px;
+
+  color: var(--text-main);
+}
+
+
+/* Details paragraph */
+
+.cv-entry > p {
+  margin: 6px 0 0;
+
+  font-size: 0.9rem;
+
+  line-height: 1.5;
+}
+
+
+/* CV bullet lists */
+
+.cv-entry ul {
+  margin: 7px 0 0;
+
+  padding-left: 22px;
+}
+
+
+.cv-entry li {
+  margin-bottom: 3px;
+
+  font-size: 0.9rem;
+
+  line-height: 1.5;
+}
+
+
+/*
+   Download CV link
+*/
+
+.main-content > p:first-of-type a {
+  font-weight: 500;
+
+  text-decoration: none;
+}
+
+
+.main-content > p:first-of-type a:hover {
+  text-decoration: underline;
+}
+
+
+/* =========================================================
+   HOME PAGE — EDUCATION
+   ========================================================= */
+
+/*
+   Education entries on index.md reuse .cv-entry.
+   This keeps the homepage and CV visually consistent.
+*/
+
+.main-content .cv-entry {
+  max-width: 800px;
 }
 
 
@@ -1015,8 +1154,7 @@ body {
 /*
    The general .main-content a:hover rule changes
    links to --link-hover. The 404 email is intentionally
-   kept at --link on hover, so this selector is more
-   specific and does not require !important.
+   kept at --link on hover.
 */
 
 .error-page .error-email {
@@ -1172,6 +1310,13 @@ body {
   }
 
 
+  /* CV */
+
+  .cv-entry {
+    margin-bottom: 24px;
+  }
+
+
   /* Footer */
 
   .footer-inner {
@@ -1203,5 +1348,17 @@ body {
 
   .error-code {
     font-size: 4.5rem;
+  }
+
+
+  .publication-title,
+  .publication-authors,
+  .publication-journal {
+    font-size: 0.85rem;
+  }
+
+
+  .publication-topics {
+    align-items: flex-start;
   }
 }

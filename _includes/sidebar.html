@@ -1,121 +1,315 @@
 <aside class="sidebar">
 
+
+  <!-- =====================================================
+       PROFILE
+       ===================================================== -->
+
   <img
-    src="{{ '/assets/images/profile.jpg' | relative_url }}"
-    alt="{{ site.title }}"
+    src="{{ site.data.site_info.profile.photo | relative_url }}"
+    alt="{{ site.data.site_info.name.display }}"
     class="profile-photo"
   >
 
-  <h2>{{ site.title }}</h2>
+  <h2>
+    {{ site.data.site_info.name.display }}
+  </h2>
 
   <p class="position">
-    Your Position<br>
+    {{ site.data.site_info.position }}<br>
   </p>
 
-  
+
   <div class="sidebar-divider"></div>
 
 
-  <!-- Contact -->
+  <!-- =====================================================
+       CONTACT
+       ===================================================== -->
+
   <div class="contact-info">
 
-    <div>
-      <i class="fa-solid fa-building-columns icon"></i>
-      <span>Current affiliation</span>
-    </div>
 
-    <div>
-      <i class="fa-solid fa-building-columns icon"></i>
-      <span>Current affiliation#2</span>
-    </div>
+    <!-- Current affiliations -->
 
-    <a href="mailto:your.email@example.com">
-      <i class="fa-solid fa-envelope icon"></i>
-      <span>your.email@example.com</span>
-    </a>
-    
-    <div>
-      <i class="fa-solid fa-location-dot icon"></i>
-      <span>City, State, Country</span>
-    </div>
-
-  </div>
-
-
-  <div class="sidebar-divider"></div>
-
-  <!-- Resources -->
-  <div class="resource-links">
-
-    <a
-      href="{{ '/assets/files/CV.pdf' | relative_url }}"
-      target="_blank"
-    >
-      <i class="fa-solid fa-file-pdf icon"></i>
-      <span>Download CV</span>
-    </a>
-
-    <a
-      href="https://github.com/yourusername/project-collection"
-      target="_blank"
-    >
-      <i class="fa-brands fa-github icon"></i>
-      <span>Code for Published Projects</span>
-    </a>
-
-  </div>
-
-  <div class="sidebar-divider"></div>
-
-  <!-- Academic profiles -->
-  <div class="academic-links">
-
-    <a href="https://scholar.google.com/citations?user=YOUR-ID" target="_blank">
-      <i class="fa-brands fa-google-scholar icon"></i>
-      <span>Google Scholar</span>
-    </a>
-
-    <a href="https://www.researchgate.net/profile/Your-Name" target="_blank">
-      <span class="icon researchgate">R<sup>G</sup></span>
-      <span>ResearchGate</span>
-    </a>
-
-    <a href="https://orcid.org/YOUR-ORCID-ID" target="_blank">
-      <i class="fa-brands fa-orcid icon"></i>
-      <span>ORCID</span>
-    </a>
-
-    <a href="https://www.linkedin.com/in/yourusername/" target="_blank">
-      <i class="fa-brands fa-linkedin-in icon"></i>
-      <span>LinkedIn</span>
-    </a>
-
-    <a href="https://www.youruniversity.edu/" target="_blank">
-      <i class="fa-solid fa-building-columns icon"></i>
-      <span>Institutional Web Page</span>
-    </a>
-
-  </div>
-
-  <div class="sidebar-divider"></div>
-
-  <!-- Past affiliations -->
-  <div class="sidebar-section">
-
-    <h3>Past Affiliations</h3>
-
-    <div class="past-affiliations">
+    {% for affiliation in site.data.site_info.profile.current_affiliations %}
 
       <div>
+
         <i class="fa-solid fa-building-columns icon"></i>
+
         <span>
-          University Name<br>
-          <small>Year-Year</small>
+
+          {{ affiliation.institution }}
+
+          {% if affiliation.department %}
+            <br>
+            {{ affiliation.department }}
+          {% endif %}
+
         </span>
+
+      </div>
+
+    {% endfor %}
+
+
+    <!-- Email -->
+
+    <a
+      href="mailto:{{ site.data.site_info.email }}"
+    >
+
+      <i class="fa-solid fa-envelope icon"></i>
+
+      <span>
+        {{ site.data.site_info.email }}
+      </span>
+
+    </a>
+
+
+    <!-- Location -->
+
+    <div>
+
+      <i class="fa-solid fa-location-dot icon"></i>
+
+      <span>
+        {{ site.data.site_info.location }}
+      </span>
+
+    </div>
+
+
+  </div>
+
+
+  <div class="sidebar-divider"></div>
+
+
+  <!-- =====================================================
+       RESOURCES
+       ===================================================== -->
+
+  <div class="resource-links">
+
+
+    <!-- CV -->
+
+    <a
+      href="{{ site.data.site_info.documents.cv | relative_url }}"
+      target="_blank"
+      rel="noopener"
+    >
+
+      <i class="fa-solid fa-file-pdf icon"></i>
+
+      <span>
+        Download CV
+      </span>
+
+    </a>
+
+
+    <!-- GitHub -->
+
+    {% if site.data.site_info.profiles.github %}
+
+      <a
+        href="{{ site.data.site_info.profiles.github }}"
+        target="_blank"
+        rel="noopener"
+      >
+
+        <i class="fa-brands fa-github icon"></i>
+
+        <span>
+          Code for Published Projects
+        </span>
+
+      </a>
+
+    {% endif %}
+
+
+  </div>
+
+
+  <div class="sidebar-divider"></div>
+
+
+  <!-- =====================================================
+       ACADEMIC PROFILES
+       ===================================================== -->
+
+  <div class="academic-links">
+
+
+    <!-- Google Scholar -->
+
+    {% if site.data.site_info.profiles.scholar %}
+
+      <a
+        href="{{ site.data.site_info.profiles.scholar }}"
+        target="_blank"
+        rel="noopener"
+      >
+
+        <i class="fa-brands fa-google-scholar icon"></i>
+
+        <span>
+          Google Scholar
+        </span>
+
+      </a>
+
+    {% endif %}
+
+
+    <!-- ResearchGate -->
+
+    {% if site.data.site_info.profiles.researchgate %}
+
+      <a
+        href="{{ site.data.site_info.profiles.researchgate }}"
+        target="_blank"
+        rel="noopener"
+      >
+
+        <span class="icon researchgate">
+          R<sup>G</sup>
+        </span>
+
+        <span>
+          ResearchGate
+        </span>
+
+      </a>
+
+    {% endif %}
+
+
+    <!-- ORCID -->
+
+    {% if site.data.site_info.profiles.orcid %}
+
+      <a
+        href="{{ site.data.site_info.profiles.orcid }}"
+        target="_blank"
+        rel="noopener"
+      >
+
+        <i class="fa-brands fa-orcid icon"></i>
+
+        <span>
+          ORCID
+        </span>
+
+      </a>
+
+    {% endif %}
+
+
+    <!-- LinkedIn -->
+
+    {% if site.data.site_info.profiles.linkedin %}
+
+      <a
+        href="{{ site.data.site_info.profiles.linkedin }}"
+        target="_blank"
+        rel="noopener"
+      >
+
+        <i class="fa-brands fa-linkedin-in icon"></i>
+
+        <span>
+          LinkedIn
+        </span>
+
+      </a>
+
+    {% endif %}
+
+
+    <!-- Institutional Web Page -->
+
+    {% if site.data.site_info.profiles.institutional %}
+
+      <a
+        href="{{ site.data.site_info.profiles.institutional }}"
+        target="_blank"
+        rel="noopener"
+      >
+
+        <i class="fa-solid fa-building-columns icon"></i>
+
+        <span>
+          Institutional Web Page
+        </span>
+
+      </a>
+
+    {% endif %}
+
+
+  </div>
+
+
+  <div class="sidebar-divider"></div>
+
+
+  <!-- =====================================================
+       PAST AFFILIATIONS
+       ===================================================== -->
+
+  {% if site.data.site_info.profile.past_affiliations %}
+
+    <div class="sidebar-section">
+
+
+      <h3>
+        Past Affiliations
+      </h3>
+
+
+      <div class="past-affiliations">
+
+
+        {% for affiliation in site.data.site_info.profile.past_affiliations %}
+
+          <div>
+
+            <i class="fa-solid fa-building-columns icon"></i>
+
+            <span>
+
+              {{ affiliation.institution }}
+
+              {% if affiliation.department %}
+                <br>
+                {{ affiliation.department }}
+              {% endif %}
+
+              {% if affiliation.years %}
+                <br>
+                <small>
+                  {{ affiliation.years }}
+                </small>
+              {% endif %}
+
+            </span>
+
+          </div>
+
+        {% endfor %}
+
+
       </div>
 
     </div>
 
-  </div>
+  {% endif %}
+
 
 </aside>

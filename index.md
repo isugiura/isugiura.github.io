@@ -46,22 +46,17 @@ title: Home
   </strong>
 
   <div>
-    {{ item.institution }}
-  </div>
-
-  {% if item.location or item.year %}
-  <div>
-    {% if item.location %}
-      {{ item.location }}
-    {% endif %}
-
-    {% if item.location and item.year %}
-      <span class="cv-separator">·</span>
-    {% endif %}
+    <em>{{ item.institution }}</em>
 
     {% if item.year %}
+      <span class="cv-separator">·</span>
       {{ item.year }}
     {% endif %}
+  </div>
+
+  {% if item.location %}
+  <div>
+    {{ item.location }}
   </div>
   {% endif %}
 

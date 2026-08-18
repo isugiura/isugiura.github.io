@@ -48,9 +48,9 @@ permalink: /cv/
     {{ item.institution }}
   </div>
 
-  {% if item.years %}
+  {% if item.year %}
   <div>
-    {{ item.years }}
+    {{ item.year }}
   </div>
   {% endif %}
 

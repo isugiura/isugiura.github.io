@@ -1,15 +1,15 @@
 - title: Research
   url: /research/
-  page: research/index.md
+  page: research.md
 
 - title: Publications
   url: /publications/
-  page: publications/index.md
+  page: publications.md
 
 - title: CV
   url: /cv/
-  page: cv/index.md
+  page: cv.md
 
 - title: Teaching Statement
   url: /teaching/
-  page: teaching/index.md
+  # page: teaching.md

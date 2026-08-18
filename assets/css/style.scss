@@ -556,7 +556,7 @@ body {
 
   align-items: center;
 
-  gap: 3px;
+  gap: 5px;
 
   color: var(--link);
 
@@ -574,21 +574,28 @@ body {
 }
 
 
-/* Triangle */
+/* =========================================================
+   Triangle
+   ========================================================= */
 
 .research-publications summary::before {
   content: "";
+
   display: inline-block;
 
   width: 0;
   height: 0;
 
-  border-top: 8px solid transparent;
-  border-bottom: 8px solid transparent;
-  border-left: 7px solid var(--link);
+  border-top: 10px solid transparent;
+  border-bottom: 10px solid transparent;
+  border-left: 14px solid var(--link);
 
-  margin-right: 3px;
-  transform: translateY(1px);
+  flex-shrink: 0;
+
+  margin-right: 2px;
+
+  /* Keep the triangle vertically centered with the text */
+  align-self: center;
 
   transition: transform 0.15s ease;
 }
@@ -607,7 +614,7 @@ body {
 
 
 .research-publications summary:hover::before {
-  color: var(--link-hover);
+  border-left-color: var(--link-hover);
 }
 
 
@@ -638,7 +645,7 @@ body {
 
 
 .publication-title {
-  margin-bottom: 4.5px;
+  margin-bottom: 6px;
 
   color: var(--text-main);
 

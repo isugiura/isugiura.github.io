@@ -78,25 +78,23 @@ profile:
     #   years: yyyy–yyyy
 
 
-# # =========================================================
-# # ACADEMIC PROFILES
-# # =========================================================
+# =========================================================
+# ACADEMIC PROFILES
+# =========================================================
 
-# profiles:
+profiles:
 
-#   github: https://isugiura.github.io/
+  github_published_works: https://github.com/isugiura/published-works
+
+  scholar: https://scholar.google.com/citations?user=RpILjbkAAAAJ&hl=en
   
-#   project_collection: https://github.com/isugiura/published-works
+  researchgate: https://www.researchgate.net/profile/Ibuki-Sugiura-2
 
-#   scholar: https://scholar.google.com/citations?user=RpILjbkAAAAJ&hl=en
-  
-#   researchgate: https://www.researchgate.net/profile/Ibuki-Sugiura-2
+  orcid: https://orcid.org/0009-0002-2464-8488
 
-#   orcid: https://orcid.org/0009-0002-2464-8488
+  linkedin: https://www.linkedin.com/in/ibuki-sugiura/
 
-#   linkedin: https://www.linkedin.com/in/ibuki-sugiura/
-
-#   institutional: https://eesc.columbia.edu/content/ibuki-sugiura
+  institutional: https://eesc.columbia.edu/content/ibuki-sugiura
 
 
 # # =========================================================

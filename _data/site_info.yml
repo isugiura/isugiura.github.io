@@ -22,21 +22,21 @@ profile:
 
   photo: /assets/files/profile.jpg
 
-#   bio:
+  bio:
 
-#     - >
-#       I am a PhD candidate in Earth and Environmental Sciences at Columbia University, 
-#       advised by Dr. Jason Smerdon and Dr. Richard Seager. My research explores the 
-#       ocean's role in Earth’s climate system across timescales, from the past to the 
-#       present and into the future. I am particularly interested in ocean–atmosphere 
-#       interactions, long-term climate variability, and how the ocean responds to 
-#       external forcings and, in turn, influences hydroclimate.
+    - >
+      I am a PhD candidate in Earth and Environmental Sciences at Columbia University, 
+      advised by Dr. Jason Smerdon and Dr. Richard Seager. My research explores the 
+      ocean's role in Earth’s climate system across timescales, from the past to the 
+      present and into the future. I am particularly interested in ocean–atmosphere 
+      interactions, long-term climate variability, and how the ocean responds to 
+      external forcings and, in turn, influences hydroclimate.
 
-#     - >
-#       I graduated from Smith College in 2022 with a B.A. in Mathematics and Geosciences. 
-#       My undergraduate honors research, advised by Dr. Gregory de Wet, reconstructed 
-#       past temperature from lake sediments at Darwin Crater in Tasmania, Australia, 
-#       using the brGDGT biomarker proxy.
+    - >
+      I graduated from Smith College in 2022 with a B.A. in Mathematics and Geosciences. 
+      My undergraduate honors research, advised by Dr. Gregory de Wet, reconstructed 
+      past temperature from lake sediments at Darwin Crater in Tasmania, Australia, 
+      using the brGDGT biomarker proxy.
 
 
 #   # -------------------------------------------------------

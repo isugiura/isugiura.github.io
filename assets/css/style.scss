@@ -755,9 +755,12 @@ body {
 
 
 .publication-keyword:not(:last-child)::after {
-  content: " · ";
+  content: "·";
 
   color: var(--text-main);
+
+  font-size: 1.5em;
+  margin: 0 0.3em;
 }
 
 
@@ -1120,9 +1123,9 @@ body {
 
   color: var(--text-main);
 
-  font-size: 0.95rem;
+  font-size: 0.85rem;
 
-  line-height: 1.5;
+  line-height: 1.2;
 }
 
 
@@ -1143,7 +1146,10 @@ body {
 
   color: var(--text-section);
 
+  font-size: 0.95rem;
   font-weight: 600;
+
+  line-height: 1.5;
 }
 
 
@@ -1187,8 +1193,8 @@ body {
 
 /* cv separator dot */
 .cv-separator {
-  font-size: 1.2em;
-  margin: 0 0.2em;
+  font-size: 1.5em;
+  margin: 0 0.3em;
 }
 
 

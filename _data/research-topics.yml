@@ -1,20 +1,31 @@
-climate-variability:
-  topic-name: Modes of variability and their teleconnections
+tropical-pacific-and-forcings:
+  topic-name: Tropical Pacific's Responses to External Forcing
   description: >
-    My research examines variability in the climate system across
-    different spatial and temporal scales, with a particular focus on
-    understanding the mechanisms driving regional and global changes.
+    The tropical Pacific Ocean is key to climatic conditions around the world
+    because it is home to the major mode of climate variability, the El 
+    Niño–Southern Oscillation (ENSO). Yet the tropical Pacific’s response to 
+    external radiative forcing remains uncertain, as observations and climate 
+    model simulations disagree on the direction of historical SST trends. My 
+    research focuses on identifying and characterizing this observation–model 
+    discrepancy and on understanding the mechanisms behind the tropical 
+    Pacific’s responses.
 
-volcanic-forcing:
-  topic-name: Interactions of volcanic forcing and the climate system
+volcano-climate-interactions:
+  topic-name: Climatic Signals of Volcanic Forcing
   description: >
-    My research investigates the climatic impacts of volcanic eruptions,
-    including the spatial and temporal evolution of post-eruption
-    temperature and precipitation responses.
+    Explosive volcanic eruptions can affect the climate system by injecting 
+    sulfur into the stratosphere, where sulfate aerosols reflect incoming solar 
+    radiation and temporarily cool the Earth’s surface. This is also considered 
+    an analog for a proposed geoengineering strategy to tackle anthropogenic 
+    climate change. Beyond global mean cooling, volcanic forcing may produce 
+    spatially and temporally complex responses in temperature, hydroclimate, and 
+    atmospheric and oceanic dynamical processes. However, only a few large events 
+    have occurred since the beginning of satellite observations, making it 
+    difficult to estimate climatic responses to volcanic forcing and assess how 
+    well climate models replicate them. I am particularly interested in 
+    understanding these spatial and hydroclimatic responses, the mechanisms 
+    driving them, and the discrepancies between climate models and observations.
 
-climate-dynamics:
-  topic-name: Basic physical understanding of the climate system
-  description: >
-    I study interactions among different components of the climate
-    system and how large-scale modes of climate variability influence
-    regional climate.
+# future idea: add subsections like 
+# "Questions I am interested in:"
+# "Findings from the work so far:"

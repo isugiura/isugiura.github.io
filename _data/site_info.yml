@@ -3,15 +3,15 @@
 # =========================================================
 
 name:
-  first: June
-  last: Atwood
-  display: June Atwood
+  first: Ibuki
+  last: Sugiura
+  display: Ibuki Sugiura
 
-position: Assistant Professor
+position: PhD Candidate
 
-email: your.email@university.edu
+email: ibuki.s@columbia.edu
 
-location: Hoboken, NJ
+location: New York, NY USA
 
 
 # =========================================================
@@ -24,15 +24,15 @@ profile:
 
   bio:
 
-    - >
-      I am a Ph.D. candidate in the Department of Earth and
-      Environmental Sciences at Columbia University. My research
-      examines the ocean's role in past, modern, and future climates.
+    # - >
+    #   I am a Ph.D. candidate in the Department of Earth and
+    #   Environmental Sciences at Columbia University. My research
+    #   examines the ocean's role in past, modern, and future climates.
 
-    - >
-      I am particularly interested in ocean–atmosphere interactions,
-      modes of climate variability, ocean responses to external
-      forcings, and their impacts on hydroclimate.
+    # - >
+    #   I am particularly interested in ocean–atmosphere interactions,
+    #   modes of climate variability, ocean responses to external
+    #   forcings, and their impacts on hydroclimate.
 
 
   # -------------------------------------------------------
@@ -43,7 +43,7 @@ profile:
 
     - Climate variability and change
     - Climate–volcano interactions
-    - Paleoclimate
+    - Paleoclimate (especially Last Millennium)
 
 
   # -------------------------------------------------------
@@ -52,11 +52,11 @@ profile:
 
   current_affiliations:
 
-    - institution: Your University
-      department: Department
+    - institution: Columbia University
+      department: Earth & Environmental Sciences
 
-    - institution: Another University
-      department: Another Department
+    - institution: Lamont–Doherty Earth Observatory
+      department: Ocean & Climate Physics
 
 
   # -------------------------------------------------------
@@ -65,13 +65,13 @@ profile:
 
   past_affiliations:
 
-    - institution: University Name
-      department: Department Name
-      years: 2020–2024
+    - institution: Smith College
+      department: Geosciences/Mathematics
+      years: 2017–2022
 
-    - institution: Another University
-      department: Another Department
-      years: 2018–2020
+    # - institution: Another University
+    #   department: Another Department
+    #   years: yyyy–yyyy
 
 
 # =========================================================
@@ -80,19 +80,19 @@ profile:
 
 profiles:
 
-  github: https://github.com/yourusername
+  github: 
+  
+  project_collection: https://github.com/isugiura/published-works
 
-  project_collection: https://github.com/yourusername/project-collection
+  scholar: 
+  
+  researchgate: https://www.researchgate.net/profile/Ibuki-Sugiura-2
 
-  scholar: https://scholar.google.com/...
+  orcid: https://orcid.org/0009-0002-2464-8488
 
-  researchgate: https://www.researchgate.net/profile/...
+  linkedin: 
 
-  orcid: https://orcid.org/...
-
-  linkedin: https://www.linkedin.com/in/...
-
-  institutional: https://www.youruniversity.edu/
+  institutional: 
 
 
 # =========================================================
@@ -114,54 +114,58 @@ cv:
 
   education:
 
-    - degree: Ph.D. in Your Field
-      institution: Your University
-      location: City, State
-      years: 2020–2025
-      details: Dissertation title or other relevant information.
+    - degree: M.Phil. in Earth and Environmental Sciences
+      institution: Columbia University
+      location: New York, NY USA
+      year: 2026
+      # details: Dissertation title or other relevant information.
 
-    - degree: M.S. in Your Field
-      institution: Another University
-      location: City, State
-      years: 2018–2020
-      details: Additional information.
+    - degree: M.A. in Earth and Environmental Sciences
+      institution: Columbia University
+      location: New York, NY USA
+      year: 2024
+
+    - degree: B.A. in Mathematics & Geosciences
+      institution: Smith College
+      location: Northampton, MA USA
+      year: 2022
 
 
   # -------------------------------------------------------
   # TEACHING
   # -------------------------------------------------------
 
-  teaching:
+  # teaching:
 
-    - position: Instructor
-      course: Course Name
-      institution: Your University
-      years: 2025–Present
-      details:
-        - Course responsibility
-        - Another teaching responsibility
+  #   - position: Instructor
+  #     course: Course Name
+  #     institution: Your University
+  #     years: 2025–Present
+  #     details:
+  #       - Course responsibility
+  #       - Another teaching responsibility
 
-    - position: Teaching Assistant
-      course: Another Course
-      institution: Another University
-      years: 2020–2024
-      details:
-        - Course responsibility
+  #   - position: Teaching Assistant
+  #     course: Another Course
+  #     institution: Another University
+  #     years: 2020–2024
+  #     details:
+  #       - Course responsibility
 
 
   # -------------------------------------------------------
   # AWARDS AND HONORS
   # -------------------------------------------------------
 
-  awards:
+  # awards:
 
-    - name: Outstanding Research Award
-      institution: Your Institution
-      year: 2025
+  #   - name: Outstanding Research Award
+  #     institution: Your Institution
+  #     year: 2025
 
-    - name: Fellowship
-      institution: Another Organization
-      year: 2023
+  #   - name: Fellowship
+  #     institution: Another Organization
+  #     year: 2023
 
 
   # -------------------------------------------------------
@@ -187,37 +191,37 @@ cv:
   # PRESENTATIONS
   # -------------------------------------------------------
 
-  presentations:
+  # presentations:
 
-    - title: Presentation Title
-      venue: Conference or Seminar Name
-      location: City, State
-      year: 2025
+  #   - title: Presentation Title
+  #     venue: Conference or Seminar Name
+  #     location: City, State
+  #     year: 2025
 
-    - title: Another Presentation
-      venue: Department Seminar
-      location: City, State
-      year: 2024
+  #   - title: Another Presentation
+  #     venue: Department Seminar
+  #     location: City, State
+  #     year: 2024
 
 
   # -------------------------------------------------------
   # PROFESSIONAL MEMBERSHIPS
   # -------------------------------------------------------
 
-  professional_memberships:
+  # professional_memberships:
 
-    - organization: American Geophysical Union
-      years: 2020–Present
+  #   - organization: American Geophysical Union
+  #     years: 2020–Present
 
-    - organization: American Meteorological Society
-      years: 2021–Present
+  #   - organization: American Meteorological Society
+  #     years: 2021–Present
 
 
   # -------------------------------------------------------
   # SERVICE
   # -------------------------------------------------------
 
-  service:
+  # service:
 
     # - role: Reviewer
     #   organization: Journal Name
@@ -232,17 +236,17 @@ cv:
   # OUTREACH
   # -------------------------------------------------------
 
-  outreach:
+  # outreach:
 
-    - activity: Outreach Program
-      organization: Your Organization
-      location: City, State
-      year: 2025
-      details: Description of outreach activity.
+  #   - activity: Outreach Program
+  #     organization: Your Organization
+  #     location: City, State
+  #     year: 2025
+  #     details: Description of outreach activity.
 
-    - activity: Public Lecture
-      organization: Another Organization
-      location: City, State
-      year: 2024
-      details: Description of outreach activity.
+  #   - activity: Public Lecture
+  #     organization: Another Organization
+  #     location: City, State
+  #     year: 2024
+  #     details: Description of outreach activity.
 

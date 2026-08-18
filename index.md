@@ -49,7 +49,13 @@ title: Home
     {{ item.institution }}
   </div>
 
-  {% if item.years %}
+  {% if item.location %}
+  <div>
+    {{ item.location }}
+  </div>
+  {% endif %}
+
+  {% if item.year %}
   <div>
     {{ item.year }}
   </div>

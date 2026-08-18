@@ -6,6 +6,7 @@ permalink: /cv/
 
 <h1>Curriculum Vitae</h1>
 
+
 <!-- =========================================================
      DOWNLOAD CV
      ========================================================= -->
@@ -28,6 +29,7 @@ permalink: /cv/
 
 {% endif %}
 
+
 <!-- =========================================================
      EDUCATION
      ========================================================= -->
@@ -49,24 +51,19 @@ permalink: /cv/
   <div>
     <em>{{ item.institution }}</em>
 
-```
-{% if item.year %}
-  <span class="cv-separator">·</span>
-  {{ item.year }}
-{% endif %}
-```
-
+    {% if item.year %}
+      <span class="cv-separator">·</span>
+      {{ item.year }}
+    {% endif %}
   </div>
 
-{% if item.location %}
-
+  {% if item.location %}
   <div>
-    {{ item.location }}
+      {{ item.location }}
   </div>
   {% endif %}
 
-{% if item.details %}
-
+  {% if item.details %}
   <p>
     {{ item.details }}
   </p>
@@ -77,6 +74,7 @@ permalink: /cv/
 {% endfor %}
 
 {% endif %}
+
 
 <!-- =========================================================
      RESEARCH EXPERIENCE
@@ -103,36 +101,34 @@ permalink: /cv/
     {% endif %}
   </div>
 
-{% if item.years %}
-
+  {% if item.years %}
   <div>
     {{ item.years }}
   </div>
   {% endif %}
 
-{% if item.details %}
+  {% if item.details %}
 
   <ul>
 
-```
-{% for detail in item.details %}
+    {% for detail in item.details %}
 
-<li>
-  {{ detail }}
-</li>
+    <li>
+      {{ detail }}
+    </li>
 
-{% endfor %}
-```
+    {% endfor %}
 
   </ul>
 
-{% endif %}
+  {% endif %}
 
 </div>
 
 {% endfor %}
 
 {% endif %}
+
 
 <!-- =========================================================
      TEACHING
@@ -152,43 +148,41 @@ permalink: /cv/
     {{ item.position }}
   </strong>
 
-{% if item.course %}
-
+  {% if item.course %}
   <div>
     {{ item.course }}
   </div>
   {% endif %}
 
   <div>
-    {{ item.institution }}
+    <em>{{ item.institution }}</em>
     {% if item.years %}
       · {{ item.years }}
     {% endif %}
   </div>
 
-{% if item.details %}
+  {% if item.details %}
 
   <ul>
 
-```
-{% for detail in item.details %}
+    {% for detail in item.details %}
 
-<li>
-  {{ detail }}
-</li>
+    <li>
+      {{ detail }}
+    </li>
 
-{% endfor %}
-```
+    {% endfor %}
 
   </ul>
 
-{% endif %}
+  {% endif %}
 
 </div>
 
 {% endfor %}
 
 {% endif %}
+
 
 <!-- =========================================================
      AWARDS AND HONORS
@@ -208,24 +202,19 @@ permalink: /cv/
     {{ item.name }}
   </strong>
 
-{% if item.institution or item.year %}
-
+  {% if item.institution or item.year %}
   <div>
+    {% if item.institution %}
+      <em>{{ item.institution }}</em>
+    {% endif %}
 
-```
-{% if item.institution %}
-  <em>{{ item.institution }}</em>
-{% endif %}
+    {% if item.institution or item.year %}
+      <span class="cv-separator">·</span>
+      {% endif %}
 
-{% if item.institution and item.year %}
-  <span class="cv-separator">·</span>
-{% endif %}
-
-{% if item.year %}
-  {{ item.year }}
-{% endif %}
-```
-
+    {% if item.year %}
+      {{ item.year }}
+    {% endif %}
   </div>
   {% endif %}
 
@@ -234,6 +223,7 @@ permalink: /cv/
 {% endfor %}
 
 {% endif %}
+
 
 <!-- =========================================================
      GRANTS
@@ -253,57 +243,52 @@ permalink: /cv/
     {{ item.title }}
   </strong>
 
-{% if item.agency %}
-
+  {% if item.agency %}
   <div>
     {{ item.agency }}
   </div>
   {% endif %}
 
-{% if item.role %}
-
+  {% if item.role %}
   <div>
     {{ item.role }}
   </div>
   {% endif %}
 
-{% if item.amount %}
-
+  {% if item.amount %}
   <div>
     {{ item.amount }}
   </div>
   {% endif %}
 
-{% if item.years %}
-
+  {% if item.years %}
   <div>
     {{ item.years }}
   </div>
   {% endif %}
 
-{% if item.details %}
+  {% if item.details %}
 
   <ul>
 
-```
-{% for detail in item.details %}
+    {% for detail in item.details %}
 
-<li>
-  {{ detail }}
-</li>
+    <li>
+      {{ detail }}
+    </li>
 
-{% endfor %}
-```
+    {% endfor %}
 
   </ul>
 
-{% endif %}
+  {% endif %}
 
 </div>
 
 {% endfor %}
 
 {% endif %}
+
 
 <!-- =========================================================
      PRESENTATIONS
@@ -323,29 +308,25 @@ permalink: /cv/
     {{ item.title }}
   </strong>
 
-{% if item.venue %}
-
+  {% if item.venue %}
   <div>
     {{ item.venue }}
   </div>
   {% endif %}
 
-{% if item.location %}
-
+  {% if item.location %}
   <div>
     {{ item.location }}
   </div>
   {% endif %}
 
-{% if item.year %}
-
+  {% if item.year %}
   <div>
     {{ item.year }}
   </div>
   {% endif %}
 
-{% if item.details %}
-
+  {% if item.details %}
   <p>
     {{ item.details }}
   </p>
@@ -356,6 +337,7 @@ permalink: /cv/
 {% endfor %}
 
 {% endif %}
+
 
 <!-- =========================================================
      PROFESSIONAL MEMBERSHIPS
@@ -375,15 +357,13 @@ permalink: /cv/
     {{ item.organization }}
   </strong>
 
-{% if item.role %}
-
+  {% if item.role %}
   <div>
     {{ item.role }}
   </div>
   {% endif %}
 
-{% if item.years %}
-
+  {% if item.years %}
   <div>
     {{ item.years }}
   </div>
@@ -394,6 +374,7 @@ permalink: /cv/
 {% endfor %}
 
 {% endif %}
+
 
 <!-- =========================================================
      SERVICE
@@ -413,8 +394,7 @@ permalink: /cv/
     {{ item.role }}
   </strong>
 
-{% if item.organization %}
-
+  {% if item.organization %}
   <div>
     {{ item.organization }}
     {% if item.years %}
@@ -423,29 +403,28 @@ permalink: /cv/
   </div>
   {% endif %}
 
-{% if item.details %}
+  {% if item.details %}
 
   <ul>
 
-```
-{% for detail in item.details %}
+    {% for detail in item.details %}
 
-<li>
-  {{ detail }}
-</li>
+    <li>
+      {{ detail }}
+    </li>
 
-{% endfor %}
-```
+    {% endfor %}
 
   </ul>
 
-{% endif %}
+  {% endif %}
 
 </div>
 
 {% endfor %}
 
 {% endif %}
+
 
 <!-- =========================================================
      OUTREACH
@@ -465,8 +444,7 @@ permalink: /cv/
     {{ item.activity }}
   </strong>
 
-{% if item.organization %}
-
+  {% if item.organization %}
   <div>
     {{ item.organization }}
     {% if item.years %}
@@ -475,15 +453,13 @@ permalink: /cv/
   </div>
   {% endif %}
 
-{% if item.location %}
-
+  {% if item.location %}
   <div>
     {{ item.location }}
   </div>
   {% endif %}
 
-{% if item.details %}
-
+  {% if item.details %}
   <p>
     {{ item.details }}
   </p>

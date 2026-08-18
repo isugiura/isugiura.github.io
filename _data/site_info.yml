@@ -70,7 +70,6 @@ profile:
   past_affiliations:
 
     - institution: Smith College
-      department: Geosciences/Mathematics
       years: 2017–2022
 
     # - institution: Another University
@@ -97,40 +96,40 @@ profiles:
   institutional: https://eesc.columbia.edu/content/ibuki-sugiura
 
 
-# # =========================================================
-# # CURRICULUM VITAE
-# # =========================================================
+# =========================================================
+# CURRICULUM VITAE
+# =========================================================
 
-# cv:
+cv:
 
-#   # -------------------------------------------------------
-#   # CV DOCUMENT
-#   # -------------------------------------------------------
+  # -------------------------------------------------------
+  # CV DOCUMENT
+  # -------------------------------------------------------
 
-#   document: /assets/files/cv.pdf
+  # document: /assets/files/cv.pdf
 
 
-#   # -------------------------------------------------------
-#   # EDUCATION
-#   # -------------------------------------------------------
+  # -------------------------------------------------------
+  # EDUCATION
+  # -------------------------------------------------------
 
-#   education:
+  education:
 
-#     - degree: M.Phil. in Earth and Environmental Sciences
-#       institution: Columbia University
-#       location: New York, NY, USA
-#       year: 2026
-#       # details: Dissertation title or other relevant information.
+    - degree: M.Phil. in Earth and Environmental Sciences
+      institution: Columbia University
+      location: New York, NY, USA
+      year: 2026
+      # details: Dissertation title or other relevant information.
 
-#     - degree: M.A. in Earth and Environmental Sciences
-#       institution: Columbia University
-#       location: New York, NY, USA
-#       year: 2024
+    - degree: M.A. in Earth and Environmental Sciences
+      institution: Columbia University
+      location: New York, NY, USA
+      year: 2024
 
-#     - degree: B.A. in Mathematics & Geosciences
-#       institution: Smith College
-#       location: Northampton, MA, USA
-#       year: 2022
+    - degree: B.A. in Mathematics & Geosciences
+      institution: Smith College
+      location: Northampton, MA, USA
+      year: 2022
 
 
 #   # -------------------------------------------------------

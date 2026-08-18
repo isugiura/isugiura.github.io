@@ -50,17 +50,17 @@ profile:
     - Paleoclimate (especially Last Millennium)
 
 
-#   # -------------------------------------------------------
-#   # CURRENT AFFILIATIONS
-#   # -------------------------------------------------------
+  # -------------------------------------------------------
+  # CURRENT AFFILIATIONS
+  # -------------------------------------------------------
 
-#   current_affiliations:
+  current_affiliations:
 
-#     - institution: Columbia University
-#       department: Earth & Environmental Sciences
+    - institution: Columbia University
+      department: Earth & Environmental Sciences
 
-#     - institution: Lamont–Doherty Earth Observatory
-#       department: Ocean & Climate Physics
+    - institution: Lamont–Doherty Earth Observatory
+      department: Ocean & Climate Physics
 
 
 #   # -------------------------------------------------------

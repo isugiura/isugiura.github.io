@@ -51,7 +51,7 @@ title: Home
 
   {% if item.years %}
   <div>
-    {{ item.years }}
+    {{ item.year }}
   </div>
   {% endif %}
 

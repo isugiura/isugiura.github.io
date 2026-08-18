@@ -63,19 +63,19 @@ profile:
       department: Ocean & Climate Physics
 
 
-#   # -------------------------------------------------------
-#   # PAST AFFILIATIONS
-#   # -------------------------------------------------------
+  # -------------------------------------------------------
+  # PAST AFFILIATIONS
+  # -------------------------------------------------------
 
-#   past_affiliations:
+  past_affiliations:
 
-#     - institution: Smith College
-#       department: Geosciences/Mathematics
-#       years: 2017–2022
+    - institution: Smith College
+      department: Geosciences/Mathematics
+      years: 2017–2022
 
-#     # - institution: Another University
-#     #   department: Another Department
-#     #   years: yyyy–yyyy
+    # - institution: Another University
+    #   department: Another Department
+    #   years: yyyy–yyyy
 
 
 # # =========================================================

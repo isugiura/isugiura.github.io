@@ -760,7 +760,7 @@ body {
   color: var(--text-main);
 
   font-size: 1.0em;
-  font-weight: 600;
+  font-weight: 900;
    
   margin: 0 0.2em;
 }
@@ -1127,7 +1127,7 @@ body {
 
   font-size: 0.85rem;
 
-  line-height: 1.2;
+  line-height: 1.35;
 }
 
 
@@ -1152,6 +1152,16 @@ body {
   font-weight: 600;
 
   line-height: 1.5;
+}
+
+
+/* last updated date */
+.cv-last-updated {
+  font-size: 0.8em;
+   
+  color: var(--text-main);
+   
+  margin-left: 0.4em;
 }
 
 
@@ -1195,8 +1205,9 @@ body {
 
 /* cv separator dot */
 .cv-separator {
-  font-size: 0.85em;
-  font-weight: 600;
+  font-size: 0.9em;
+  font-weight: 900;
+   
   margin: 0 0.2em;
 }
 

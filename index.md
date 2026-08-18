@@ -56,7 +56,7 @@ title: Home
     {% endif %}
 
     {% if item.location and item.year %}
-      ·
+      <span class="cv-separator">·</span>
     {% endif %}
 
     {% if item.year %}

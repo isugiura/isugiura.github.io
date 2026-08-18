@@ -11,16 +11,20 @@ permalink: /cv/
      DOWNLOAD CV
      ========================================================= -->
 
-{% if site.data.site_info.documents.cv %}
+{% if site.data.site_info.cv.document %}
 
 <p>
+  View
   <a
-    href="{{ site.data.site_info.documents.cv | relative_url }}"
+    href="{{ site.data.site_info.cv.document | relative_url }}"
     target="_blank"
     rel="noopener"
   >
-    Download my CV
+    my full CV
   </a>
+  <span class="cv-last-updated">
+    (last updated: {{ site.data.site_info.cv.last_updated }})
+  </span>
 </p>
 
 {% endif %}

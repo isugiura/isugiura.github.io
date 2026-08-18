@@ -106,8 +106,8 @@ cv:
   # CV DOCUMENT
   # -------------------------------------------------------
 
-  # document: /assets/files/cv.pdf
-  # last_updated: yyyy-mm-dd
+  document: /assets/files/cv.pdf
+  last_updated: yyyy-mm-dd
 
 
   # -------------------------------------------------------
@@ -144,17 +144,17 @@ cv:
       institution: Columbia University
       years: Spring 2025
       details:
-        - Leading weekly ~3-hour lab sessions with other teaching assistants
-        - Grading homework and lab reports
-        - Hosting weekly office hours
+        - Led weekly ~3-hour lab sessions with other teaching assistants
+        - Graded homework and lab reports
+        - Hosted weekly office hours
 
     - position: Teaching Assistant
-      course: Another Course
+      course: Oceanography
       institution: Columbia University
       years: Fall 2023
       details:
-        - Creating homework and exam questions
-        - Hosting weekly office hours
+        - Created homework and exam questions
+        - Hosted weekly office hours
 
 
   # -------------------------------------------------------

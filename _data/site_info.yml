@@ -132,15 +132,15 @@ cv:
       year: 2022
 
 
-  # # -------------------------------------------------------
-  # # TEACHING
-  # # -------------------------------------------------------
+  # -------------------------------------------------------
+  # TEACHING
+  # -------------------------------------------------------
 
-  # teaching:
+  teaching:
 
-  #   - position: Teaching Assistant
-  #     course: Earth’s Environmental Systems: Climate Systems
-  #     institution: Columbia University
+    - position: Teaching Assistant
+      course: Earth’s Environmental Systems: Climate Systems
+      institution: Columbia University
   #     years: Spring 2025
   #     details:
   #       - Leading weekly ~3-hour lab sessions with other teaching assistants

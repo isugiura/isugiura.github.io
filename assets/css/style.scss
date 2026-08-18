@@ -262,13 +262,6 @@ body {
 }
 
 
-.contact-info small {
-  color: var(--text-main);
-
-  font-size: 0.65rem;
-}
-
-
 .contact-info a,
 .contact-info div {
   display: flex;
@@ -276,7 +269,7 @@ body {
 
   gap: 10px;
 
-  color: var(--text-main);
+  color: var(--text-section);
 
   font-size: 0.82rem;
 
@@ -293,6 +286,13 @@ body {
 
 .contact-info i {
   color: var(--icon);
+}
+
+
+.contact-info small {
+  color: var(--text-main);
+
+  font-size: 0.65rem;
 }
 
 
@@ -441,10 +441,9 @@ body {
 
   gap: 10px;
 
-  color: var(--text-main);
+  color: var(--text-section);
 
   font-size: 0.82rem;
-  font-weight: 300;
 
   line-height: 1.35;
 }

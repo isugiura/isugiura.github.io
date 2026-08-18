@@ -11,7 +11,7 @@ position: PhD Candidate
 
 email: ibuki.s@columbia.edu
 
-location: New York, NY USA
+location: New York, NY, USA
 
 
 # =========================================================
@@ -80,19 +80,19 @@ profile:
 
 profiles:
 
-  github: 
+  github: https://isugiura.github.io/
   
   project_collection: https://github.com/isugiura/published-works
 
-  scholar: 
+  scholar: https://scholar.google.com/citations?user=RpILjbkAAAAJ&hl=en
   
   researchgate: https://www.researchgate.net/profile/Ibuki-Sugiura-2
 
   orcid: https://orcid.org/0009-0002-2464-8488
 
-  linkedin: 
+  linkedin: https://www.linkedin.com/in/ibuki-sugiura/
 
-  institutional: 
+  institutional: https://eesc.columbia.edu/content/ibuki-sugiura
 
 
 # =========================================================
@@ -116,18 +116,18 @@ cv:
 
     - degree: M.Phil. in Earth and Environmental Sciences
       institution: Columbia University
-      location: New York, NY USA
+      location: New York, NY, USA
       year: 2026
       # details: Dissertation title or other relevant information.
 
     - degree: M.A. in Earth and Environmental Sciences
       institution: Columbia University
-      location: New York, NY USA
+      location: New York, NY, USA
       year: 2024
 
     - degree: B.A. in Mathematics & Geosciences
       institution: Smith College
-      location: Northampton, MA USA
+      location: Northampton, MA, USA
       year: 2022
 
 
@@ -137,20 +137,22 @@ cv:
 
   # teaching:
 
-  #   - position: Instructor
-  #     course: Course Name
-  #     institution: Your University
-  #     years: 2025–Present
-  #     details:
-  #       - Course responsibility
-  #       - Another teaching responsibility
+    - position: Teaching Assistant
+      course: Earth’s Environmental Systems: Climate Systems
+      institution: Columbia University
+      years: Spring 2025
+      details:
+        - Leading weekly ~3-hour lab sessions with other teaching assistants
+        - Grading homework and lab reports
+        - Hosting weekly office hours
 
-  #   - position: Teaching Assistant
-  #     course: Another Course
-  #     institution: Another University
-  #     years: 2020–2024
-  #     details:
-  #       - Course responsibility
+    - position: Teaching Assistant
+      course: Another Course
+      institution: Columbia University
+      years: Fall 2023
+      details:
+        - Creating homework and exam questions
+        - Hosting weekly office hours
 
 
   # -------------------------------------------------------
@@ -159,13 +161,29 @@ cv:
 
   # awards:
 
-  #   - name: Outstanding Research Award
-  #     institution: Your Institution
-  #     year: 2025
+    - name: Teaching Assessment fellow at the Center for Teaching and Learning
+      institution: Columbia University
+      year: Fall 2025–Spring 2026
 
-  #   - name: Fellowship
-  #     institution: Another Organization
-  #     year: 2023
+    - name: Teaching with AI fellow at the Center for Teaching and Learning
+      institution: Columbia University
+      year: Fall 2024–Spring 2025
+    
+    - name: Dean’s Fellowship
+      institution: Columbia University
+      year: Fall 2022
+
+    - name: Smith College’s Praxis scholarship
+      institution: Smith College
+      year: Summer 2019
+
+    - name: Five College Coastal & Marine Sciences summer internship scholarship
+      institution: Smith College
+      year: Summer 2019
+
+    - name: Dean’s List
+      institution: Smith College
+      year: Fall 2018–Spring 2019
 
 
   # -------------------------------------------------------

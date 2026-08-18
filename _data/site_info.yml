@@ -39,15 +39,15 @@ profile:
       using the brGDGT biomarker proxy.
 
 
-#   # -------------------------------------------------------
-#   # RESEARCH INTERESTS
-#   # -------------------------------------------------------
+  # -------------------------------------------------------
+  # RESEARCH INTERESTS
+  # -------------------------------------------------------
 
-#   research_interests:
+  research_interests:
 
-#     - Climate variability and change
-#     - Climate–volcano interactions
-#     - Paleoclimate (especially Last Millennium)
+    - Climate variability and change
+    - Climate–volcano interactions
+    - Paleoclimate (especially Last Millennium)
 
 
 #   # -------------------------------------------------------

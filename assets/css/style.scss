@@ -586,9 +586,9 @@ body {
   width: 0;
   height: 0;
 
-  border-top: 12px solid transparent;
-  border-bottom: 12px solid transparent;
-  border-left: 12px solid var(--link);
+  border-top: 10px solid transparent;
+  border-bottom: 10px solid transparent;
+  border-left: 10px solid var(--link);
 
   flex-shrink: 0;
 
@@ -652,7 +652,7 @@ body {
   font-size: 0.9rem;
   font-weight: 500;
 
-  line-height: 1.2;
+  line-height: 1.5;
 }
 
 
@@ -661,7 +661,7 @@ body {
 
   color: var(--text-main);
 
-  font-size: 0.85rem;
+  font-size: 0.8rem;
 
   line-height: 1.2;
 }
@@ -670,7 +670,7 @@ body {
 .publication-journal {
   color: var(--text-main);
 
-  font-size: 0.85rem;
+  font-size: 0.8rem;
 
   line-height: 1.2;
 }

@@ -2,7 +2,7 @@
 layout: default
 title: CV
 permalink: /cv/
----------------
+---
 
 <h1>Curriculum Vitae</h1>
 

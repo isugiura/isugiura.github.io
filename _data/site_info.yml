@@ -22,253 +22,252 @@ profile:
 
   photo: /assets/files/profile.jpg
 
-  bio:
+#   bio:
 
-    - >
-      I am a PhD candidate in Earth and Environmental Sciences at Columbia University, 
-      advised by Dr. Jason Smerdon and Dr. Richard Seager. My research explores the 
-      ocean's role in Earth’s climate system across timescales, from the past to the 
-      present and into the future. I am particularly interested in ocean–atmosphere 
-      interactions, long-term climate variability, and how the ocean responds to 
-      external forcings and, in turn, influences hydroclimate.
+#     - >
+#       I am a PhD candidate in Earth and Environmental Sciences at Columbia University, 
+#       advised by Dr. Jason Smerdon and Dr. Richard Seager. My research explores the 
+#       ocean's role in Earth’s climate system across timescales, from the past to the 
+#       present and into the future. I am particularly interested in ocean–atmosphere 
+#       interactions, long-term climate variability, and how the ocean responds to 
+#       external forcings and, in turn, influences hydroclimate.
 
-    - >
-      I graduated from Smith College in 2022 with a B.A. in Mathematics and Geosciences. 
-      My undergraduate honors research, advised by Dr. Gregory de Wet, reconstructed 
-      past temperature from lake sediments at Darwin Crater in Tasmania, Australia, 
-      using the brGDGT biomarker proxy.
-
-
-  # -------------------------------------------------------
-  # RESEARCH INTERESTS
-  # -------------------------------------------------------
-
-  research_interests:
-
-    - Climate variability and change
-    - Climate–volcano interactions
-    - Paleoclimate (especially Last Millennium)
+#     - >
+#       I graduated from Smith College in 2022 with a B.A. in Mathematics and Geosciences. 
+#       My undergraduate honors research, advised by Dr. Gregory de Wet, reconstructed 
+#       past temperature from lake sediments at Darwin Crater in Tasmania, Australia, 
+#       using the brGDGT biomarker proxy.
 
 
-  # -------------------------------------------------------
-  # CURRENT AFFILIATIONS
-  # -------------------------------------------------------
+#   # -------------------------------------------------------
+#   # RESEARCH INTERESTS
+#   # -------------------------------------------------------
 
-  current_affiliations:
+#   research_interests:
 
-    - institution: Columbia University
-      department: Earth & Environmental Sciences
-
-    - institution: Lamont–Doherty Earth Observatory
-      department: Ocean & Climate Physics
+#     - Climate variability and change
+#     - Climate–volcano interactions
+#     - Paleoclimate (especially Last Millennium)
 
 
-  # -------------------------------------------------------
-  # PAST AFFILIATIONS
-  # -------------------------------------------------------
+#   # -------------------------------------------------------
+#   # CURRENT AFFILIATIONS
+#   # -------------------------------------------------------
 
-  past_affiliations:
+#   current_affiliations:
 
-    - institution: Smith College
-      department: Geosciences/Mathematics
-      years: 2017–2022
+#     - institution: Columbia University
+#       department: Earth & Environmental Sciences
 
-    # - institution: Another University
-    #   department: Another Department
-    #   years: yyyy–yyyy
+#     - institution: Lamont–Doherty Earth Observatory
+#       department: Ocean & Climate Physics
 
 
-# =========================================================
-# ACADEMIC PROFILES
-# =========================================================
+#   # -------------------------------------------------------
+#   # PAST AFFILIATIONS
+#   # -------------------------------------------------------
 
-profiles:
+#   past_affiliations:
 
-  github: https://isugiura.github.io/
+#     - institution: Smith College
+#       department: Geosciences/Mathematics
+#       years: 2017–2022
+
+#     # - institution: Another University
+#     #   department: Another Department
+#     #   years: yyyy–yyyy
+
+
+# # =========================================================
+# # ACADEMIC PROFILES
+# # =========================================================
+
+# profiles:
+
+#   github: https://isugiura.github.io/
   
-  project_collection: https://github.com/isugiura/published-works
+#   project_collection: https://github.com/isugiura/published-works
 
-  scholar: https://scholar.google.com/citations?user=RpILjbkAAAAJ&hl=en
+#   scholar: https://scholar.google.com/citations?user=RpILjbkAAAAJ&hl=en
   
-  researchgate: https://www.researchgate.net/profile/Ibuki-Sugiura-2
+#   researchgate: https://www.researchgate.net/profile/Ibuki-Sugiura-2
 
-  orcid: https://orcid.org/0009-0002-2464-8488
+#   orcid: https://orcid.org/0009-0002-2464-8488
 
-  linkedin: https://www.linkedin.com/in/ibuki-sugiura/
+#   linkedin: https://www.linkedin.com/in/ibuki-sugiura/
 
-  institutional: https://eesc.columbia.edu/content/ibuki-sugiura
-
-
-# =========================================================
-# CURRICULUM VITAE
-# =========================================================
-
-cv:
-
-  # -------------------------------------------------------
-  # CV DOCUMENT
-  # -------------------------------------------------------
-
-  document: /assets/files/cv.pdf
+#   institutional: https://eesc.columbia.edu/content/ibuki-sugiura
 
 
-  # -------------------------------------------------------
-  # EDUCATION
-  # -------------------------------------------------------
+# # =========================================================
+# # CURRICULUM VITAE
+# # =========================================================
 
-  education:
+# cv:
 
-    - degree: M.Phil. in Earth and Environmental Sciences
-      institution: Columbia University
-      location: New York, NY, USA
-      year: 2026
-      # details: Dissertation title or other relevant information.
+#   # -------------------------------------------------------
+#   # CV DOCUMENT
+#   # -------------------------------------------------------
 
-    - degree: M.A. in Earth and Environmental Sciences
-      institution: Columbia University
-      location: New York, NY, USA
-      year: 2024
-
-    - degree: B.A. in Mathematics & Geosciences
-      institution: Smith College
-      location: Northampton, MA, USA
-      year: 2022
+#   document: /assets/files/cv.pdf
 
 
-  # -------------------------------------------------------
-  # TEACHING
-  # -------------------------------------------------------
+#   # -------------------------------------------------------
+#   # EDUCATION
+#   # -------------------------------------------------------
 
-  # teaching:
+#   education:
 
-    - position: Teaching Assistant
-      course: Earth’s Environmental Systems: Climate Systems
-      institution: Columbia University
-      years: Spring 2025
-      details:
-        - Leading weekly ~3-hour lab sessions with other teaching assistants
-        - Grading homework and lab reports
-        - Hosting weekly office hours
+#     - degree: M.Phil. in Earth and Environmental Sciences
+#       institution: Columbia University
+#       location: New York, NY, USA
+#       year: 2026
+#       # details: Dissertation title or other relevant information.
 
-    - position: Teaching Assistant
-      course: Another Course
-      institution: Columbia University
-      years: Fall 2023
-      details:
-        - Creating homework and exam questions
-        - Hosting weekly office hours
+#     - degree: M.A. in Earth and Environmental Sciences
+#       institution: Columbia University
+#       location: New York, NY, USA
+#       year: 2024
+
+#     - degree: B.A. in Mathematics & Geosciences
+#       institution: Smith College
+#       location: Northampton, MA, USA
+#       year: 2022
 
 
-  # -------------------------------------------------------
-  # AWARDS AND HONORS
-  # -------------------------------------------------------
+#   # -------------------------------------------------------
+#   # TEACHING
+#   # -------------------------------------------------------
 
-  # awards:
+#   # teaching:
 
-    - name: Teaching Assessment fellow at the Center for Teaching and Learning
-      institution: Columbia University
-      year: Fall 2025–Spring 2026
+#     - position: Teaching Assistant
+#       course: Earth’s Environmental Systems: Climate Systems
+#       institution: Columbia University
+#       years: Spring 2025
+#       details:
+#         - Leading weekly ~3-hour lab sessions with other teaching assistants
+#         - Grading homework and lab reports
+#         - Hosting weekly office hours
 
-    - name: Teaching with AI fellow at the Center for Teaching and Learning
-      institution: Columbia University
-      year: Fall 2024–Spring 2025
+#     - position: Teaching Assistant
+#       course: Another Course
+#       institution: Columbia University
+#       years: Fall 2023
+#       details:
+#         - Creating homework and exam questions
+#         - Hosting weekly office hours
+
+
+#   # -------------------------------------------------------
+#   # AWARDS AND HONORS
+#   # -------------------------------------------------------
+
+#   # awards:
+
+#     - name: Teaching Assessment fellow at the Center for Teaching and Learning
+#       institution: Columbia University
+#       year: Fall 2025–Spring 2026
+
+#     - name: Teaching with AI fellow at the Center for Teaching and Learning
+#       institution: Columbia University
+#       year: Fall 2024–Spring 2025
     
-    - name: Dean’s Fellowship
-      institution: Columbia University
-      year: Fall 2022
+#     - name: Dean’s Fellowship
+#       institution: Columbia University
+#       year: Fall 2022
 
-    - name: Smith College’s Praxis scholarship
-      institution: Smith College
-      year: Summer 2019
+#     - name: Smith College’s Praxis scholarship
+#       institution: Smith College
+#       year: Summer 2019
 
-    - name: Five College Coastal & Marine Sciences summer internship scholarship
-      institution: Smith College
-      year: Summer 2019
+#     - name: Five College Coastal & Marine Sciences summer internship scholarship
+#       institution: Smith College
+#       year: Summer 2019
 
-    - name: Dean’s List
-      institution: Smith College
-      year: Fall 2018–Spring 2019
-
-
-  # -------------------------------------------------------
-  # GRANTS
-  # -------------------------------------------------------
-
-  # grants:
-
-  #   - title: Grant Title
-  #     agency: Funding Agency
-  #     role: Principal Investigator
-  #     amount: $XXX,XXX
-  #     years: 2025–2028
-
-  #   - title: Another Grant
-  #     agency: Another Funding Agency
-  #     role: Co-Investigator
-  #     amount: $XX,XXX
-  #     years: 2023–2025
+#     - name: Dean’s List
+#       institution: Smith College
+#       year: Fall 2018–Spring 2019
 
 
-  # -------------------------------------------------------
-  # PRESENTATIONS
-  # -------------------------------------------------------
+#   # -------------------------------------------------------
+#   # GRANTS
+#   # -------------------------------------------------------
 
-  # presentations:
+#   # grants:
 
-  #   - title: Presentation Title
-  #     venue: Conference or Seminar Name
-  #     location: City, State
-  #     year: 2025
+#   #   - title: Grant Title
+#   #     agency: Funding Agency
+#   #     role: Principal Investigator
+#   #     amount: $XXX,XXX
+#   #     years: 2025–2028
 
-  #   - title: Another Presentation
-  #     venue: Department Seminar
-  #     location: City, State
-  #     year: 2024
-
-
-  # -------------------------------------------------------
-  # PROFESSIONAL MEMBERSHIPS
-  # -------------------------------------------------------
-
-  # professional_memberships:
-
-  #   - organization: American Geophysical Union
-  #     years: 2020–Present
-
-  #   - organization: American Meteorological Society
-  #     years: 2021–Present
+#   #   - title: Another Grant
+#   #     agency: Another Funding Agency
+#   #     role: Co-Investigator
+#   #     amount: $XX,XXX
+#   #     years: 2023–2025
 
 
-  # -------------------------------------------------------
-  # SERVICE
-  # -------------------------------------------------------
+#   # -------------------------------------------------------
+#   # PRESENTATIONS
+#   # -------------------------------------------------------
 
-  # service:
+#   # presentations:
 
-    # - role: Reviewer
-    #   organization: Journal Name
-    #   years: 2024–Present
+#   #   - title: Presentation Title
+#   #     venue: Conference or Seminar Name
+#   #     location: City, State
+#   #     year: 2025
 
-    # - role: Committee Member
-    #   organization: Your University
-    #   years: 2023–2025
+#   #   - title: Another Presentation
+#   #     venue: Department Seminar
+#   #     location: City, State
+#   #     year: 2024
 
 
-  # -------------------------------------------------------
-  # OUTREACH
-  # -------------------------------------------------------
+#   # -------------------------------------------------------
+#   # PROFESSIONAL MEMBERSHIPS
+#   # -------------------------------------------------------
 
-  # outreach:
+#   # professional_memberships:
 
-  #   - activity: Outreach Program
-  #     organization: Your Organization
-  #     location: City, State
-  #     year: 2025
-  #     details: Description of outreach activity.
+#   #   - organization: American Geophysical Union
+#   #     years: 2020–Present
 
-  #   - activity: Public Lecture
-  #     organization: Another Organization
-  #     location: City, State
-  #     year: 2024
-  #     details: Description of outreach activity.
+#   #   - organization: American Meteorological Society
+#   #     years: 2021–Present
 
+
+#   # -------------------------------------------------------
+#   # SERVICE
+#   # -------------------------------------------------------
+
+#   # service:
+
+#     # - role: Reviewer
+#     #   organization: Journal Name
+#     #   years: 2024–Present
+
+#     # - role: Committee Member
+#     #   organization: Your University
+#     #   years: 2023–2025
+
+
+#   # -------------------------------------------------------
+#   # OUTREACH
+#   # -------------------------------------------------------
+
+#   # outreach:
+
+#   #   - activity: Outreach Program
+#   #     organization: Your Organization
+#   #     location: City, State
+#   #     year: 2025
+#   #     details: Description of outreach activity.
+
+#   #   - activity: Public Lecture
+#   #     organization: Another Organization
+#   #     location: City, State
+#   #     year: 2024
+#   #     details: Description of outreach activity.

@@ -556,7 +556,7 @@ body {
 
   align-items: center;
 
-  gap: 7px;
+  gap: 3px;
 
   color: var(--link);
 
@@ -583,11 +583,11 @@ body {
   width: 0;
   height: 0;
 
-  border-top: 5px solid transparent;
-  border-bottom: 5px solid transparent;
+  border-top: 8px solid transparent;
+  border-bottom: 8px solid transparent;
   border-left: 7px solid var(--link);
 
-  margin-right: 5px;
+  margin-right: 3px;
   transform: translateY(1px);
 
   transition: transform 0.15s ease;
@@ -638,7 +638,7 @@ body {
 
 
 .publication-title {
-  margin-bottom: 2px;
+  margin-bottom: 4.5px;
 
   color: var(--text-main);
 
